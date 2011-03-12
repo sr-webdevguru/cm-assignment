@@ -1,0 +1,31 @@
+<div>
+    <label class="btn btn-info" ng-if="!file.url && !uploading">
+        <i ng-if="!uploading" class="glyphicon glyphicon-plus"></i>
+        <input
+            style="display: none"
+            type="file"
+            file-observer
+            on-file-change="onFileChange(files)" />
+        <span ng-if="!uploading">{{options.title}}</span>
+    </label>
+    <label
+        style="margin-left: 10px"
+        ng-if="!uploading">
+        {{options.description}}
+    </label>
+
+    <label class="btn btn-info disabled" ng-if="uploading">
+        <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>
+        <span>Uploading...</span>
+    </label>
+    <a ng-if="uploading" style="margin-left: 10px" href="" ng-click="stopUpload()">Cancel</a>
+    <div ng-if="file.url">
+        <a
+            target="_blank"
+            ng-class="{disabled: !file.url}"
+            ng-href="{{file.url}}">
+            <label class="" >{{file.name}}</label>
+        </a>
+        <a style="margin-left: 10px" href="" ng-click="removeFile()">Remove</a>
+    </div>
+</div>
