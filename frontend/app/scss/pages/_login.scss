@@ -1,0 +1,161 @@
+.login{
+	height: 100%;
+	min-height: 100%;
+	min-height: 100vh;
+	@include clearfix();
+	overflow-y:auto;
+
+	color:white;
+	background:#105cb6 url('/assets/images/bg_xs.png');
+	@include background-cover();
+
+	>.container{
+		height:100%;
+		display:table;
+		width: 100%;
+		>.row{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.login-box{
+		width: 100%;
+		max-width: 359px;
+		margin: 5px auto;
+		padding: 0 5px;
+
+		img{
+
+		}
+		form{
+			margin-top: 40px;
+		}
+		button[type="submit"]{
+			@extend .btn-lg;
+			@extend .btn-primary;
+			min-width: 240px;
+			padding: 8px 16px;
+			display: block;
+			font-size: 29px;
+			margin: $grid-gutter-width auto 0 auto;
+			text-transform: uppercase;
+		}
+		.checkbox-transparent{
+			//margin-left: 19px;
+			label{
+				display: inline-block;
+			}
+			span {
+				width: 100%;
+				display: block;
+				text-align: center;
+				margin-bottom: -10px;
+				margin-top: 20px;
+			}
+		}
+		a{
+			text-decoration: underline;
+			display: block;
+			margin-top: $grid-gutter-width/2;
+		}
+		.form-info-row{
+			margin-bottom: 15px;
+		}
+	}
+
+	&.login__new-password{
+		.login-box{
+			strong{
+				margin-top:20px;
+				line-height: 20px;
+				font-size: 18px;
+				color: white;
+				text-align: center;
+				display: inline-block;
+				width: 100%;
+				font-family: $font-helvetica-lt;
+			}
+			form{
+				margin-top:20px;
+			}
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: white;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: white;
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: white;
+	}
+	:-ms-input-placeholder {
+		color: white;
+	}
+}
+
+
+
+@media only screen and (min-width: $screen-xs){
+	.login{
+		.login-box{
+			img{
+				max-width: 170px;
+			}
+		}
+	}
+}
+@media only screen and (min-width: $screen-sm){
+
+	.form-info-row{
+		width: 150%;
+		margin-left: -25%;
+	}
+
+	.login{
+		background:#105cb6 url('/assets/images/bg_sm.png');
+		@include background-cover();
+		.login-box{
+			margin-top: -170px;
+			img{
+
+			}
+			form{
+				margin-top: 60px;
+			}
+			.checkbox-transparent{
+				margin:0 15px;
+				@include clearfix();
+
+				label{
+					float: left;
+				}
+				span {
+					width: auto;
+					display: inline;
+					text-align: right;
+					margin-bottom: 0;
+					margin-top: 0;
+					float:right;
+				}
+			}
+			a{
+				display: inline-block;
+				margin-top: 0;
+				line-height: 17px;
+				padding-top: 4px;
+			}
+		}
+	}
+}
+@media only screen and (min-width: $screen-md){
+	.login{
+		background:#105cb6 url('/assets/images/bg.png');
+		@include background-cover();
+		.login-box{
+			margin-top:-60px;
+		}
+	}
+}
