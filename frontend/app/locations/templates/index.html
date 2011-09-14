@@ -1,0 +1,104 @@
+<div class="container-fluid page-heading">
+    <h4>[[ 'asset_management' | translate]]</h4>
+</div>
+<div class="container-fluid" ng-class="{side__active: true}">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <h2>[[ 'locations' | translate]]</h2>
+
+            <div class="main-title--options">
+                <div class="pull-right">
+                    <a class="link-btn" ui-sref="locations">[[ 'locations' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="location_add">[[ 'add_location' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="areas">[[ 'areas' | translate]]</a><span>|</span>
+                    <a class="link-btn right" ui-sref="area_add">[[ 'add_area' | translate]]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row" style="margin-bottom: 10px">
+                <div class="col-xs-2 pull-right">
+                <select class="form-control" name="area_id" id="area_id" ng-model="area_id" ng-options="choice.area_id as choice.area_name for choice in areas"></select>
+                    </div>
+            </div>
+            <div class="row table-container">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th ng-click="list.sort_by('location_name');">[['name'|translate]] <span
+                                ng-show="list.predicate=='location_name'"><i class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th ng-click="list.sort_by('area_id');">[['area'|translate]] <span
+                                ng-show="list.predicate=='area_id'"><i
+                                class="fa fa-caret-down"
+                                ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th>[['actions'|translate]]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-show="list.loading">
+                        <td colspan="5">
+                            [[ 'loading' | translate]]
+                        </td>
+                    </tr>
+                    <tr ng-repeat="data in list.items">
+                        <td class="location-name">[[data.location_name]]</td>
+                        <td>[[data.area.area_name]]</td>
+                        <td>
+                            <a ui-sref="location_edit({ locationId: data.location_id })"><i class="fa fa-pencil-square-o"></i>
+                                [[ 'edit' | translate]]</a>
+                            <a href=""
+                               ng-click="list.archive(data.location_id)"><i class="fa fa-trash-o"></i>[[ 'delete' | translate]]</a>
+                        </td>
+                    </tr>
+                    <tr ng-show="list.filteredItems == 0 && list.loading == false">
+                        <td colspan="5">
+                            [[ 'no_location_found' | translate]]
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row table-footer">
+                <div class="table-options">
+                    <div class="table-options--page">
+                        <span>[[ 'page' | translate]]</span>
+                        <select class="form-control select__small" name="" id="" ng-model="list.currentPage">
+                            <option ng-repeat="n in [] | range:list.totalPages">[[n]]</option>
+                        </select>
+                        <span>[[ 'of' | translate]] 1 [[ 'page' | translate]]</span>
+                        <small> ([[list.totalItems]] [[ 'total_items' | translate]])</small>
+                    </div>
+                    <div class="table-options--itemspp">
+                        <span>[[ 'showing' | translate]]</span>
+                        <select class="form-control select__small" name="" ng-model="list.itemsPerPage">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>[[ 'items_per_page' | translate]]</span>
+                    </div>
+                </div>
+                <div
+                        pagination=""
+                        ng-model="list.currentPage"
+                        total-items="list.totalItems"
+                        items-per-page="list.itemsPerPage"
+                        boundary-links="false"
+                        on-select-page="list.setPage(page)"
+                        previous-text="&laquo;"
+                        next-text="&raquo;"
+                        class="pagination-small">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
