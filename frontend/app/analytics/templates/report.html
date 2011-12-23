@@ -1,0 +1,226 @@
+<div class="container-fluid page-heading">
+    <h4>[[ 'Reports' | translate]]</h4>
+</div>
+<div class="container-fluid cont-w-sidenav" ng-class="{side__active: true}">
+    <div class="row-fluid">
+
+        <form name="reportform" style="margin-top: 20px;">
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="right-inner-addon">
+                        <label>From:</label>
+                        <input type="text" class="form-control" placeholder="From"
+                               ng-model="list.range.dateFrom"
+                               bs-datepicker
+                               data-autoclose="false"
+                               data-max-date="[[list.range.dateTo]]" data-date-format="[[date_format]]"
+                               data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                               maxlength="10"
+                               data-placement="bottom-left"
+                                >
+                        <i class="fa fa-calendar"
+                           style="float: right; position: relative;  top: -35px;  right: 0px;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="right-inner-addon">
+                        <label>To:</label>
+                        <input type="text" class="form-control" placeholder="[[ 'to' | translate]]"
+                               ng-model="list.range.dateTo"
+                               bs-datepicker
+                               data-min-date="[[list.range.dateFrom]]" data-date-format="[[date_format]]"
+                               data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                               data-autoclose="true" data-placement="bottom-right"
+                               maxlength="10">
+                        <i class="fa fa-calendar"
+                           style="float: right; position: relative;  top: -35px;  right: 0px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <table class="col-lg-8 col-md-12 col-xs-12" style="border-collapse: inherit; background-color: transparent; border-spacing: 10px 10px;">
+                    <tr style="margin-bottom:8px" ng-repeat="filter in model.filters">
+                        <td style="width:20%">
+                            <div class="form-group" style="margin-bottom:0px;">
+                                <select class="form-control"
+                                        ng-options="property as property.title for property in schema.properties track by property.fullkey"
+                                        ng-model="model.filters[$index].field"/>
+                            </div>
+                        </td>
+                        <td style="width:20%">
+                            <div class="form-group" style="margin-bottom:0px;">
+                                <input ng-if="model.filters[$index].field.formtype=='text' || model.filters[$index].field.formtype=='number'"
+                                       class="form-control" type="[[ filter.formtype ]]" placeholder="[[ filter.placeholder ]]"
+                                       ng-model="model.filters[$index].value"
+                                       ng-required="model.filters[$index].field.formtype=='text' || model.filters[$index].field.formtype=='number'"
+                                />
+                                <select ng-if="model.filters[$index].field.formtype=='select'" class="form-control" placeholder="[[ filter.placeholder ]]"
+                                        ng-options="property.value as property.name for property in model.filters[$index].field.titleMap"
+                                        ng-model="model.filters[$index].value"
+                                        ng-required="model.filters[$index].field.formtype=='select'"
+                                />
+                            </div>
+
+                        </td>
+                        <td style="width:20%">
+                            <div class="form-group" style="margin-bottom:0px;">
+                                <select ng-if="model.filters[$index].value && model.filters[$index].field.childField" class="form-control"
+                                        ng-options="property as property.title for property in model.filters[$index].field.childField[model.filters[$index].value].select track by property.fullkey"
+                                        ng-init="model.filters[$index].childField.field = model.filters[$index].field.childField[model.filters[$index].value].select[0]"
+                                        ng-model="model.filters[$index].childField.field"/>
+                            </div>
+                        </td>
+                        <td style="width:20%">
+                            <div class="form-group" style="margin-bottom:0px;">
+                                <select ng-if="model.filters[$index].value && model.filters[$index].field.childField" class="form-control"
+                                        ng-options="property.value as property.name for property in model.filters[$index].field.childField[model.filters[$index].value].titleMap"
+                                        ng-init="model.filters[$index].childField.value = 'all'"
+                                        ng-model="model.filters[$index].childField.value"
+                                        ng-required="model.filters[$index].value && model.filters[$index].field.childField"
+                                />
+                            </div>
+                        </td>
+                        <td style="width:20%">
+                            <a class="button" ng-click="addField(model.filters)" ng-hide="!$last"><i class="fa fa-plus-circle fa-2x"></i></a>
+                            <a class="button" ng-click="removeField($index)" ng-hide="$first && model.filters.length<=1"><i class="fa fa-minus-circle fa-2x"></i></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </form>
+
+        <div class="col-xs-12">
+            <button ng-disabled="reportform.$invalid" class="btn btn-primary pull-right" ng-click="onSubmit(reportform)">[[ 'search' | translate]]</button>
+            <button type="button" class="btn btn-primary pull-right" ng-click="onReset()" style="margin-right:10px">[[ 'reset' | translate]]</button>
+        </div>
+
+        <!--<div class="row">-->
+            <!--<div class="col-xs-12">-->
+                <!--<pre>[[model | json]]</pre>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="col-xs-12" style="margin:10px 0px">
+            <span class="pull-left">There are [[list.totalItems]] incidents matching your search.</span>
+            <a href="" class="pull-right" ng-click="onDownload(reportform)"><i class="fa fa-file-excel-o"></i> [[
+                                                                                                               'download'
+                                                                                                               |
+                                                                                                               translate]]</a>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row table-container">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th ng-click="list.sort_by('dt_created');">[[ 'date_time' | translate]] <span
+                                ng-show="list.predicate=='dt_created'"><i
+                                class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th>[[ 'casualty_name' | translate]]</th>
+                        <th>[[ 'injury' | translate]]</th>
+                        <th>[[ 'activity' | translate]]</th>
+                        <th ng-click="list.sort_by('assigned_to');">[[ 'assigned_to' | translate]] <span
+                                ng-show="list.predicate=='assigned_to'"><i
+                                class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th ng-click="list.sort_by('incident_status');">[[ 'status' | translate]] <span
+                                ng-show="list.predicate=='incident_status'"><i
+                                class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th class="thnohover">[[ 'actions' | translate]]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-show="list.loading">
+                        <td colspan="8">
+                            Loading...
+                        </td>
+                    </tr>
+                    <tr ng-repeat="data in list.incidents | orderBy :list.predicate :list.reverse">
+                        <td>[[data.incident_pk]]</td>
+                        <td>[[data.dt_created]]</td>
+                        <td class="titlecase">[[data.patient.name]]</td>
+                        <td>[[data.injury| transformInjury | toTitlecase]]</td>
+                        <td class="titlecase">[[data.activity]]</td>
+                        <td class="titlecase">[[data.assigned_to.name]]</td>
+                        <td class="titlecase">[[data.incident_status[0].key | translate]]</td>
+                        <td>
+                            <a ui-sref="incident_edit({ incidentId: data.incident_id })"
+                               ng-hide="data.status=='Closed'"><i
+                                    class="fa fa-pencil-square-o"></i> [[ 'view' | translate]]</a>
+                        </td>
+                    </tr>
+
+                    <tr ng-show="list.filteredItems == 0 && list.loading == false">
+                        <td colspan="7">
+                            [[ 'no_incident_found' | translate]]
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row table-footer">
+                <div class="table-options">
+                    <div class="table-options--page">
+                        <span>[[ 'page' | translate]]</span>
+                        <select class="form-control select__small" name="" id="" ng-model="list.currentPage">
+                            <option ng-repeat="n in [] | range:list.totalPages">[[n]]</option>
+                        </select>
+                        <span>[[ 'of' | translate]] 1 [[ 'page' | translate]]</span>
+                        <small> ([[list.totalItems]] [[ 'total_items' | translate]])</small>
+                    </div>
+                    <div class="table-options--itemspp">
+                        <span>[[ 'showing' | translate]]</span>
+                        <select class="form-control select__small" name="" ng-model="list.itemsPerPage">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>[[ 'items_per_page' | translate]]</span>
+                    </div>
+                </div>
+                <div
+                        pagination=""
+                        ng-model="list.currentPage"
+                        total-items="list.totalItems"
+                        items-per-page="list.itemsPerPage"
+                        boundary-links="false"
+                        on-select-page="list.setPage(page)"
+                        previous-text="&laquo;"
+                        next-text="&raquo;"
+                        class="pagination-small">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-9"></div>
+                <div class="col-xs-2">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Enter report name" ng-model="report.label">
+                    </div>
+                    </div>
+                <div class="col-xs-1">
+                    <a href="" type="button" class="btn btn-primary pull-right" ng-click="createReport()" ng-disabled="report.label==''">[['save_report' | translate]]</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-9"></div>
+                <div class="col-xs-2">
+                    <div class="form-group">
+                        <input type="checkbox" ng-model="report.global" ng-checked="report.global"> Share with other users?
+                    </div>
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
