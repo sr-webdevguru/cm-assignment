@@ -1,0 +1,57 @@
+<div class="container-fluid page-heading">
+    <h4>[[ 'asset_management' | translate]]</h4>
+</div>
+<div class="container-fluid user-edit" ng-class="{side__active: true}">
+    <div class="row-fluid">
+        <div class="main-title">
+            <h2>[[ 'add_asset' | translate]]</h2>
+
+            <div class="main-title--options">
+                <div class="pull-right">
+                    <a class="link-btn" ui-sref="assets">[[ 'assets' | translate]]</a><span>|</span>
+                    <a class="link-btn right" ui-sref="asset_add">[[ 'add_asset' | translate]]</a>
+                </div>
+            </div>
+        </div>
+        <div class="user-edit--details">
+
+            <form name="form" class="form-horizontal" role="form" ng-submit="add()">
+                <div class="form-group">
+                    <label for="asset_name" class="col-sm-3 control-label">[[ 'name' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="asset_name" id="asset_name" placeholder=""
+                               ng-model="asset_name" required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="asset_type_id" class="col-sm-3 control-label">[[ 'type' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="asset_type_id" id="asset_type_id" ng-model="asset_type_id" ng-options="choice.asset_type_id as choice.asset_type_name for choice in assetTypes" required="true"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="area_id" class="col-sm-3 control-label">[[ 'area' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="area_id" id="area_id" ng-model="area_id" ng-options="choice.area_id as choice.area_name for choice in areas" required="true"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="location_id" class="col-sm-3 control-label">[[ 'location' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="location_id" id="location_id" ng-model="location_id" ng-options="choice.location_id as choice.location_name for choice in locations" required="true"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary pull-right">[['save'|translate]]</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
