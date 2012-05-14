@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Medic52</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M52">
+    <meta name="author" content="">
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--<link rel="stylesheet" href="/libs/leaflet-dist/leaflet.css"/>-->
+    <!--<link rel="stylesheet" href="/libs/angular-leaflet-directive/dist/MarkerCluster.css"/>-->
+    <!--<link rel="stylesheet" href="/libs/angular-leaflet-directive/dist/MarkerCluster.Default.css"/>-->
+
+    <!--<link rel="stylesheet" href="/libs/angular-growl-v2/angular-growl.min.css"/>-->
+
+    <!--<link rel="stylesheet" href="/libs/angular-hotkeys/hotkeys.css"/>-->
+
+    <!--<link rel="stylesheet" href="/libs/angular-loading-bar/build/loading-bar.min.css"/>-->
+
+    <!--<link rel="stylesheet" href="/app/app.css">-->
+
+    <!--<link rel="stylesheet" href="/libs/angular-schema-form/file/file.css">-->
+    <!--<link rel="stylesheet" href="/libs/angular-schema-form/image/imagemodal.css">-->
+    <!--<link rel="stylesheet" href="/libs/angular-schema-form/image/magnifierjs/magnifier.css">-->
+
+    <!--<link rel="stylesheet" href="/libs/angular-schema-form/datepicker/libs/bootstrap-datetimepicker.min.css">-->
+
+    <link rel="stylesheet" href="/app/app.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1kevcQH2kmQvcs4zmMgg31ec-b_I-NcE&libraries=places"> </script>
+
+</head>
+
+<body ng-app="app">
+
+<div ui-view="header"></div>
+<div growl></div>
+<div id="ui-content" ui-view="content"></div>
+
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PZV56F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PZV56F');
+</script>
+<!-- End Google Tag Manager -->
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+<script src="/libs//es5-shim/es5-shim.js"></script>
+<script src="/libs//json3/lib/json3.min.js"></script>
+<![endif]-->
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"> </script>
+<!--<script async defer src="https://widget.intercom.io/widget/y5rk20en"></script>-->
+
+<script src="/compiled/base.min.js"></script>
+<script src="/compiled/vendor.min.js"></script>
+<script src="/compiled/app.min.js"></script>
+
+</body>
+</html>
