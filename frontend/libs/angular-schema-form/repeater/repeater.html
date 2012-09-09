@@ -1,0 +1,33 @@
+<div class="schema-form-array">
+    <div class="list-group">
+        <form
+            name="ngform"
+            class="list-group-item"
+            ng-repeat="form in repeatedForm"
+            name="{{repeatedFormKey}}"
+            sf-model="form.model"
+            sf-form="form.form"
+            sf-schema="form.schema"
+            ng-submit="submitForm(ngform, form.model)">
+            <button
+                ng-hide="form.readonly"
+                ng-click="$parent.deleteFromArray()"
+                style="position: relative; z-index: 20;"
+                type="button"
+                class="close pull-right">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+        </form>
+    </div>
+    <div class="clearfix">
+        <button
+            ng-hide="readonly || add === null"
+            ng-click="appendToArray()"
+            type="button"
+            class="btn {{ form.style.add || 'btn-default' }} pull-right">
+            <i class="glyphicon glyphicon-plus"></i>
+            {{ form.add || 'Add' }}
+        </button>
+    </div>
+</div>
