@@ -1,0 +1,29 @@
+<div class="container-fluid map-container" ng-class="{side__active: true}" ng-init="init()">
+    <div leaflet height="100%" width="100%" center="map.center" markers="map.markers"
+         defaults="map.defaults"></div>
+
+    <div class="main-title">
+        <div class="main-title--options">
+            <div class="right-inner-addon">
+                <input type="text" class="form-control" placeholder="[[ 'to' | translate]]" ng-model="list.dateTo" bs-datepicker
+                       ng-change="init()"
+                       data-min-date="[[list.dateFrom]]" data-date-format="[[date_format]]"
+                       data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                       data-autoclose="true" data-placement="bottom-right"
+                       maxlength="10">
+                <i class="fa fa-calendar"></i>
+            </div>
+            <div class="right-inner-addon">
+                <input type="text" class="form-control" placeholder="[[ 'from' | translate]]" ng-model="list.dateFrom" bs-datepicker
+                       ng-change="init()"
+                       data-max-date="[[list.dateTo]]" data-date-format="[[date_format]]"
+                       data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                       data-autoclose="true" data-placement="bottom-right"
+                       maxlength="10">
+                <i class="fa fa-calendar"></i>
+            </div>
+        </div>
+    </div>
+
+
+</div>
