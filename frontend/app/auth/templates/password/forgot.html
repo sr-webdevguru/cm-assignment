@@ -1,0 +1,33 @@
+<div class="login login__new-password">
+
+    <div class="container">
+        <div class="row clearfix">
+
+            <div class="login-box">
+                <img src="/images/logo_medium.png" class="center-block" alt="logo"/>
+
+                <div class="alert alert-danger" ng-show="form.errors">
+                    <p>[[ form.errors|translate ]]</p>
+                </div>
+
+                <div class="alert alert-success" ng-show="form.success" style="margin-top: 10px">
+                    <p>[[ form.success|translate ]]</p>
+                </div>
+
+                <strong[['enter_email_for_password_reset'|translate]]</strong>
+
+                <form role="form">
+                    <div class="form-group">
+                        <input type="email" class="input-transparent" name="email" id="email" required
+                               placeholder="[['email_placeholder'|translate]]" autofocus="true" ng-model="user.email">
+                    </div>
+                    <button type="submit" class="btn" ng-click="send_reset_password()">Send Reset Email</button>
+                </form>
+
+                <button type="button" class="btn hidden">Go</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
