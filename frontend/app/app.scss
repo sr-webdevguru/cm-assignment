@@ -1,0 +1,100 @@
+$icon-font-path: "/libs/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$fa-font-path: "/libs/font-awesome/fonts";
+
+
+@import 'font-awesome/scss/font-awesome';
+@import 'scss/fonts';
+
+// Core variables and mixins
+@import 'scss/bootstrap_variables';
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins';
+
+// Reset and dependencies
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/normalize";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/print";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/type";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/code";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/grid";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/forms";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/component-animations";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/dropdowns";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/button-groups";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/input-groups";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/navs";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/navbar";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/breadcrumbs";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/pagination";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/pager";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/labels";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/badges";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/jumbotron";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/thumbnails";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/alerts";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/progress-bars";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/media";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/list-group";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/panels";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/responsive-embed";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/wells";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/modals";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/tooltip";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/popovers";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/utilities";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/responsive-utilities";
+
+@import 'scss/mixins';
+
+/// Shared styles
+@import 'scss/index';
+
+
+//// _TEXTURES
+@import 'scss/textures.scss';
+
+
+//// _VENDOR
+
+
+
+//// _MODULES
+@import 'scss/modules/input-transparent';
+@import 'scss/modules/table-data';
+@import 'scss/modules/nav';
+
+
+//// _PAGES
+@import 'scss/pages/login';
+@import 'scss/pages/user-edit';
+@import 'scss/pages/incident-edit';
+@import 'scss/pages/dashboard';
+@import 'scss/pages/map';
+
+/// HELPERS
+//@import 'scss/helpers';
+
+/**
+ * App-wide Styles
+ */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+@import 'scss/media';
