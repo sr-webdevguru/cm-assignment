@@ -1,0 +1,5141 @@
+#: apps/authentication/custom_authentication_drf.py:75
+msgid "Invalid token header. No credentials provided."
+msgstr "invalid_token_header_no_credentials_provided"
+
+#: apps/authentication/custom_authentication_drf.py:78
+msgid "Invalid token header. Token string should not contain spaces."
+msgstr "invalid_token_header_token_string_should_not_contain_spaces"
+
+#: apps/authentication/custom_authentication_drf.py:87
+msgid "Invalid token."
+msgstr "invalid_token"
+
+#: apps/authentication/custom_authentication_drf.py:90
+#: apps/custom_user/views.py:191 apps/custom_user/views.py:226
+#: apps/custom_user/views.py:244 apps/custom_user/views.py:296
+#: apps/devices/views.py:29 apps/devices/views.py:47 apps/devices/views.py:68
+#: apps/devices/views.py:85
+msgid "User inactive or deleted."
+msgstr "user_inactive_or_deleted"
+
+#: apps/authentication/custom_authentication_drf.py:120
+msgid "Invalid token header. No access token provided."
+msgstr "invalid_token_header_no_access_token_provided"
+
+#: apps/authentication/custom_authentication_drf.py:123
+msgid "Invalid access token header. Token string should not contain spaces."
+msgstr "invalid_access_token_header_token_string_should_not_contain_spaces"
+
+#: apps/authentication/custom_authentication_drf.py:130
+msgid "Invalid token (or) token has expired"
+msgstr "invalid_token_or_token_has_expired"
+
+#: apps/authentication/views.py:51 apps/authentication/views.py:88
+#: apps/authentication/views.py:92 apps/authentication/views.py:126
+#: apps/authentication/views.py:141 apps/custom_user/views.py:70
+#: apps/custom_user/views.py:87 apps/custom_user/views.py:160
+#: apps/custom_user/views.py:172 apps/custom_user/views.py:174
+#: apps/custom_user/views.py:191 apps/custom_user/views.py:207
+#: apps/custom_user/views.py:212 apps/custom_user/views.py:214
+#: apps/custom_user/views.py:226 apps/custom_user/views.py:228
+#: apps/custom_user/views.py:234 apps/custom_user/views.py:244
+#: apps/custom_user/views.py:255 apps/custom_user/views.py:257
+#: apps/custom_user/views.py:296 apps/custom_user/views.py:305
+#: apps/custom_user/views.py:307 apps/devices/views.py:29
+#: apps/devices/views.py:38 apps/devices/views.py:40 apps/devices/views.py:47
+#: apps/devices/views.py:61 apps/devices/views.py:68 apps/devices/views.py:77
+#: apps/devices/views.py:85 apps/devices/views.py:93 apps/devices/views.py:95
+#: apps/devices/views.py:108 apps/devices/views.py:110
+#: apps/devices/views.py:118 apps/devices/views.py:126
+#: apps/devices/views.py:128 apps/devices/views.py:131
+#: apps/incidents/views.py:41 apps/incidents/views.py:44
+#: apps/incidents/views.py:51 apps/incidents/views.py:58
+#: apps/incidents/views.py:61 apps/incidents/views.py:71
+#: apps/incidents/views.py:85 apps/incidents/views.py:108
+#: apps/incidents/views.py:121 apps/incidents/views.py:132
+#: apps/incidents/views.py:146 apps/incidents/views.py:150
+#: apps/incidents/views.py:182 apps/incidents/views.py:217
+#: apps/incidents/views.py:220 apps/incidents/views.py:225
+#: apps/incidents/views.py:230 apps/incidents/views.py:237
+#: apps/incidents/views.py:240 apps/incidents/views.py:252
+#: apps/incidents/views.py:258 apps/incidents/views.py:278
+#: apps/incidents/views.py:299 apps/incidents/views.py:307
+#: apps/incidents/views.py:315 apps/incidents/views.py:339
+#: apps/incidents/views.py:361 apps/incidents/views.py:382
+#: apps/incidents/views.py:422 apps/resorts/views.py:35
+#: apps/resorts/views.py:60 apps/resorts/views.py:62 apps/resorts/views.py:72
+#: apps/resorts/views.py:88 apps/resorts/views.py:138 apps/routing/views.py:30
+msgid "detail"
+msgstr "detail"
+
+#: apps/authentication/views.py:51 apps/authentication/views.py:126
+#: apps/routing/views.py:30
+msgid "invalid email provided"
+msgstr "invalid_email_provided"
+
+#: apps/authentication/views.py:89
+msgid "Your username or password are not correct please try again or click to retrieve your password"
+msgstr "your_username_or_password_are_not_correct_please_try_again_or_click_to_retrieve_your_password"
+
+#: apps/authentication/views.py:92
+msgid "email/password is not provided"
+msgstr "email_password_is_not_provided"
+
+#: apps/authentication/views.py:101
+msgid "User is logged out"
+msgstr "user_is_logged_out"
+
+#: apps/authentication/views.py:141
+msgid "Email to reset password has been sent"
+msgstr "email_to_reset_password_has_been_sent"
+
+#: apps/custom_user/views.py:70
+msgid "Resort with network key does not exist"
+msgstr "resort_with_network_key_does_not_exist"
+
+#: apps/custom_user/views.py:87
+msgid "resort name and/or resort network key not provided"
+msgstr "resort_name_and_or_resort_network_key_not_provided"
+
+#: apps/custom_user/views.py:160
+msgid "invalid role_id provided"
+msgstr "invalid_role_id_provided"
+
+#: apps/custom_user/views.py:172
+msgid "You dont have have permission to add user"
+msgstr "you_dont_have_have_permission_to_add_user"
+
+#: apps/custom_user/views.py:174
+msgid "Resort with provided resort_id does not exists"
+msgstr "resort_with_provided_resort_id_does_not_exists"
+
+#: apps/custom_user/views.py:207
+msgid "specified role does not exists"
+msgstr "specified_role_does_not_exists"
+
+#: apps/custom_user/views.py:212
+msgid "You don't have permission to add user"
+msgstr "you_dont_have_permission_to_add_user"
+
+#: apps/custom_user/views.py:214 apps/custom_user/views.py:228
+#: apps/custom_user/views.py:255 apps/devices/views.py:38
+#: apps/devices/views.py:118
+msgid "User does not exists"
+msgstr "user_does_not_exists"
+
+#: apps/custom_user/views.py:234
+msgid "You dont have permission to retrieve user"
+msgstr "you_dont_have_permission_to_retrieve_user"
+
+#: apps/custom_user/views.py:257
+msgid "You dont have permission to delete user"
+msgstr "you_dont_have_permission_to_delete_user"
+
+#: apps/custom_user/views.py:305
+msgid "user does not exists"
+msgstr "user_does_not_exists"
+
+#: apps/custom_user/views.py:307
+msgid "You dont have permission to retrieve user device"
+msgstr "you_dont_have_permission_to_retrieve_user_device"
+
+#: apps/devices/views.py:40
+msgid "user_id is not provided"
+msgstr "user_id_is_not_provided"
+
+#: apps/devices/views.py:61 apps/devices/views.py:77 apps/devices/views.py:95
+#: apps/devices/views.py:108
+msgid "Device does not exists"
+msgstr "device_does_not_exists"
+
+#: apps/devices/views.py:91
+msgid "device_status"
+msgstr "device_status"
+
+#: apps/devices/views.py:91
+msgid "deleted"
+msgstr "deleted"
+
+#: apps/devices/views.py:93
+msgid "either this device is not for deletion or does not belong to current user"
+msgstr "either_this_device_is_not_for_deletion_or_does_not_belong_to_current_user"
+
+#: apps/devices/views.py:110
+msgid "device_id is not provided"
+msgstr "device_id_is_not_provided"
+
+#: apps/devices/views.py:126 apps/incidents/views.py:51
+#: apps/incidents/views.py:71 apps/incidents/views.py:150
+#: apps/resorts/views.py:62 apps/resorts/views.py:88
+msgid "Resort does not exists"
+msgstr "resort_does_not_exists"
+
+#: apps/devices/views.py:128
+msgid "resort_id is not provided"
+msgstr "resort_id_is_not_provided"
+
+#: apps/devices/views.py:131
+msgid "Device does not belong to this user"
+msgstr "device_does_not_belong_to_this_user"
+
+#: apps/incidents/views.py:41
+msgid "resort_id not provided"
+msgstr "resort_id_not_provided"
+
+#: apps/incidents/views.py:44 apps/incidents/views.py:61
+#: apps/incidents/views.py:146
+msgid "not a valid UUID"
+msgstr "not_a_valid_uuid"
+
+#: apps/incidents/views.py:58
+msgid "resort id not provided"
+msgstr "resort_id_not_provided"
+
+#: apps/incidents/views.py:85
+msgid "invalid incident information provided"
+msgstr "invalid_incident_information_provided"
+
+#: apps/incidents/views.py:108
+msgid "assigned_user does not exist"
+msgstr "assigned_user_does_not_exist"
+
+#: apps/incidents/views.py:121 apps/incidents/views.py:132
+msgid "Incident does not exist"
+msgstr "incident_does_not_exist"
+
+#: apps/incidents/views.py:182
+msgid "assigned_to user does not exists"
+msgstr "assigned_to_user_does_not_exists"
+
+#: apps/incidents/views.py:217 apps/incidents/views.py:299
+#: apps/incidents/views.py:339 apps/incidents/views.py:361
+#: apps/incidents/views.py:382
+msgid "Incident does not exists"
+msgstr "incident_does_not_exists"
+
+#: apps/incidents/views.py:220
+msgid "You do not have permission to add media to this incident"
+msgstr "you_do_not_have_permission_to_add_media_to_this_incident"
+
+#: apps/incidents/views.py:225
+msgid "mimeType is required"
+msgstr "mimetype_is_required"
+
+#: apps/incidents/views.py:230
+msgid "invalid mime_type provided"
+msgstr "invalid_mime_type_provided"
+
+#: apps/incidents/views.py:237
+msgid "invalid type provided, it must either statement, photo ,signature or general"
+msgstr "invalid_type_provided_it_must_either_statement_photo_signature_or_general"
+
+#: apps/incidents/views.py:240
+msgid "media type is required"
+msgstr "media_type_is_required"
+
+#: apps/incidents/views.py:252
+msgid "media content not provided"
+msgstr "media_content_not_provided"
+
+#: apps/incidents/views.py:258
+msgid "base64 string is not valid"
+msgstr "base64_string_is_not_valid"
+
+#: apps/incidents/views.py:278
+msgid "media_reference is required"
+msgstr "media_reference_is_required"
+
+#: apps/incidents/views.py:280
+msgid "media_url"
+msgstr "media_url"
+
+#: apps/incidents/views.py:307
+msgid "incident status not found"
+msgstr "incident_status_not_found"
+
+#: apps/incidents/views.py:309
+msgid "media_reference not found in incident"
+msgstr "media_reference_not_found_in_incident"
+
+#: apps/incidents/views.py:315
+msgid "updated_by user not found"
+msgstr "updated_by_user_not_found"
+
+#: apps/incidents/views.py:422
+msgid "file not found"
+msgstr "file_not_found"
+
+#: apps/resorts/views.py:35
+msgid "You dont have the permission to create resort"
+msgstr "you_dont_have_the_permission_to_create_resort"
+
+#: apps/resorts/views.py:60
+msgid "You dont have the permission to update resort"
+msgstr "you_dont_have_the_permission_to_update_resort"
+
+#: apps/resorts/views.py:72
+msgid "You dont have the permission to get resort information"
+msgstr "you_dont_have_the_permission_to_get_resort_information"
+
+#: apps/resorts/views.py:138
+msgid "You dont have the permission to get user for the resort"
+msgstr "you_dont_have_the_permission_to_get_user_for_the_resort"
+
+#: oauth2_provider/models.py:41
+msgid "Confidential"
+msgstr "confidential"
+
+#: oauth2_provider/models.py:42
+msgid "Public"
+msgstr "public"
+
+#: oauth2_provider/models.py:50
+msgid "Authorization code"
+msgstr "authorization_code"
+
+#: oauth2_provider/models.py:51
+msgid "Implicit"
+msgstr "implicit"
+
+#: oauth2_provider/models.py:52
+msgid "Resource owner password-based"
+msgstr "resource_owner_password-based"
+
+#: oauth2_provider/models.py:53
+msgid "Client credentials"
+msgstr "client_credentials"
+
+#: oauth2_provider/models.py:59
+msgid "Allowed URIs list, space separated"
+msgstr "allowed_uris_list_space_separated"
+
+#: oauth2_provider/models.py:114
+#, python-brace-format
+msgid "Redirect_uris could not be empty with {0} grant_type"
+msgstr "redirect_uris_could_not_be_empty_with_{0}_grant_type"
+
+#: oauth2_provider/templates/oauth2_provider/application_confirm_delete.html:7
+msgid "Are you sure to delete the application"
+msgstr "are_you_sure_to_delete_the_application"
+
+#: oauth2_provider/templates/oauth2_provider/application_confirm_delete.html:13
+msgid "Cancel"
+msgstr "cancel"
+
+#: oauth2_provider/templates/oauth2_provider/application_confirm_delete.html:14
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:39
+msgid "Delete"
+msgstr "delete"
+
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:11
+msgid "Client id"
+msgstr "client_id"
+
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:16
+msgid "Client secret"
+msgstr "client_secret"
+
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:21
+msgid "Client type"
+msgstr "client_type"
+
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:26
+msgid "Authorization Grant Type"
+msgstr "authorization_grant_type"
+
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:31
+msgid "Redirect Uris"
+msgstr "redirect_uris"
+
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:37
+#: oauth2_provider/templates/oauth2_provider/application_form.html:36
+msgid "Go Back"
+msgstr "go_back"
+
+#: oauth2_provider/templates/oauth2_provider/application_detail.html:38
+msgid "Edit"
+msgstr "edit"
+
+#: oauth2_provider/templates/oauth2_provider/application_form.html:10
+msgid "Edit application"
+msgstr "edit_application"
+
+#: oauth2_provider/templates/oauth2_provider/application_list.html:7
+msgid "Your applications"
+msgstr "your_applications"
+
+#: oauth2_provider/templates/oauth2_provider/application_list.html:17
+msgid "No applications defined"
+msgstr "no_applications_defined"
+
+#: oauth2_provider/templates/oauth2_provider/application_list.html:17
+msgid "Click here"
+msgstr "click_here"
+
+#: oauth2_provider/templates/oauth2_provider/application_list.html:17
+msgid "if you want to register a new one"
+msgstr "if_you_want_to_register_a_new_one"
+
+#: oauth2_provider/templates/oauth2_provider/application_registration_form.html:6
+msgid "Register a new application"
+msgstr "register_a_new_application"
+
+#: oauth2_provider/templates/oauth2_provider/authorize.html:8
+msgid "Authorize"
+msgstr "authorize"
+
+#: oauth2_provider/templates/oauth2_provider/authorize.html:17
+msgid "Application requires following permissions"
+msgstr "application_requires_following_permissions"
+
+#: oauth2_provider/validators.py:23
+msgid "Enter a valid URL."
+msgstr "enter_a_valid_url"
+
+#: authentication.py:69
+msgid "Invalid basic header. No credentials provided."
+msgstr "invalid_basic_header_no_credentials_provided"
+
+#: authentication.py:72
+msgid "Invalid basic header. Credentials string should not contain spaces."
+msgstr "invalid_basic_header_credentials_string_should_not_contain_spaces"
+
+#: authentication.py:78
+msgid "Invalid basic header. Credentials not correctly base64 encoded."
+msgstr "invalid_basic_header_credentials_not_correctly_base64_encoded"
+
+#: authentication.py:90
+msgid "Invalid username/password."
+msgstr "invalid_username_password"
+
+#: exceptions.py:38
+msgid "A server error occurred."
+msgstr "a_server_error_occurred"
+
+#: exceptions.py:73
+msgid "Malformed request."
+msgstr "malformed_request"
+
+#: exceptions.py:78
+msgid "Incorrect authentication credentials."
+msgstr "incorrect_authentication_credentials"
+
+#: exceptions.py:83
+msgid "Authentication credentials were not provided."
+msgstr "authentication_credentials_were_not_provided"
+
+#: exceptions.py:88
+msgid "You do not have permission to perform this action."
+msgstr "you_do_not_have_permission_to_perform_this_action"
+
+#: exceptions.py:93
+msgid "Not found."
+msgstr "not_found"
+
+#: exceptions.py:98
+msgid "Method \"{method}\" not allowed."
+msgstr "method_\"{method}\" not allowed"
+
+#: exceptions.py:109
+msgid "Could not satisfy the request Accept header."
+msgstr "could_not_satisfy_the_request_accept_header"
+
+#: exceptions.py:121
+msgid "Unsupported media type \"{media_type}\" in request."
+msgstr "unsupported_media_type_\"{media_type}\"_in_request"
+
+#: exceptions.py:134
+msgid "Request was throttled."
+msgstr "request_was_throttled"
+
+#: fields.py:153 relations.py:132 relations.py:156 validators.py:77
+#: validators.py:155
+msgid "This field is required."
+msgstr "this_field_is_required"
+
+#: fields.py:154
+msgid "This field may not be null."
+msgstr "this_field_may_not_be_null"
+
+#: fields.py:487 fields.py:515
+msgid "\"{input}\" is not a valid boolean."
+msgstr "\"{input}\"_is_not_a_valid_boolean"
+
+#: fields.py:550
+msgid "This field may not be blank."
+msgstr "this_field_may_not_be_blank"
+
+#: fields.py:551 fields.py:1324
+msgid "Ensure this field has no more than {max_length} characters."
+msgstr "ensure_this_field_has_no_more_than_{max_length}_characters"
+
+#: fields.py:552
+msgid "Ensure this field has at least {min_length} characters."
+msgstr "ensure_this_field_has_at_least_{min_length}_characters"
+
+#: fields.py:587
+msgid "Enter a valid email address."
+msgstr "enter_a_valid_email_address"
+
+#: fields.py:604
+msgid "This value does not match the required pattern."
+msgstr "this_value_does_not_match_the_required_pattern"
+
+#: fields.py:615
+msgid "Enter a valid \"slug\" consisting of letters, numbers, underscores or hyphens."
+msgstr "\"slug\"_consisting_of_letters_numbers_underscores_or_hyphens"
+
+#: fields.py:638
+msgid "\"{value}\" is not a valid UUID."
+msgstr "\"{value}\"_is_not_a_valid_UUID"
+
+#: fields.py:657
+msgid "A valid integer is required."
+msgstr "a_valid_integer_is_required"
+
+#: fields.py:658 fields.py:692 fields.py:725
+msgid "Ensure this value is less than or equal to {max_value}."
+msgstr "ensure_this_value_is_less_than_or_equal_to_{max_value}"
+
+#: fields.py:659 fields.py:693 fields.py:726
+msgid "Ensure this value is greater than or equal to {min_value}."
+msgstr "ensure_this_value_is_greater_than_or_equal_to_{min_value}"
+
+#: fields.py:660 fields.py:694 fields.py:730
+msgid "String value too large."
+msgstr "string_value_too_large"
+
+#: fields.py:691 fields.py:724
+msgid "A valid number is required."
+msgstr "a_valid_number_is_required"
+
+#: fields.py:727
+msgid "Ensure that there are no more than {max_digits} digits in total."
+msgstr "ensure_that_there_are_no_more_than_{max_digits}_digits_in_total"
+
+#: fields.py:728
+msgid "Ensure that there are no more than {max_decimal_places} decimal places."
+msgstr "ensure_that_there_are_no_more_than_{max_decimal_places}_decimal_places"
+
+#: fields.py:729
+msgid "Ensure that there are no more than {max_whole_digits} digits before the decimal point."
+msgstr "ensure_that_there_are_no_more_than_{max_whole_digits}_digits_before_the_decimal_point"
+
+#: fields.py:813
+msgid "Datetime has wrong format. Use one of these formats instead: {format}."
+msgstr "datetime_has_wrong_format_use_one_of_these_formats_instead:_{format}"
+
+#: fields.py:814
+msgid "Expected a datetime but got a date."
+msgstr "expected_a_datetime_but_got_a_date"
+
+#: fields.py:878
+msgid "Date has wrong format. Use one of these formats instead: {format}."
+msgstr "date_has_wrong_format_use_one_of_these_formats_instead:_{format}"
+
+#: fields.py:879
+msgid "Expected a date but got a datetime."
+msgstr "expected_a_date_but_got_a_datetime"
+
+#: fields.py:936
+msgid "Time has wrong format. Use one of these formats instead: {format}."
+msgstr "time_has_wrong_format._use_one_of_these_formats_instead:_{format}"
+
+#: fields.py:992 fields.py:1036
+msgid "\"{input}\" is not a valid choice."
+msgstr "\"{input}\"_is_not_a_valid_choice"
+
+#: fields.py:1037 fields.py:1151 serializers.py:482
+msgid "Expected a list of items but got type \"{input_type}\"."
+msgstr "expected_a_list_of_items_but_got_type_\"{input_type}\""
+
+#: fields.py:1067
+msgid "No file was submitted."
+msgstr "no_file_was_submitted"
+
+#: fields.py:1068
+msgid "The submitted data was not a file. Check the encoding type on the form."
+msgstr "the_submitted_data_was_not_a_file._check_the_encoding_type_on_the_form"
+
+#: fields.py:1069
+msgid "No filename could be determined."
+msgstr "no_filename_could_be_determined"
+
+#: fields.py:1070
+msgid "The submitted file is empty."
+msgstr "the_submitted_file_is_empty"
+
+#: fields.py:1071
+msgid "Ensure this filename has at most {max_length} characters (it has {length})."
+msgstr "ensure_this_filename_has_at_most_{max_length}_characters_(it_has_{length})"
+
+#: fields.py:1113
+msgid "Upload a valid image. The file you uploaded was either not an image or a corrupted image."
+msgstr "upload_a_valid_image_the_file_you_uploaded_was_either_not_an_image_or_a_corrupted_image"
+
+#: fields.py:1188
+msgid "Expected a dictionary of items but got type \"{input_type}\"."
+msgstr "expected_a_dictionary_of_items_but_got_type_\"{input_type}\""
+
+#: pagination.py:221
+msgid "Invalid page \"{page_number}\": {message}."
+msgstr "invalid_page_\"{page_number}\"_{message}"
+
+#: pagination.py:442
+msgid "Invalid cursor"
+msgstr "invalid_cursor"
+
+#: relations.py:133
+msgid "Invalid pk \"{pk_value}\" - object does not exist."
+msgstr "invalid_pk_\"{pk_value}\"_object does not exist"
+
+#: relations.py:134
+msgid "Incorrect type. Expected pk value, received {data_type}."
+msgstr "incorrect_type_expected_pk_value_received_{data_type}"
+
+#: relations.py:157
+msgid "Invalid hyperlink - No URL match."
+msgstr "invalid_hyperlink_no_url_match"
+
+#: relations.py:158
+msgid "Invalid hyperlink - Incorrect URL match."
+msgstr "invalid_hyperlink_incorrect_url_match"
+
+#: relations.py:159
+msgid "Invalid hyperlink - Object does not exist."
+msgstr "invalid_hyperlink_object_does_not_exist"
+
+#: relations.py:160
+msgid "Incorrect type. Expected URL string, received {data_type}."
+msgstr "incorrect_type_expected_url_string_received_{data_type}"
+
+#: relations.py:295
+msgid "Object with {slug_name}={value} does not exist."
+msgstr "object_with_{slug_name}={value}_does_not_exist"
+
+#: relations.py:296
+msgid "Invalid value."
+msgstr "invalid_value"
+
+#: serializers.py:299
+msgid "Invalid data. Expected a dictionary, but got {datatype}."
+msgstr "invalid_data_expected_a_dictionary_but_got_{datatype}"
+
+#: validators.py:22
+msgid "This field must be unique."
+msgstr "this_field_must_be_unique"
+
+#: validators.py:76
+msgid "The fields {field_names} must make a unique set."
+msgstr "the_fields_{field_names}_must_make_a_unique_set"
+
+#: validators.py:219
+msgid "This field must be unique for the \"{date_field}\" date."
+msgstr "this_field_must_be_unique_for_the_\"{date_field}\"_date"
+
+#: validators.py:234
+msgid "This field must be unique for the \"{date_field}\" month."
+msgstr "this_field_must_be_unique_for_the_\"{date_field}\"_month"
+
+#: validators.py:247
+msgid "This field must be unique for the \"{date_field}\" year."
+msgstr "this_field_must_be_unique_for_the_\"{date_field}\"_year"
+
+#: versioning.py:39
+msgid "Invalid version in \"Accept\" header."
+msgstr "invalid_version_in_\"Accept\"_header"
+
+#: versioning.py:70 versioning.py:112
+msgid "Invalid version in URL path."
+msgstr "invalid_version_in_url_path"
+
+#: versioning.py:138
+msgid "Invalid version in hostname."
+msgstr "invalid_version_in_hostname"
+
+#: versioning.py:160
+msgid "Invalid version in query parameter."
+msgstr "invalid_version_in_query_parameter"
+
+#: authtoken/serializers.py:20
+msgid "User account is disabled."
+msgstr "user_account_is_disabled"
+
+#: authtoken/serializers.py:23
+msgid "Unable to log in with provided credentials."
+msgstr "unable_to_log_in_with_provided_credentials"
+
+#: authtoken/serializers.py:26
+msgid "Must include \"username\" and \"password\"."
+msgstr "must_include_\"username\"_and_\"password\""
+
+#: apps/devices/views.py:33
+msgid "device type and/or device os can not be empty"
+msgstr "device_type_and_or_device_os_can_not_be_empty"
+
+#: apps/devices/views.py:36
+msgid "invalid data provided for device type and/or device os"
+msgstr "invalid_data_provided_for_device_type_and_or_device_os"
+
+#: apps/incidents/views.py:157
+msgid "dt_created can not be a future date"
+msgstr "dt_created_can_not_be_a_future_date"
+
+#: apps/incidents/views.py:404
+msgid "You do not have permission to delete this incident"
+msgstr "you_do_not_have_permission_to_delete_this_incident"
+
+#: apps/custom_user/views.py:94
+msgid "Resort expiry date past"
+msgstr "resort_expiry_date_past"
+
+#: apps/custom_user/views.py:96
+msgid "no more licenses"
+msgstr "no_more_licenses"
+
+#: apps/incidents/views.py:389
+msgid "Please set the correct timezone for resort"
+msgstr "please_set_the_correct_timezone_for_resort"
+
+#: apps/incidents/views.py:238
+msgid "You do not have permission to retrieve the incident"
+msgstr "you_do_not_have_permission_to_retrieve_the_incident"
+
+#: apps/custom_user/views.py:224
+#: apps/custom_user/views.py:145
+msgid "the email address is already in use"
+msgstr "the_email_address_is_already_in_use"
+
+msgid "raining"
+msgstr "Raining"
+
+msgid "litres_lt"
+msgstr "Litres (lt)"
+
+msgid "staff_off_work"
+msgstr "Staff - Off Work"
+
+msgid "America/Nipigon"
+msgstr "America/Nipigon"
+
+msgid "uzbekistan"
+msgstr "Uzbekistan"
+
+msgid "user_is_logged_out"
+msgstr "User is logged out"
+
+msgid "Antarctica/Davis"
+msgstr "Antarctica/Davis"
+
+msgid "invalid_type_provided_it_must_either_statement_photo_signature_or_genera"
+msgstr "Invalid Type Provided It Must Either Statement Photo Signature Or Genera"
+
+msgid "tajikistan"
+msgstr "Tajikistan"
+
+msgid "mountain_biking"
+msgstr "Mountain Biking"
+
+msgid "snowing"
+msgstr "Snowing"
+
+msgid "search_users"
+msgstr "Search users"
+
+msgid "device_does_not_belong_to_this_user"
+msgstr "Device Does Not Belong To This User"
+
+msgid "french_polynesia"
+msgstr "French Polynesia"
+
+msgid "united_states_minor_outlying_islands"
+msgstr "United States Minor Outlying Islands"
+
+msgid "customer_types"
+msgstr "Customer Types"
+
+msgid "blanket"
+msgstr "Blanket"
+
+msgid "Europe/Paris"
+msgstr "Europe/Paris"
+
+msgid "Pacific/Fiji"
+msgstr "Pacific/Fiji"
+
+msgid "Pacific/Pago_Pago"
+msgstr "Pacific/Pago_Pago"
+
+msgid "tickets"
+msgstr "Tickets"
+
+msgid "resort_types"
+msgstr "Resort Types"
+
+msgid "jamaica"
+msgstr "Jamaica"
+
+msgid "pulse"
+msgstr "Pulse"
+
+msgid "collision_oversnow_vehicle"
+msgstr "Collision Oversnow Vehicle"
+
+msgid "summer"
+msgstr "Summer"
+
+msgid "not_a_valid_date_format"
+msgstr "Not a valid date format"
+
+msgid "Asia/Krasnoyarsk"
+msgstr "Asia/Krasnoyarsk"
+
+msgid "back_left_din"
+msgstr "Back Left DIN"
+
+msgid "cyprus"
+msgstr "Cyprus"
+
+msgid "panama"
+msgstr "Panama"
+
+msgid "fingers"
+msgstr "Fingers"
+
+msgid "jan_mayen"
+msgstr "Jan Mayen"
+
+msgid "dominican_republic"
+msgstr "Dominican Republic"
+
+msgid "Africa/Monrovia"
+msgstr "Africa/Monrovia"
+
+msgid "china"
+msgstr "China"
+
+msgid "America/St_Vincent"
+msgstr "America/St_Vincent"
+
+msgid "oman"
+msgstr "Oman"
+
+msgid "incident_does_not_exist"
+msgstr "Incident Does Not Exist"
+
+msgid "são_tomé_and_príncipe"
+msgstr "São Tomé and Príncipe"
+
+msgid "niue"
+msgstr "Niue"
+
+msgid "userdetails"
+msgstr "User Details"
+
+msgid "first_day"
+msgstr "1st Day"
+
+msgid "America/Belize"
+msgstr "America/Belize"
+
+msgid "welcome_to_medic52_for_patrollers"
+msgstr "Welcome to Medic52 for Patrollers"
+
+msgid "patientdetails"
+msgstr "Patient Details"
+
+msgid "myanmar"
+msgstr "Myanmar"
+
+msgid "Asia/Tokyo"
+msgstr "Asia/Tokyo"
+
+msgid "snow_condition"
+msgstr "Snow Condition"
+
+msgid "Asia/Dili"
+msgstr "Asia/Dili"
+
+msgid "visible_distance"
+msgstr "Visible Distance"
+
+msgid "hospital"
+msgstr "Hospital"
+
+msgid "mexico"
+msgstr "Mexico"
+
+msgid "search_casualty_name"
+msgstr "Search Casualty Name"
+
+msgid "emailaddress"
+msgstr "Email Address"
+
+msgid "suriname"
+msgstr "Suriname"
+
+msgid "type"
+msgstr "Type"
+
+msgid "America/Chicago"
+msgstr "America/Chicago"
+
+msgid "location_rating"
+msgstr "Location Rating"
+
+msgid "Pacific/Kwajalein"
+msgstr "Pacific/Kwajalein"
+
+msgid "America/Cuiaba"
+msgstr "America/Cuiaba"
+
+msgid "phone"
+msgstr "Phone"
+
+msgid "Indian/Christmas"
+msgstr "Indian/Christmas"
+
+msgid "language"
+msgstr "LANGUAGE"
+
+msgid "mb"
+msgstr "mb"
+
+msgid "trinidad_and_tobago"
+msgstr "Trinidad and Tobago"
+
+msgid "elbow"
+msgstr "Elbow"
+
+msgid "grenada"
+msgstr "Grenada"
+
+msgid "removed_by"
+msgstr "Removed By"
+
+msgid "Africa/Ndjamena"
+msgstr "Africa/Ndjamena"
+
+msgid "Invalid_token_or_token_has_expired"
+msgstr "Invalid token or token has expired"
+
+msgid "india"
+msgstr "India"
+
+msgid "Indian/Mayotte"
+msgstr "Indian/Mayotte"
+
+msgid "angle_splint"
+msgstr "Angle Splint"
+
+msgid "Asia/Phnom_Penh"
+msgstr "Asia/Phnom_Penh"
+
+msgid "lift_riding"
+msgstr "Lift Riding"
+
+msgid "turks_and_caicos_islands"
+msgstr "Turks and Caicos Islands"
+
+msgid "the_password_must_be_at_least_8_characters_long_contain_an_uppercase_character_number_and_special_character"
+msgstr "The password must be at least 8 characters long, contain an uppercase character, number and special character."
+
+msgid "America/Adak"
+msgstr "America/Adak"
+
+msgid "America/Indiana/Indianapolis"
+msgstr "America/Indiana/Indianapolis"
+
+msgid "saint_kitts_and_nevis"
+msgstr "Saint Kitts and Nevis"
+
+msgid "abdomen"
+msgstr "Abdomen"
+
+msgid "use_email_password_to_login"
+msgstr "Use your email and password details login"
+
+msgid "6_10_lessons"
+msgstr "6-10 Lessons"
+
+msgid "ski_school"
+msgstr "Ski School?"
+
+msgid "transport_started"
+msgstr "Transport started"
+
+msgid "hypoglycaemia"
+msgstr "Hypoglycaemia"
+
+msgid "America/Montreal"
+msgstr "America/Montreal"
+
+msgid "ambulance"
+msgstr "Ambulance"
+
+msgid "new_password"
+msgstr "New Password"
+
+msgid "wind"
+msgstr "Wind"
+
+msgid "feedback"
+msgstr "Tell us your ideas for this app"
+
+msgid "resort_id_not_provided"
+msgstr "Resort Id Not Provided"
+
+msgid "Europe/Stockholm"
+msgstr "Europe/Stockholm"
+
+msgid "bosnia_and_herzegovina"
+msgstr "Bosnia and Herzegovina"
+
+msgid "delete_user"
+msgstr "Delete User"
+
+msgid "cote_divoire"
+msgstr "Cote d'Ivoire"
+
+msgid "réunion"
+msgstr "Réunion"
+
+msgid "Pacific/Apia"
+msgstr "Pacific/Apia"
+
+msgid "japan"
+msgstr "Japan"
+
+msgid "gcs_eyes"
+msgstr "GCS - Eyes"
+
+msgid "America/Creston"
+msgstr "America/Creston"
+
+msgid "mongolia"
+msgstr "Mongolia"
+
+msgid "Africa/Cairo"
+msgstr "Africa/Cairo"
+
+msgid "wales"
+msgstr "Wales"
+
+msgid "easier"
+msgstr "Easier"
+
+msgid "built_into_glove"
+msgstr "Built into Glove"
+
+msgid "belarus"
+msgstr "Belarus"
+
+msgid "open_fracture"
+msgstr "Open Fracture"
+
+msgid "how_many_time_before"
+msgstr "How many times today?"
+
+msgid "rental"
+msgstr "Rental?"
+
+msgid "netherlands"
+msgstr "Netherlands"
+
+msgid "oxygen"
+msgstr "Oxygen"
+
+msgid "Pacific/Chatham"
+msgstr "Pacific/Chatham"
+
+msgid "clavicle"
+msgstr "Clavicle"
+
+msgid "angola"
+msgstr "Angola"
+
+msgid "Asia/Tbilisi"
+msgstr "Asia/Tbilisi"
+
+msgid "Europe/Gibraltar"
+msgstr "Europe/Gibraltar"
+
+msgid "Asia/Karachi"
+msgstr "Asia/Karachi"
+
+msgid "i_accept_terms_and_conditions"
+msgstr "I accept the Terms & Conditions of use"
+
+msgid "palau"
+msgstr "Palau"
+
+msgid "christmas_island"
+msgstr "Christmas Island"
+
+msgid "kuwait"
+msgstr "Kuwait"
+
+msgid "helmet_brand"
+msgstr "Helmet Brand"
+
+msgid "slip_trip_or_fall"
+msgstr "Slip Trip or Fall"
+
+msgid "venezuela"
+msgstr "Venezuela"
+
+msgid "be_as_descriptive_as_you_can"
+msgstr "Be as descriptive as you can, including names of people and places where possible."
+
+msgid "skidoo_trailer_akja"
+msgstr "Skidoo/Trailer/Akja"
+
+msgid "oversnow_tracked_vehicle"
+msgstr "Oversnow/Tracked Vehicle"
+
+msgid "hand"
+msgstr "Hand"
+
+msgid "Asia/Sakhalin"
+msgstr "Asia/Sakhalin"
+
+msgid "slovenia"
+msgstr "Slovenia"
+
+msgid "America/Sitka"
+msgstr "America/Sitka"
+
+msgid "british_virgin_islands"
+msgstr "British Virgin Islands"
+
+msgid "the_email_your_entered_matches_an_existing_user_please_login"
+msgstr "The email address you entered matches an existing user, please login. "
+
+msgid "America/Guyana"
+msgstr "America/Guyana"
+
+msgid "user"
+msgstr "User"
+
+msgid "Africa/Djibouti"
+msgstr "Africa/Djibouti"
+
+msgid "Antarctica/Palmer"
+msgstr "Antarctica/Palmer"
+
+msgid "reassure"
+msgstr "Reassure"
+
+msgid "my_dob_is"
+msgstr "My date of birth is"
+
+msgid "what_who"
+msgstr "What or Who?"
+
+msgid "Africa/Johannesburg"
+msgstr "Africa/Johannesburg"
+
+msgid "niger"
+msgstr "Niger"
+
+msgid "gaza_strip"
+msgstr "Gaza Strip"
+
+msgid "America/Bahia"
+msgstr "America/Bahia"
+
+msgid "concussion"
+msgstr "Concussion"
+
+msgid "Africa/Casablanca"
+msgstr "Africa/Casablanca"
+
+msgid "logged_in"
+msgstr "Logged in"
+
+msgid "Africa/Mogadishu"
+msgstr "Africa/Mogadishu"
+
+msgid "image_audio"
+msgstr "Images/Audio"
+
+msgid "clipperton_island"
+msgstr "Clipperton Island"
+
+msgid "Pacific/Guam"
+msgstr "Pacific/Guam"
+
+msgid "your_cases"
+msgstr "Your Cases"
+
+msgid "Atlantic/Azores"
+msgstr "Atlantic/Azores"
+
+msgid "gabon"
+msgstr "Gabon"
+
+msgid "either_this_device_is_not_for_deletion_or_does_not_belong_to_current_user"
+msgstr "Either This Device Is Not For Deletion Or Does Not Belong To Current User"
+
+msgid "genders"
+msgstr "Genders"
+
+msgid "bridge"
+msgstr "Bridge"
+
+msgid "Asia/Bahrain"
+msgstr "Asia/Bahrain"
+
+msgid "upper_arm"
+msgstr "Upper Arm"
+
+msgid "Asia/Riyadh"
+msgstr "Asia/Riyadh"
+
+msgid "America/Anguilla"
+msgstr "America/Anguilla"
+
+msgid "botswana"
+msgstr "Botswana"
+
+msgid "on_scene"
+msgstr "ON SCENE"
+
+msgid "binding_model"
+msgstr "Binding Model"
+
+msgid "local_accommodation_info"
+msgstr "Local Hotel/Lodge lnfo"
+
+msgid "Atlantic/St_Helena"
+msgstr "Atlantic/St_Helena"
+
+msgid "surface_change"
+msgstr "Change in surface"
+
+msgid "day_ticket"
+msgstr "Day Ticket"
+
+msgid "chest"
+msgstr "Chest"
+
+msgid "Atlantic/Faroe"
+msgstr "Atlantic/Faroe"
+
+msgid "Africa/Lome"
+msgstr "Africa/Lome"
+
+msgid "ski_area_demo"
+msgstr "Ski Area Demo"
+
+msgid "iceland"
+msgstr "Iceland"
+
+msgid "Africa/Brazzaville"
+msgstr "Africa/Brazzaville"
+
+msgid "regular"
+msgstr "Regular"
+
+msgid "germany"
+msgstr "Germany"
+
+msgid "America/Nome"
+msgstr "America/Nome"
+
+msgid "Asia/Taipei"
+msgstr "Asia/Taipei"
+
+msgid "injury_type"
+msgstr "Injury Type"
+
+msgid "reference_not_found_in_incident"
+msgstr "Reference not found in Incident"
+
+msgid "medical"
+msgstr "Medical"
+
+msgid "remember_me"
+msgstr "Remember me"
+
+msgid "America/Atikokan"
+msgstr "America/Atikokan"
+
+msgid "America/Santa_Isabel"
+msgstr "America/Santa_Isabel"
+
+msgid "time_administered"
+msgstr "Time Administered"
+
+msgid "hungary"
+msgstr "Hungary"
+
+msgid "lessons"
+msgstr "Lessons"
+
+msgid "Europe/Amsterdam"
+msgstr "Europe/Amsterdam"
+
+msgid "menu"
+msgstr "Menu"
+
+msgid "bahrain"
+msgstr "Bahrain"
+
+msgid "enter_email_for_password_reset"
+msgstr "Enter your email to be sent instructions for password reset."
+
+msgid "guatemala"
+msgstr "Guatemala"
+
+msgid "other_person_not_a_collision"
+msgstr "Other Person (not a collision)"
+
+msgid "haiti"
+msgstr "Haiti"
+
+msgid "America/Aruba"
+msgstr "America/Aruba"
+
+msgid "Pacific/Chuuk"
+msgstr "Pacific/Chuuk"
+
+msgid "ski_area_rental"
+msgstr "Ski Area Rental"
+
+msgid "season_days"
+msgstr "Season Days"
+
+msgid "djibouti"
+msgstr "Djibouti"
+
+msgid "pulse_and_breathing"
+msgstr "PULSE & BREATHING"
+
+msgid "Australia/Darwin"
+msgstr "Australia/Darwin"
+
+msgid "enter_any_notes_you_may_think_are_relevant_to_this_incident"
+msgstr "Enter any notes you may think are relevant to this incident."
+
+msgid "fair"
+msgstr "Fair"
+
+msgid "powered_by_medic52"
+msgstr "Powered by Medic52"
+
+msgid "Pacific/Kosrae"
+msgstr "Pacific/Kosrae"
+
+msgid "brazil"
+msgstr "Brazil"
+
+msgid "alcohol_or_drugs"
+msgstr "Alcohol/Drugs"
+
+msgid "America/Thule"
+msgstr "America/Thule"
+
+msgid "Europe/Helsinki"
+msgstr "Europe/Helsinki"
+
+msgid "America/Boise"
+msgstr "America/Boise"
+
+msgid "America/Halifax"
+msgstr "America/Halifax"
+
+msgid "resort_key"
+msgstr "Resort key"
+
+msgid "America/Argentina/Rio_Gallegos"
+msgstr "America/Argentina/Rio_Gallegos"
+
+msgid "Pacific/Gambier"
+msgstr "Pacific/Gambier"
+
+msgid "country"
+msgstr "Country"
+
+msgid "postcode__zip_code"
+msgstr "Postcode/ Zip code"
+
+msgid "tap_to_sign"
+msgstr "Tap to sign"
+
+msgid "confirm_close_case_title"
+msgstr "Are you sure?"
+
+msgid "Asia/Novokuznetsk"
+msgstr "Asia/Novokuznetsk"
+
+msgid "Asia/Aqtau"
+msgstr "Asia/Aqtau"
+
+msgid "login"
+msgstr "Login"
+
+msgid "medication_what"
+msgstr "What?"
+
+msgid "box_splint"
+msgstr "Box Splint"
+
+msgid "height"
+msgstr "Height"
+
+msgid "iraq"
+msgstr "Iraq"
+
+msgid "source"
+msgstr "Source"
+
+msgid "witness_types"
+msgstr "Witness Types"
+
+msgid "America/Argentina/Ushuaia"
+msgstr "America/Argentina/Ushuaia"
+
+msgid "Asia/Bangkok"
+msgstr "Asia/Bangkok"
+
+msgid "slope_style_course"
+msgstr "Slope Style Course"
+
+msgid "flexible"
+msgstr "Flexible"
+
+msgid "Asia/Ust_Nera"
+msgstr "Asia/Ust-Nera"
+
+msgid "America/Recife"
+msgstr "America/Recife"
+
+msgid "edit_user"
+msgstr "Edit User"
+
+msgid "chile"
+msgstr "Chile"
+
+msgid "did_you_purchase_ticket"
+msgstr "Did you purchase your ticket?"
+
+msgid "Asia/Vientiane"
+msgstr "Asia/Vientiane"
+
+msgid "Europe/Kaliningrad"
+msgstr "Europe/Kaliningrad"
+
+msgid "vacuum_splint"
+msgstr "Vacuum Splint"
+
+msgid "Africa/Conakry"
+msgstr "Africa/Conakry"
+
+msgid "big_air_site"
+msgstr "Big Air Site"
+
+msgid "America/Argentina/Tucuman"
+msgstr "America/Argentina/Tucuman"
+
+msgid "dashboard"
+msgstr "Dashboard"
+
+msgid "America/Vancouver"
+msgstr "America/Vancouver"
+
+msgid "America/Caracas"
+msgstr "America/Caracas"
+
+msgid "skier_traffic"
+msgstr "Skier Traffic"
+
+msgid "Asia/Kuala_Lumpur"
+msgstr "Asia/Kuala_Lumpur"
+
+msgid "America/Menominee"
+msgstr "America/Menominee"
+
+msgid "Asia/Jayapura"
+msgstr "Asia/Jayapura"
+
+msgid "America/Matamoros"
+msgstr "America/Matamoros"
+
+msgid "half_pipe"
+msgstr "Half Pipe"
+
+msgid "Asia/Yakutsk"
+msgstr "Asia/Yakutsk"
+
+msgid "Asia/Omsk"
+msgstr "Asia/Omsk"
+
+msgid "rail"
+msgstr "Rail"
+
+msgid "specified_role_does_not_exists"
+msgstr "Specified Role Does Not Exists"
+
+msgid "sao_tome_and_principe"
+msgstr "Sao Tome and Principe"
+
+msgid "suburb"
+msgstr "Suburb"
+
+msgid "collision_w__lift"
+msgstr "Collision w/ Lift"
+
+msgid "Asia/Anadyr"
+msgstr "Asia/Anadyr"
+
+msgid "incident_types"
+msgstr "Incident Types"
+
+msgid "Pacific/Norfolk"
+msgstr "Pacific/Norfolk"
+
+msgid "catching_edge"
+msgstr "Catching an edge"
+
+msgid "you_dont_have_the_permission_to_create_resort"
+msgstr "You Dont Have The Permission To Create Resort"
+
+msgid "America/Dominica"
+msgstr "America/Dominica"
+
+msgid "patient_under_18"
+msgstr "Patient under 18?"
+
+msgid "Asia/Thimphu"
+msgstr "Asia/Thimphu"
+
+msgid "monaco"
+msgstr "Monaco"
+
+msgid "no__street"
+msgstr "No. & Street"
+
+msgid "left"
+msgstr "Left"
+
+msgid "enter_password"
+msgstr "Enter Password"
+
+msgid "photo"
+msgstr "Photo"
+
+msgid "united_states"
+msgstr "United States"
+
+msgid "assigned"
+msgstr "Assigned"
+
+msgid "America/Indiana/Tell_City"
+msgstr "America/Indiana/Tell_City"
+
+msgid "guerney"
+msgstr "Guerney"
+
+msgid "transporting"
+msgstr "Transporting"
+
+msgid "snowboard_bindings"
+msgstr "Snowboard Bindings"
+
+msgid "sp02"
+msgstr "sp02"
+
+msgid "yes"
+msgstr "Yes"
+
+msgid "smiggins"
+msgstr "Smiggins"
+
+msgid "tube_park"
+msgstr "Tube park"
+
+msgid "incident_id_does_not_exist_or_you_do_not_have_permission_to_print_it"
+msgstr "Incident ID does not exist or you do not have permission to print it"
+
+msgid "bhutan"
+msgstr "Bhutan"
+
+msgid "resort_key_version"
+msgstr "Join Resort Network"
+
+msgid "America/Cayman"
+msgstr "America/Cayman"
+
+msgid "save"
+msgstr "Save"
+
+msgid "invalid_access_token_header_token_string_should_not_contain_spaces"
+msgstr "Invalid oAuth access token, String should not contain spaces"
+
+msgid "Europe/Chisinau"
+msgstr "Europe/Chisinau"
+
+msgid "Asia/Dubai"
+msgstr "Asia/Dubai"
+
+msgid "new_injury"
+msgstr "New Injury"
+
+msgid "multi_day_ticket"
+msgstr "Multi-Day Ticket"
+
+msgid "Australia/Sydney"
+msgstr "Australia/Sydney"
+
+msgid "Africa/Dar_es_Salaam"
+msgstr "Africa/Dar_es_Salaam"
+
+msgid "date_added"
+msgstr "Date Added"
+
+msgid "burns"
+msgstr "Burns"
+
+msgid "pre_existing_injuries"
+msgstr "Pre-Existing Injuries"
+
+msgid "advanced"
+msgstr "Advanced"
+
+msgid "shoulder"
+msgstr "Shoulder"
+
+msgid "Europe/Athens"
+msgstr "Europe/Athens"
+
+msgid "third_party_name"
+msgstr "If third party, who?"
+
+msgid "bpm"
+msgstr "BPM"
+
+msgid "Africa/Khartoum"
+msgstr "Africa/Khartoum"
+
+msgid "Asia/Manila"
+msgstr "Asia/Manila"
+
+msgid "benin"
+msgstr "Benin"
+
+msgid "greenland"
+msgstr "Greenland"
+
+msgid "Africa/Douala"
+msgstr "Africa/Douala"
+
+msgid "the_session_token_is_invalid_or_expired_and_must_be_between_190_and_255_characters"
+msgstr "The session token is invalid or expired, and must be between 190 and 255 characters."
+
+msgid "malaysia"
+msgstr "Malaysia"
+
+msgid "assigned_to_user_does_not_exist"
+msgstr "Assigned To User Does Not Exist"
+
+msgid "ice"
+msgstr "Ice"
+
+msgid "loading_notes"
+msgstr "LOADING NOTES"
+
+msgid "icy"
+msgstr "Icy"
+
+msgid "fog"
+msgstr "Fog"
+
+msgid "America/Mazatlan"
+msgstr "America/Mazatlan"
+
+msgid "wristguards_worn"
+msgstr "Wristguards Worn?"
+
+msgid "central_african_republic"
+msgstr "Central African Republic"
+
+msgid "lift_load"
+msgstr "Lift Load"
+
+msgid "subscriptions"
+msgstr "Subscriptions"
+
+msgid "new_zealand"
+msgstr "New Zealand"
+
+msgid "America/Thunder_Bay"
+msgstr "America/Thunder_Bay"
+
+msgid "equipment_sources"
+msgstr "Equipment Sources"
+
+msgid "upper_leg"
+msgstr "Upper Leg"
+
+msgid "total:"
+msgstr "Total:"
+
+msgid "ribs"
+msgstr "Ribs"
+
+msgid "el_salvador"
+msgstr "El Salvador"
+
+msgid "Pacific/Tongatapu"
+msgstr "Pacific/Tongatapu"
+
+msgid "statements"
+msgstr "Statements"
+
+msgid "incident_role"
+msgstr "Incident Role"
+
+msgid "right"
+msgstr "Right"
+
+msgid "knee"
+msgstr "Knee"
+
+msgid "loss_of_control"
+msgstr "Loss of Control"
+
+msgid "America/Dawson_Creek"
+msgstr "America/Dawson_Creek"
+
+msgid "ski_bindings"
+msgstr "Ski Bindings"
+
+msgid "welcomeScreenSubTitle2"
+msgstr "Take photos of the scene and use GPS to mark \\n exact positions"
+
+msgid "welcomeScreenSubTitle3"
+msgstr "Record witness statements and patient signatures \\n directly on the app"
+
+msgid "Asia/Bishkek"
+msgstr "Asia/Bishkek"
+
+msgid "glorioso_islands"
+msgstr "Glorioso Islands"
+
+msgid "enter_resort_name"
+msgstr "If you don't have a Resort Key, use the free Standalone version by just entering your Resort name."
+
+msgid "welcomeScreenSubTitle4"
+msgstr "Upgrade to PRO version to securely combine data \\n with other devices, web reporting, offline features, and cloud sync"
+
+msgid "bolivia"
+msgstr "Bolivia"
+
+msgid "Africa/Dakar"
+msgstr "Africa/Dakar"
+
+msgid "medium"
+msgstr "Medium"
+
+msgid "America/Fortaleza"
+msgstr "America/Fortaleza"
+
+msgid "company_vehicle"
+msgstr "Company Vehicle"
+
+msgid "back"
+msgstr "Back"
+
+msgid "Pacific/Tarawa"
+msgstr "Pacific/Tarawa"
+
+msgid "Africa/Addis_Ababa"
+msgstr "Africa/Addis_Ababa"
+
+msgid "funicular"
+msgstr "Funicular"
+
+msgid "inside"
+msgstr "Inside"
+
+msgid "Asia/Qyzylorda"
+msgstr "Asia/Qyzylorda"
+
+msgid "Pacific/Auckland"
+msgstr "Pacific/Auckland"
+
+msgid "flat_light"
+msgstr "Flat Light"
+
+msgid "invalid_token_header_no_credentials_provided"
+msgstr "Invalid session token header, or no credentials provided"
+
+msgid "medication"
+msgstr "Medication"
+
+msgid "estonia"
+msgstr "Estonia"
+
+msgid "forearm"
+msgstr "Forearm"
+
+msgid "time_of_witness_statement"
+msgstr "Time of Witness Statement"
+
+msgid "Europe/Vaduz"
+msgstr "Europe/Vaduz"
+
+msgid "note_date_time"
+msgstr "Note Date/Time"
+
+msgid "no"
+msgstr "No"
+
+msgid "south_perisher"
+msgstr "South Perisher"
+
+msgid "Asia/Gaza"
+msgstr "Asia/Gaza"
+
+msgid "America/Argentina/Catamarca"
+msgstr "America/Argentina/Catamarca"
+
+msgid "America/Indiana/Knox"
+msgstr "America/Indiana/Knox"
+
+msgid "sling"
+msgstr "Sling"
+
+msgid "the_gambia"
+msgstr "The Gambia"
+
+msgid "oversnow_ambulance"
+msgstr "Oversnow Ambulance"
+
+msgid "vietnam"
+msgstr "Vietnam"
+
+msgid "teeth"
+msgstr "Teeth"
+
+msgid "sri_lanka"
+msgstr "Sri Lanka"
+
+msgid "Europe/Lisbon"
+msgstr "Europe/Lisbon"
+
+msgid "America/Miquelon"
+msgstr "America/Miquelon"
+
+msgid "manager"
+msgstr "Manager"
+
+msgid "skiing"
+msgstr "Skiing"
+
+msgid "recharge"
+msgstr "Recharged"
+
+msgid "Asia/Dhaka"
+msgstr "Asia/Dhaka"
+
+msgid "America/St_Lucia"
+msgstr "America/St_Lucia"
+
+msgid "free_standalone_version"
+msgstr "Free Standalone Version"
+
+msgid "arrived_at_base_clinic"
+msgstr "Arrived at base/clinic"
+
+msgid "Antarctica/Rothera"
+msgstr "Antarctica/Rothera"
+
+msgid "very_strong"
+msgstr "Very Strong"
+
+msgid "sys_dia"
+msgstr "Sys/Dia"
+
+msgid "Asia/Rangoon"
+msgstr "Asia/Rangoon"
+
+msgid "philippines"
+msgstr "Philippines"
+
+msgid "America/Puerto_Rico"
+msgstr "America/Puerto_Rico"
+
+msgid "Europe/Zurich"
+msgstr "Europe/Zurich"
+
+msgid "united_arab_emirates"
+msgstr "United Arab Emirates"
+
+msgid "the_bahamas"
+msgstr "The Bahamas"
+
+msgid "point_of_sale"
+msgstr "Point of Sale"
+
+msgid "afghanistan"
+msgstr "Afghanistan"
+
+msgid "Australia/Currie"
+msgstr "Australia/Currie"
+
+msgid "Asia/Tehran"
+msgstr "Asia/Tehran"
+
+msgid "somalia"
+msgstr "Somalia"
+
+msgid "howland_island"
+msgstr "Howland Island"
+
+msgid "former_yugoslav_republic_of_macedonia"
+msgstr "Former Yugoslav Republic of Macedonia"
+
+msgid "password_rules"
+msgstr "Passwords should be:\\n+ 8 characters in length\\n+ contain a numeric character\\n+ one uppercase character\\n+ not include your name, email or date or birth"
+
+msgid "America/Scoresbysund"
+msgstr "America/Scoresbysund"
+
+msgid "south_georgia_and_the_south_sandwich_islands"
+msgstr "South Georgia and the South Sandwich Islands"
+
+msgid "Asia/Baghdad"
+msgstr "Asia/Baghdad"
+
+msgid "address"
+msgstr "Address"
+
+msgid "front_right_din"
+msgstr "Front Right DIN"
+
+msgid "south_korea"
+msgstr "South Korea"
+
+msgid "male"
+msgstr "Male"
+
+msgid "missing_answers"
+msgstr "Missing Answers"
+
+msgid "mauritius"
+msgstr "Mauritius"
+
+msgid "tube_town___toboggan_slope"
+msgstr "Tube Town / Toboggan Slope"
+
+msgid "Africa/Accra"
+msgstr "Africa/Accra"
+
+msgid "America/Edmonton"
+msgstr "America/Edmonton"
+
+msgid "client_authentication_failed"
+msgstr "Client authentication failed"
+
+msgid "Pacific/Kiritimati"
+msgstr "Pacific/Kiritimati"
+
+msgid "snowboard"
+msgstr "Snowboard"
+
+msgid "know_the_arc"
+msgstr "Know the ARC?"
+
+msgid "flat_surface"
+msgstr "Flat Surface"
+
+msgid "united_kingdom"
+msgstr "United Kingdom"
+
+msgid "Europe/Istanbul"
+msgstr "Europe/Istanbul"
+
+msgid "Africa/Abidjan"
+msgstr "Africa/Abidjan"
+
+msgid "you_dont_have_permission_to_delete_user"
+msgstr "You Dont Have Permission To Delete User"
+
+msgid "isle_of_man"
+msgstr "Isle of Man"
+
+msgid "hey!_thanks_for_providing_feedback!"
+msgstr "Hey! Thanks for providing feedback!"
+
+msgid "france"
+msgstr "France"
+
+msgid "patient_occupation"
+msgstr "Patient occupation"
+
+msgid "peru"
+msgstr "Peru"
+
+msgid "America/Dawson"
+msgstr "America/Dawson"
+
+msgid "aspirin"
+msgstr "Aspirin"
+
+msgid "east_timor"
+msgstr "East Timor"
+
+msgid "Australia/Broken_Hill"
+msgstr "Australia/Broken_Hill"
+
+msgid "rigid"
+msgstr "Rigid"
+
+msgid "field_name"
+msgstr "en"
+
+msgid "easiest"
+msgstr "Easiest"
+
+msgid "eight_weeks"
+msgstr "8 Weeks+"
+
+msgid "incidents"
+msgstr "Incidents"
+
+msgid "America/Argentina/Cordoba"
+msgstr "America/Argentina/Cordoba"
+
+msgid "guadeloupe"
+msgstr "Guadeloupe"
+
+msgid "incident_roles"
+msgstr "Incident Roles"
+
+msgid "heart"
+msgstr "Heart"
+
+msgid "departure_from_base_clinic"
+msgstr "Departure from base/clinic"
+
+msgid "uruguay"
+msgstr "Uruguay"
+
+msgid "email_to_reset_password_has_been_sent"
+msgstr "email to reset password has been sent"
+
+msgid "marshall_islands"
+msgstr "Marshall Islands"
+
+msgid "winter"
+msgstr "Winter"
+
+msgid "Pacific/Fakaofo"
+msgstr "Pacific/Fakaofo"
+
+msgid "vital"
+msgstr "Vital"
+
+msgid "snow_conditions"
+msgstr "Snow Conditions"
+
+msgid "America/Argentina/La_Rioja"
+msgstr "America/Argentina/La_Rioja"
+
+msgid "map"
+msgstr "Map"
+
+msgid "equipment_removal_methods"
+msgstr "Equipment Removal Methods"
+
+msgid "drug_volume"
+msgstr "Drug Volume"
+
+msgid "incident_is_closed_and_cannot_be_edited"
+msgstr "Incident is closed, and cannot be edited"
+
+msgid "bouvet_island"
+msgstr "Bouvet Island"
+
+msgid "neck"
+msgstr "Neck"
+
+msgid "wheelchair"
+msgstr "Wheelchair"
+
+msgid "unsupported_grant_type"
+msgstr "Unsupported grant type"
+
+msgid "America/Blanc_Sablon"
+msgstr "America/Blanc-Sablon"
+
+msgid "close_case"
+msgstr "Close Case"
+
+msgid "logging_out"
+msgstr "Logging out"
+
+msgid "front_left_din_placeholder"
+msgstr "1-20"
+
+msgid "Europe/Tallinn"
+msgstr "Europe/Tallinn"
+
+msgid "walk_or_ski_away"
+msgstr "Walk or Ski Away"
+
+msgid "resort_name"
+msgstr "Resort Name"
+
+msgid "Asia/Singapore"
+msgstr "Asia/Singapore"
+
+msgid "thumb"
+msgstr "Thumb"
+
+msgid "Africa/Nairobi"
+msgstr "Africa/Nairobi"
+
+msgid "coordinates"
+msgstr "Coordinates"
+
+msgid "America/Maceio"
+msgstr "America/Maceio"
+
+msgid "resort_name_and_or_resort_network_key_not_provided"
+msgstr "Resort name and or resort network key not provided"
+
+msgid "anyone_else_or_thing"
+msgstr "Was there anyone else or an object involved?"
+
+msgid "norway"
+msgstr "Norway"
+
+msgid "new_caledonia"
+msgstr "New Caledonia"
+
+msgid "my_name_is"
+msgstr "My name is"
+
+msgid "sharp_light"
+msgstr "Sharp Light"
+
+msgid "data_saves_lives"
+msgstr "Data Saves Lives"
+
+msgid "enter_your_details"
+msgstr "Enter your details"
+
+msgid "more_difficult"
+msgstr "More Difficult"
+
+msgid "sign_on_screen"
+msgstr "Sign on screen"
+
+msgid "name"
+msgstr "Name"
+
+msgid "the_email_adress_does_not_look_valid_please_try_again"
+msgstr "The email adress does not look valid, please try again"
+
+msgid "Africa/Luanda"
+msgstr "Africa/Luanda"
+
+msgid "local_accommodation"
+msgstr "Local accommodation"
+
+msgid "back_right_din_placeholder"
+msgstr "1-20"
+
+msgid "helmet_area_rental"
+msgstr "Helmet Area Rental?"
+
+msgid "honduras"
+msgstr "Honduras"
+
+msgid "medic_alert_details"
+msgstr "Medic Alert Details"
+
+msgid "please_enter_an_email_address_in_the_correct_format"
+msgstr "Please enter an email address in the correct format"
+
+msgid "Australia/Lord_Howe"
+msgstr "Australia/Lord_Howe"
+
+msgid "canada"
+msgstr "Canada"
+
+msgid "Indian/Reunion"
+msgstr "Indian/Reunion"
+
+msgid "Atlantic/Stanley"
+msgstr "Atlantic/Stanley"
+
+msgid "from_base"
+msgstr "From Base"
+
+msgid "midway_islands"
+msgstr "Midway Islands"
+
+msgid "Antarctica/Syowa"
+msgstr "Antarctica/Syowa"
+
+msgid "America/Jamaica"
+msgstr "America/Jamaica"
+
+msgid "Europe/Budapest"
+msgstr "Europe/Budapest"
+
+msgid "argo"
+msgstr "Argo"
+
+msgid "Antarctica/Vostok"
+msgstr "Antarctica/Vostok"
+
+msgid "dispatcher"
+msgstr "Dispatcher"
+
+msgid "qty_lessons"
+msgstr "Qty Lessons"
+
+msgid "binding_release"
+msgstr "Binding Release"
+
+msgid "firstname_lastname"
+msgstr "Firstname Lastname"
+
+msgid "change_password"
+msgstr "Change Password"
+
+msgid "snow_shoe"
+msgstr "Snow Shoe"
+
+msgid "America/Sao_Paulo"
+msgstr "America/Sao_Paulo"
+
+msgid "romania"
+msgstr "Romania"
+
+msgid "seychelles"
+msgstr "Seychelles"
+
+msgid "long"
+msgstr "Long"
+
+msgid "wristguard_type"
+msgstr "Wristguard Type"
+
+msgid "fiji"
+msgstr "Fiji"
+
+msgid "patient___guardian_signature"
+msgstr "Patient / Guardian Signature"
+
+msgid "Africa/Niamey"
+msgstr "Africa/Niamey"
+
+msgid "welcomeScreenSubTitle0"
+msgstr "This app is designed to help Ski Patrollers \\n collect crucial information about their patients at the incident scene"
+
+msgid "welcomeScreenSubTitle1"
+msgstr "Collect vital patient, injury and scene data"
+
+msgid "swaziland"
+msgstr "Swaziland"
+
+msgid "anguilla"
+msgstr "Anguilla"
+
+msgid "eyes"
+msgstr "Eyes"
+
+msgid "saint_vincent_and_the_grenadines"
+msgstr "Saint Vincent and the Grenadines"
+
+msgid "walk_in"
+msgstr "Walk in?"
+
+msgid "America/Cancun"
+msgstr "America/Cancun"
+
+msgid "hong_kong"
+msgstr "Hong Kong"
+
+msgid "patient_history"
+msgstr "Patient History"
+
+msgid "list_users"
+msgstr "List Users"
+
+msgid "customer_type"
+msgstr "Customer Type"
+
+msgid "America/Rankin_Inlet"
+msgstr "America/Rankin_Inlet"
+
+msgid "fullname"
+msgstr "Firstname Lastname"
+
+msgid "russia"
+msgstr "Russia"
+
+msgid "gcs_motor"
+msgstr "GCS - Motor"
+
+msgid "powder"
+msgstr "Powder"
+
+msgid "guthega"
+msgstr "Guthega"
+
+msgid "head"
+msgstr "Head"
+
+msgid "Europe/London"
+msgstr "Europe/London"
+
+msgid "burundi"
+msgstr "Burundi"
+
+msgid "czech_republic"
+msgstr "Czech Republic"
+
+msgid "Asia/Damascus"
+msgstr "Asia/Damascus"
+
+msgid "resort_with_provided_resort_id_does_not_exists"
+msgstr "Resort With Provided Resort Id Does Not Exists"
+
+msgid "malta"
+msgstr "Malta"
+
+msgid "note"
+msgstr "NOT"
+
+msgid "equipment"
+msgstr "Equipment"
+
+msgid "America/Indiana/Vincennes"
+msgstr "America/Indiana/Vincennes"
+
+msgid "online"
+msgstr "Online"
+
+msgid "cayman_islands"
+msgstr "Cayman Islands"
+
+msgid "America/Santo_Domingo"
+msgstr "America/Santo_Domingo"
+
+msgid "pain"
+msgstr "Pain"
+
+msgid "pitcairn_islands"
+msgstr "Pitcairn Islands"
+
+msgid "body_parts"
+msgstr "Body Parts"
+
+msgid "snow_making"
+msgstr "Snow making"
+
+msgid "season_pass"
+msgstr "Season Pass"
+
+msgid "your_device_collect_personal_data"
+msgstr "Because your device will be collecting personal, sensitive information we must ensure it is safe."
+
+msgid "rating"
+msgstr "Rating"
+
+msgid "walking"
+msgstr "Walking"
+
+msgid "elevate"
+msgstr "Elevate"
+
+msgid "Asia/Kuching"
+msgstr "Asia/Kuching"
+
+msgid "Africa/Bissau"
+msgstr "Africa/Bissau"
+
+msgid "slow"
+msgstr "Slow"
+
+msgid "Europe/Tirane"
+msgstr "Europe/Tirane"
+
+msgid "gibraltar"
+msgstr "Gibraltar"
+
+msgid "America/El_Salvador"
+msgstr "America/El_Salvador"
+
+msgid "Europe/Madrid"
+msgstr "Europe/Madrid"
+
+msgid "event_course"
+msgstr "Event Course"
+
+msgid "America/Santiago"
+msgstr "America/Santiago"
+
+msgid "assistant"
+msgstr "Assistant"
+
+msgid "email_placeholder"
+msgstr "Enter email address"
+
+msgid "patroller_not_required"
+msgstr "Patroller Not Required"
+
+msgid "secondary"
+msgstr "Secondary"
+
+msgid "witness_type"
+msgstr "Witness Type"
+
+msgid "settings"
+msgstr "Settings"
+
+msgid "bulgaria"
+msgstr "Bulgaria"
+
+msgid "run_name"
+msgstr "Run Name"
+
+msgid "binding_releases"
+msgstr "Binding Releases"
+
+msgid "America/Monterrey"
+msgstr "America/Monterrey"
+
+msgid "four_to_eight_weeks"
+msgstr "4-8 Weeks"
+
+msgid "sam_splint"
+msgstr "Sam Splint"
+
+msgid "other_pass"
+msgstr "Other Pass"
+
+msgid "nauru"
+msgstr "Nauru"
+
+msgid "Indian/Cocos"
+msgstr "Indian/Cocos"
+
+msgid "last_meal"
+msgstr "Last Meal?"
+
+msgid "America/Guadeloupe"
+msgstr "America/Guadeloupe"
+
+msgid "you_dont_have_the_permission_to_get_user_for_the_resort"
+msgstr "You Dont Have The Permission To Get User For The Resort"
+
+msgid "America/Nassau"
+msgstr "America/Nassau"
+
+msgid "degrees_in_f_setting"
+msgstr "Use Fahrenheit for temperature"
+
+msgid "parent"
+msgstr "Parent"
+
+msgid "Pacific/Enderbury"
+msgstr "Pacific/Enderbury"
+
+msgid "Asia/Hovd"
+msgstr "Asia/Hovd"
+
+msgid "left_yes"
+msgstr "Left Yes"
+
+msgid "libya"
+msgstr "Libya"
+
+msgid "Africa/Banjul"
+msgstr "Africa/Banjul"
+
+msgid "grooming"
+msgstr "Grooming"
+
+msgid "you_dont_have_permission_to_retrieve_user"
+msgstr "You Dont Have Permission To Retrieve User"
+
+msgid "pakistan"
+msgstr "Pakistan"
+
+msgid "you_dont_have_the_permission_to_get_resort_information"
+msgstr "You Dont Have The Permission To Get Resort Information"
+
+msgid "Africa/Porto_Novo"
+msgstr "Africa/Porto-Novo"
+
+msgid "dispatch"
+msgstr "Dispatch"
+
+msgid "Atlantic/Madeira"
+msgstr "Atlantic/Madeira"
+
+msgid "cancel"
+msgstr "Cancel"
+
+msgid "dislocation"
+msgstr "Dislocation"
+
+msgid "comoros"
+msgstr "Comoros"
+
+msgid "turkey"
+msgstr "Turkey"
+
+msgid "Europe/Malta"
+msgstr "Europe/Malta"
+
+msgid "user_does_not_exists"
+msgstr "User Does Not Exists"
+
+msgid "solomon_islands"
+msgstr "Solomon Islands"
+
+msgid "allergies_what"
+msgstr "What?"
+
+msgid "partly_cloudy"
+msgstr "Partly Cloudy"
+
+msgid "helicopter"
+msgstr "Helicopter"
+
+msgid "America/North_Dakota/Beulah"
+msgstr "America/North_Dakota/Beulah"
+
+msgid "Asia/Yerevan"
+msgstr "Asia/Yerevan"
+
+msgid "gcs_verbal_5"
+msgstr "Oriented, converses normally"
+
+msgid "gcs_verbal_4"
+msgstr "Confused, disoriented"
+
+msgid "gcs_verbal_1"
+msgstr "Makes no sounds"
+
+msgid "gcs_verbal_3"
+msgstr "Utters inappropriate words"
+
+msgid "gcs_verbal_2"
+msgstr "Incomprehensible sounds"
+
+msgid "seek_medical_attention"
+msgstr "Seek Medical Attention"
+
+msgid "argentina"
+msgstr "Argentina"
+
+msgid "Asia/Kuwait"
+msgstr "Asia/Kuwait"
+
+msgid "lift_name"
+msgstr "Lift Name"
+
+msgid "Europe/Oslo"
+msgstr "Europe/Oslo"
+
+msgid "rental_shop"
+msgstr "Rental Shop"
+
+msgid "american_samoa"
+msgstr "American Samoa"
+
+msgid "statement_from"
+msgstr "Statement From"
+
+msgid "Asia/Vladivostok"
+msgstr "Asia/Vladivostok"
+
+msgid "strain"
+msgstr "Strain"
+
+msgid "kenya"
+msgstr "Kenya"
+
+msgid "laceration"
+msgstr "Laceration"
+
+msgid "doctor"
+msgstr "Doctor"
+
+msgid "ethiopia"
+msgstr "Ethiopia"
+
+msgid "bermuda"
+msgstr "Bermuda"
+
+msgid "status"
+msgstr "Status"
+
+msgid "UTC"
+msgstr "UTC"
+
+msgid "singapore"
+msgstr "Singapore"
+
+msgid "Pacific/Marquesas"
+msgstr "Pacific/Marquesas"
+
+msgid "America/New_York"
+msgstr "America/New_York"
+
+msgid "generating_report"
+msgstr "Generating Report"
+
+msgid "invalid_token_header_no_access_token_provided"
+msgstr "Invalid oAuth token header, or no access token provided. "
+
+msgid "the_user_you_tried_to_assign_this_to_does_not_exist"
+msgstr "The user you tried to assign this to, does not exist."
+
+msgid "Pacific/Rarotonga"
+msgstr "Pacific/Rarotonga"
+
+msgid "page"
+msgstr "Page"
+
+msgid "America/Kentucky/Louisville"
+msgstr "America/Kentucky/Louisville"
+
+msgid "welcomeScreenTitle4"
+msgstr "Go Further"
+
+msgid "welcomeScreenTitle3"
+msgstr "Record"
+
+msgid "spring_snow"
+msgstr "Spring Snow"
+
+msgid "helmet_rental_no"
+msgstr "Helmet Rental #"
+
+msgid "this_field_may_not_be_blank"
+msgstr "This field may not be blank"
+
+msgid "taxi"
+msgstr "Taxi"
+
+msgid "device_does_not_exists"
+msgstr "Device Does Not Exists"
+
+msgid "drugs_what"
+msgstr "What?"
+
+msgid "incomplete_file_stream_received_please_try_again"
+msgstr "Incomplete file stream received, please try again"
+
+msgid "pre_existing_injury"
+msgstr "Pre-existing Injury?"
+
+msgid "Africa/Malabo"
+msgstr "Africa/Malabo"
+
+msgid "actions"
+msgstr "Actions"
+
+msgid "north_korea"
+msgstr "North Korea"
+
+msgid "cambodia"
+msgstr "Cambodia"
+
+msgid "speed"
+msgstr "Speed?"
+
+msgid "barbados"
+msgstr "Barbados"
+
+msgid "America/Swift_Current"
+msgstr "America/Swift_Current"
+
+msgid "Europe/Copenhagen"
+msgstr "Europe/Copenhagen"
+
+msgid "asthma"
+msgstr "Asthma"
+
+msgid "Africa/Blantyre"
+msgstr "Africa/Blantyre"
+
+msgid "casualty_name"
+msgstr "Casualty Name"
+
+msgid "treatment"
+msgstr "TREATMENT"
+
+msgid "America/Grenada"
+msgstr "America/Grenada"
+
+msgid "role"
+msgstr "Role"
+
+msgid "patroller_name"
+msgstr "Patroller Name"
+
+msgid "dark"
+msgstr "Dark"
+
+msgid "defibrillator"
+msgstr "Defibrillator"
+
+msgid "please_enter_a_valid_email_address"
+msgstr "Please enter a valid email address"
+
+msgid "papua_new_guinea"
+msgstr "Papua New Guinea"
+
+msgid "verbal"
+msgstr "Verbal"
+
+msgid "invalid_client"
+msgstr "Invalid client"
+
+msgid "Europe/Rome"
+msgstr "Europe/Rome"
+
+msgid "lebanon"
+msgstr "Lebanon"
+
+msgid "medical_history"
+msgstr "Other Medical History?"
+
+msgid "America/Argentina/San_Juan"
+msgstr "America/Argentina/San_Juan"
+
+msgid "jarvis_island"
+msgstr "Jarvis Island"
+
+msgid "Europe/Andorra"
+msgstr "Europe/Andorra"
+
+msgid "sudan"
+msgstr "Sudan"
+
+msgid "Pacific/Honolulu"
+msgstr "Pacific/Honolulu"
+
+msgid "luxembourg"
+msgstr "Luxembourg"
+
+msgid "Asia/Macau"
+msgstr "Asia/Macau"
+
+msgid "moderate"
+msgstr "Moderate"
+
+msgid "user_details"
+msgstr "User Details"
+
+msgid "thailand"
+msgstr "Thailand"
+
+msgid "saint_lucia"
+msgstr "Saint Lucia"
+
+msgid "ok"
+msgstr "OK"
+
+msgid "medication_when"
+msgstr "When?"
+
+msgid "to_first_aid"
+msgstr "To First Aid"
+
+msgid "road"
+msgstr "Road"
+
+msgid "this_field_is_required"
+msgstr "This field is required"
+
+msgid "hypothermia"
+msgstr "Hypothermia"
+
+msgid "collision_skidoo"
+msgstr "Collision Skidoo"
+
+msgid "base64_string_is_not_valid"
+msgstr "Base64 String Is Not Valid"
+
+msgid "patroller_sign_off"
+msgstr "Patroller Sign Off"
+
+msgid "Europe/Monaco"
+msgstr "Europe/Monaco"
+
+msgid "Africa/Ceuta"
+msgstr "Africa/Ceuta"
+
+msgid "low"
+msgstr "Low"
+
+msgid "strong"
+msgstr "Strong"
+
+msgid "costa_rica"
+msgstr "Costa Rica"
+
+msgid "Asia/Aqtobe"
+msgstr "Asia/Aqtobe"
+
+msgid "johnston_atoll"
+msgstr "Johnston Atoll"
+
+msgid "car_park"
+msgstr "Car Park"
+
+msgid "drug_volumes"
+msgstr "Drug Volumes"
+
+msgid "patient details"
+msgstr "Patient Details"
+
+msgid "gurney"
+msgstr "Gurney"
+
+msgid "Pacific/Efate"
+msgstr "Pacific/Efate"
+
+msgid "collision_w__natural_object"
+msgstr "Collision w/ Natural Object"
+
+msgid "you_cannot_submit_a_blank_note_please_enter_useful_content"
+msgstr "You cannot submit a blank note, please enter useful content"
+
+msgid "Asia/Jerusalem"
+msgstr "Asia/Jerusalem"
+
+msgid "west_bank"
+msgstr "West Bank"
+
+msgid "America/Metlakatla"
+msgstr "America/Metlakatla"
+
+msgid "general"
+msgstr "General"
+
+msgid "hours_today"
+msgstr "Hours today"
+
+msgid "Africa/Gaborone"
+msgstr "Africa/Gaborone"
+
+msgid "Africa/Tunis"
+msgstr "Africa/Tunis"
+
+msgid "casualty"
+msgstr "Casualty"
+
+msgid "pain_score"
+msgstr "Pain Score"
+
+msgid "french_southern_territories"
+msgstr "French Southern Territories"
+
+msgid "collision_with_snowboarder"
+msgstr "Collision with Snowboarder"
+
+msgid "vanuatu"
+msgstr "Vanuatu"
+
+msgid "poor"
+msgstr "Poor"
+
+msgid "Asia/Novosibirsk"
+msgstr "Asia/Novosibirsk"
+
+msgid "time"
+msgstr "TIME"
+
+msgid "America/Grand_Turk"
+msgstr "America/Grand_Turk"
+
+msgid "unload"
+msgstr "Unload Area"
+
+msgid "photos"
+msgstr "Photos"
+
+msgid "bystander"
+msgstr "Bystander"
+
+msgid "America/Anchorage"
+msgstr "America/Anchorage"
+
+msgid "Pacific/Nauru"
+msgstr "Pacific/Nauru"
+
+msgid "pass_type"
+msgstr "Pass Type"
+
+msgid "Australia/Melbourne"
+msgstr "Australia/Melbourne"
+
+msgid "walk_away"
+msgstr "Walk Away"
+
+msgid "martinique"
+msgstr "Martinique"
+
+msgid "America/Port_au_Prince"
+msgstr "America/Port-au-Prince"
+
+msgid "referred_to"
+msgstr "Refered to"
+
+msgid "to"
+msgstr "To"
+
+msgid "rwanda"
+msgstr "Rwanda"
+
+msgid "dressing"
+msgstr "Dressing"
+
+msgid "ghana"
+msgstr "Ghana"
+
+msgid "activities"
+msgstr "Activities"
+
+msgid "us_virgin_islands"
+msgstr "US Virgin Islands"
+
+msgid "traction_splint"
+msgstr "Traction Splint (CT6/Sager/Donway/Hare)"
+
+msgid "on_top_of_glove"
+msgstr "On top of Glove"
+
+msgid "fall"
+msgstr "Fall"
+
+msgid "eg_10"
+msgstr "e.g. 10"
+
+msgid "read_this_text"
+msgstr "Read This Text"
+
+msgid "cape_verde"
+msgstr "Cape Verde"
+
+msgid "moldova"
+msgstr "Moldova"
+
+msgid "Pacific/Midway"
+msgstr "Pacific/Midway"
+
+msgid "incident_does_not_exists"
+msgstr "Incident Does Not Exists"
+
+msgid "samoa"
+msgstr "Samoa"
+
+msgid "America/Belem"
+msgstr "America/Belem"
+
+msgid "crust"
+msgstr "Crust"
+
+msgid "dateofbirth"
+msgstr "Date of Birth"
+
+msgid "underneath_glove"
+msgstr "Underneath glove"
+
+msgid "America/Santarem"
+msgstr "America/Santarem"
+
+msgid "iran"
+msgstr "Iran"
+
+msgid "drugs_taken"
+msgstr "Drugs Taken"
+
+msgid "America/Eirunepe"
+msgstr "America/Eirunepe"
+
+msgid "belize"
+msgstr "Belize"
+
+msgid "user_not_found_or_you_do_not_have_permission_to_do_this"
+msgstr "User not found, or you do not have permission to do this"
+
+msgid "experience"
+msgstr "Experience"
+
+msgid "no_email"
+msgstr "No email?"
+
+msgid "Asia/Hebron"
+msgstr "Asia/Hebron"
+
+msgid "Asia/Tashkent"
+msgstr "Asia/Tashkent"
+
+msgid "departed_base_clinic"
+msgstr "Departed Base/Clinic"
+
+msgid "referrers"
+msgstr "Referrers"
+
+msgid "Africa/Mbabane"
+msgstr "Africa/Mbabane"
+
+msgid "lift_area"
+msgstr "Location"
+
+msgid "destination"
+msgstr "Destination"
+
+msgid "America/Bogota"
+msgstr "America/Bogota"
+
+msgid "Africa/Asmara"
+msgstr "Africa/Asmara"
+
+msgid "injury"
+msgstr "Injury"
+
+msgid "resort_activity"
+msgstr "Resort Activity"
+
+msgid "israel"
+msgstr "Israel"
+
+msgid "san_marino"
+msgstr "San Marino"
+
+msgid "America/Phoenix"
+msgstr "America/Phoenix"
+
+msgid "faeroe_islands"
+msgstr "Faeroe Islands"
+
+msgid "in_progress"
+msgstr "In Progress"
+
+msgid "mayotte"
+msgstr "Mayotte"
+
+msgid "Europe/Brussels"
+msgstr "Europe/Brussels"
+
+msgid "none"
+msgstr "None"
+
+msgid "burkina_faso"
+msgstr "Burkina Faso"
+
+msgid "please_enter_your_name"
+msgstr "Please enter your name"
+
+msgid "mali"
+msgstr "Mali"
+
+msgid "America/Noronha"
+msgstr "America/Noronha"
+
+msgid "yemen"
+msgstr "Yemen"
+
+msgid "lesotho"
+msgstr "Lesotho"
+
+msgid "America/Managua"
+msgstr "America/Managua"
+
+msgid "invalid_email_provided"
+msgstr "invalid email provided"
+
+msgid "America/Martinique"
+msgstr "America/Martinique"
+
+msgid "impact_with_snow_ice"
+msgstr "Impact with Snow/Ice"
+
+msgid "norfolk_island"
+msgstr "Norfolk Island"
+
+msgid "firstname"
+msgstr "Firstname"
+
+msgid "forgot_password"
+msgstr "Forgot Password?"
+
+msgid "signature"
+msgstr "Signature"
+
+msgid "treatments"
+msgstr "Treatments"
+
+msgid "drugs_administered"
+msgstr "Drugs Administered"
+
+msgid "resort_type"
+msgstr "Resort Type"
+
+msgid "Australia/Hobart"
+msgstr "Australia/Hobart"
+
+msgid "akja_cascade_sled"
+msgstr "Akja/Cascade/Sled"
+
+msgid "short"
+msgstr "Short"
+
+msgid "firstst_week"
+msgstr "1st Week"
+
+msgid "America/Ojinaga"
+msgstr "America/Ojinaga"
+
+msgid "register"
+msgstr "Register"
+
+msgid "overnight"
+msgstr "Overnight"
+
+msgid "Asia/Seoul"
+msgstr "Asia/Seoul"
+
+msgid "rentals"
+msgstr "Rentals"
+
+msgid "the_role_id_used_is_invalid"
+msgstr "The role id used is invalid"
+
+msgid "gcs_eye_2"
+msgstr "Opens eyes in response to painful stimuli"
+
+msgid "gcs_eye_1"
+msgstr "Does not open eyes"
+
+msgid "gcs_eye_4"
+msgstr "Opens eyes spontaneously"
+
+msgid "azerbaijan"
+msgstr "Azerbaijan"
+
+msgid "America/Argentina/Jujuy"
+msgstr "America/Argentina/Jujuy"
+
+msgid "signs"
+msgstr "Signs"
+
+msgid "remove_device"
+msgstr "Remove Device"
+
+msgid "Pacific/Noumea"
+msgstr "Pacific/Noumea"
+
+msgid "symptoms"
+msgstr "Symptoms"
+
+msgid "resort"
+msgstr "Resort"
+
+msgid "Europe/Moscow"
+msgstr "Europe/Moscow"
+
+msgid "postcode___zip_code"
+msgstr "Postcode / Zip code"
+
+msgid "cocos_keeling_islands"
+msgstr "Cocos (Keeling) Islands"
+
+msgid "abrasion"
+msgstr "Abrasion"
+
+msgid "America/Rainy_River"
+msgstr "America/Rainy_River"
+
+msgid "Africa/Kampala"
+msgstr "Africa/Kampala"
+
+msgid "foot"
+msgstr "Foot"
+
+msgid "buttock"
+msgstr "Buttock"
+
+msgid "referrer"
+msgstr "Referrer"
+
+msgid "America/Cambridge_Bay"
+msgstr "America/Cambridge_Bay"
+
+msgid "helmet_worn"
+msgstr "Helmet Worn?"
+
+msgid "goofy"
+msgstr "Goofy"
+
+msgid "namibia"
+msgstr "Namibia"
+
+msgid "America/Indiana/Winamac"
+msgstr "America/Indiana/Winamac"
+
+msgid "montserrat"
+msgstr "Montserrat"
+
+msgid "weight"
+msgstr "Weight"
+
+msgid "hard"
+msgstr "Hard"
+
+msgid "password_does_not_match"
+msgstr "Your password's do not match"
+
+msgid "send_password_reset_mail"
+msgstr "Send Password Reset Email"
+
+msgid "gcs_verbal"
+msgstr "GCS - Verbal"
+
+msgid "lift_line"
+msgstr "Lift Line"
+
+msgid "nepal"
+msgstr "Nepal"
+
+msgid "invalid_token_header_token_string_should_not_contain_spaces"
+msgstr "Invalid token header token string should not contain spaces"
+
+msgid "difficulty_breathing"
+msgstr "Difficulty Breathing"
+
+msgid "granulated"
+msgstr "Granulated"
+
+msgid "print"
+msgstr "Print"
+
+msgid "Africa/Lubumbashi"
+msgstr "Africa/Lubumbashi"
+
+msgid "Europe/Kiev"
+msgstr "Europe/Kiev"
+
+msgid "America/Goose_Bay"
+msgstr "America/Goose_Bay"
+
+msgid "guest"
+msgstr "Guest"
+
+msgid "witness_relationship"
+msgstr "Witness Relationship"
+
+msgid "invalid_token_header._no_access_token_provided"
+msgstr "invalid token header. no access token provided"
+
+msgid "lower_arm"
+msgstr "Lower Arm"
+
+msgid "finland"
+msgstr "Finland"
+
+msgid "puerto_rico"
+msgstr "Puerto Rico"
+
+msgid "symptoms_hint"
+msgstr "What does the patient tell you?"
+
+msgid "syria"
+msgstr "Syria"
+
+msgid "Australia/Perth"
+msgstr "Australia/Perth"
+
+msgid "guam"
+msgstr "Guam"
+
+msgid "please_enter_a_resort_name_or_network_key"
+msgstr "Please enter a resort name or network key"
+
+msgid "done"
+msgstr "Done"
+
+msgid "colombia"
+msgstr "Colombia"
+
+msgid "citysuburb"
+msgstr "City / Suburb"
+
+msgid "lengths_in_inches_setting"
+msgstr "Use inches for length"
+
+msgid "enter_email_and_name"
+msgstr "Please enter your email address and name, so we know who this device belongs to."
+
+msgid "Asia/Irkutsk"
+msgstr "Asia/Irkutsk"
+
+msgid "temperature"
+msgstr "Temperature"
+
+msgid "Africa/Nouakchott"
+msgstr "Africa/Nouakchott"
+
+msgid "updated_by_user_not_found"
+msgstr "Updated By User Not Found"
+
+msgid "nigeria"
+msgstr "Nigeria"
+
+msgid "ticket_purchase_point"
+msgstr "How did you purchase?"
+
+msgid "ecuador"
+msgstr "Ecuador"
+
+msgid "Europe/Vilnius"
+msgstr "Europe/Vilnius"
+
+msgid "America/Cayenne"
+msgstr "America/Cayenne"
+
+msgid "cross_country"
+msgstr "Cross Country"
+
+msgid "email_to_reset_password_sent"
+msgstr "Email to reset password has been sent"
+
+msgid "jordan"
+msgstr "Jordan"
+
+msgid "America/Rio_Branco"
+msgstr "America/Rio_Branco"
+
+msgid "not_related"
+msgstr "Not Related"
+
+msgid "resort_activities"
+msgstr "Resort Activities"
+
+msgid "America/Havana"
+msgstr "America/Havana"
+
+msgid "lift_unload"
+msgstr "Lift Unload"
+
+msgid "time_started"
+msgstr "TIME STARTED"
+
+msgid "Antarctica/Macquarie"
+msgstr "Antarctica/Macquarie"
+
+msgid "hard_packed"
+msgstr "Hard Packed"
+
+msgid "ski_patrol_vehicle"
+msgstr "Ski Patrol Vehicle"
+
+msgid "Australia/Eucla"
+msgstr "Australia/Eucla"
+
+msgid "please_configure_the_device_to_be_able_to_send_\\n_emails"
+msgstr "Please configure the device to be able to send \\n emails."
+
+msgid "Asia/Beirut"
+msgstr "Asia/Beirut"
+
+msgid "front_right_din_placeholder"
+msgstr "1-20"
+
+msgid "resort_with_network_key_does_not_exist"
+msgstr "Resort with network key does not exist"
+
+msgid "Asia/Ashgabat"
+msgstr "Asia/Ashgabat"
+
+msgid "macau"
+msgstr "Macau"
+
+msgid "back_of_wrist"
+msgstr "Back of Wrist"
+
+msgid "antarctica"
+msgstr "Antarctica"
+
+msgid "America/Barbados"
+msgstr "America/Barbados"
+
+msgid "self"
+msgstr "Self"
+
+msgid "email_password_is_not_provided"
+msgstr "Email password is not provided"
+
+msgid "scotland"
+msgstr "Scotland"
+
+msgid "lifts"
+msgstr "Lifts"
+
+msgid "instructor_name"
+msgstr "Instructor Name"
+
+msgid "cameroon"
+msgstr "Cameroon"
+
+msgid "sync_only_over_wi_fi"
+msgstr "Sync only over Wi-Fi"
+
+msgid "America/Yakutat"
+msgstr "America/Yakutat"
+
+msgid "tonga"
+msgstr "Tonga"
+
+msgid "kg"
+msgstr "kg"
+
+msgid "clear"
+msgstr "Clear"
+
+msgid "America/Tortola"
+msgstr "America/Tortola"
+
+msgid "liechtenstein"
+msgstr "Liechtenstein"
+
+msgid "test_notifications"
+msgstr "Test Notifications"
+
+msgid "last_name"
+msgstr "Last Name"
+
+msgid "tell_us_what_you_saw"
+msgstr "Please tell us in your own words what you saw."
+
+msgid "swelling"
+msgstr "Swelling"
+
+msgid "french_guiana"
+msgstr "French Guiana"
+
+msgid "fine"
+msgstr "Fine"
+
+msgid "occupation"
+msgstr "Occupation"
+
+msgid "miligrams_mg"
+msgstr "Miligrams (mg)"
+
+msgid "hip"
+msgstr "Hip"
+
+msgid "lastname"
+msgstr "Lastname"
+
+msgid "zambia"
+msgstr "Zambia"
+
+msgid "patient_details"
+msgstr "Patient Details"
+
+msgid "America/Argentina/San_Luis"
+msgstr "America/Argentina/San_Luis"
+
+msgid "relevant_signage"
+msgstr "Relevant Signage"
+
+msgid "sierra_leone"
+msgstr "Sierra Leone"
+
+msgid "alchohol"
+msgstr "Alcohol"
+
+msgid "Asia/Khandyga"
+msgstr "Asia/Khandyga"
+
+msgid "Pacific/Funafuti"
+msgstr "Pacific/Funafuti"
+
+msgid "add_patroller"
+msgstr "Add Patroller"
+
+msgid "poor_visibility"
+msgstr "Poor Visibility"
+
+msgid "activity"
+msgstr "Activity"
+
+msgid "upper_back"
+msgstr "Upper Back"
+
+msgid "cervical_collar"
+msgstr "Cervical Collar"
+
+msgid "America/Guatemala"
+msgstr "America/Guatemala"
+
+msgid "pending_documentation"
+msgstr "Pending Documentation"
+
+msgid "city___suburb"
+msgstr "City / Suburb"
+
+msgid "Africa/Sao_Tome"
+msgstr "Africa/Sao_Tome"
+
+msgid "sex"
+msgstr "Sex"
+
+msgid "Africa/Bujumbura"
+msgstr "Africa/Bujumbura"
+
+msgid "gcs_eye_3"
+msgstr "Opens eyes in response to voice"
+
+msgid "Europe/Warsaw"
+msgstr "Europe/Warsaw"
+
+msgid "off_piste"
+msgstr "Off Piste"
+
+msgid "expert"
+msgstr "Expert"
+
+msgid "Antarctica/Casey"
+msgstr "Antarctica/Casey"
+
+msgid "guinea"
+msgstr "Guinea"
+
+msgid "America/St_Johns"
+msgstr "America/St_Johns"
+
+msgid "enter_resort_key"
+msgstr "Enter the Resort key to connect with your resort's Medic52 network"
+
+msgid "staff_type"
+msgstr "Staff Type"
+
+msgid "the_resort_was_not_found_or_you_do_not_have_permission"
+msgstr "The resort was not found, or you do not have permission"
+
+msgid "America/Tegucigalpa"
+msgstr "America/Tegucigalpa"
+
+msgid "stnumber"
+msgstr "No. & Street"
+
+msgid "conditions"
+msgstr "Conditions"
+
+msgid "this_key_does_not_exist"
+msgstr "This key does not exist"
+
+msgid "total_items"
+msgstr "total items"
+
+msgid "unconscious"
+msgstr "Unconscious"
+
+msgid "premises"
+msgstr "Premises"
+
+msgid "hours_ago"
+msgstr "hours ago"
+
+msgid "incident_id_does_not_exist_or_you_do_not_have_permission_to_edit"
+msgstr "Incident ID does not exist or you do not have permission to edit"
+
+msgid "incident"
+msgstr "Incident"
+
+msgid "America/Manaus"
+msgstr "America/Manaus"
+
+msgid "device_not_found_or_you_do_not_have_permission"
+msgstr "Device not found, or you do not have permission."
+
+msgid "America/Iqaluit"
+msgstr "America/Iqaluit"
+
+msgid "northern_mariana_islands"
+msgstr "Northern Mariana Islands"
+
+msgid "4wd_vehicle"
+msgstr "4WD Vehicle"
+
+msgid "Europe/Volgograd"
+msgstr "Europe/Volgograd"
+
+msgid "Africa/Bamako"
+msgstr "Africa/Bamako"
+
+msgid "Europe/Uzhgorod"
+msgstr "Europe/Uzhgorod"
+
+msgid "load"
+msgstr "Loading Area"
+
+msgid "left_no"
+msgstr "Left No"
+
+msgid "village"
+msgstr "Village"
+
+msgid "location_details"
+msgstr "Location Details"
+
+msgid "front_left_din"
+msgstr "Front Left DIN"
+
+msgid "Africa/Kinshasa"
+msgstr "Africa/Kinshasa"
+
+msgid "eg_2"
+msgstr "e.g. 2"
+
+msgid "how_many_lessons_has_the_user_taken"
+msgstr "How many lessons has the user taken?"
+
+msgid "weights_in_pounds_setting"
+msgstr "Use US pounds for weight"
+
+msgid "juan_de_nova_island"
+msgstr "Juan de Nova Island"
+
+msgid "patroller"
+msgstr "Patroller"
+
+msgid "America/Detroit"
+msgstr "America/Detroit"
+
+msgid "ireland"
+msgstr "Ireland"
+
+msgid "laos"
+msgstr "Laos"
+
+msgid "svalbard_and_jan_mayen"
+msgstr "Svalbard and Jan Mayen"
+
+msgid "Australia/Brisbane"
+msgstr "Australia/Brisbane"
+
+msgid "other_involved"
+msgstr "Other person/object involved?"
+
+msgid "kilograms"
+msgstr "kilograms"
+
+msgid "enter_patients_description_of_incident"
+msgstr "Enter what the patient told you about their incident"
+
+msgid "togo"
+msgstr "Togo"
+
+msgid "no_name"
+msgstr "No name?"
+
+msgid "instructor"
+msgstr "Instructor"
+
+msgid "please_enter_an_email_address"
+msgstr "Please enter an email address"
+
+msgid "toga"
+msgstr "Toga"
+
+msgid "no_cases_yet"
+msgstr "There are no cases yet"
+
+msgid "georgia"
+msgstr "Georgia"
+
+msgid "wristguard_types"
+msgstr "Wristguard Types"
+
+msgid "air_splint"
+msgstr "Air Splint"
+
+msgid "patient_description"
+msgstr "Patient Description"
+
+msgid "error"
+msgstr "Error"
+
+msgid "America/Panama"
+msgstr "America/Panama"
+
+msgid "this_is_a_true_and_accurate_account"
+msgstr "This is a true and accurate account of the event I have just witnessed."
+
+msgid "use_your_finger_to_sign_screen"
+msgstr "Use your finger to sign on the screen"
+
+msgid "portugal"
+msgstr "Portugal"
+
+msgid "list_of_incidents"
+msgstr "List of Incidents"
+
+msgid "glasses___contact_lenses_worn"
+msgstr "Glasses / Contact lenses worn?"
+
+msgid "italy"
+msgstr "Italy"
+
+msgid "Africa/Bangui"
+msgstr "Africa/Bangui"
+
+msgid "telemark"
+msgstr "Telemark"
+
+msgid "items_per_page"
+msgstr "items per page"
+
+msgid "invalid_incident_information_provided"
+msgstr "Invalid Incident Information Provided"
+
+msgid "right_yes"
+msgstr "Right Yes"
+
+msgid "tuvalu"
+msgstr "Tuvalu"
+
+msgid "flood_lights"
+msgstr "Flood Lights"
+
+msgid "ask_us_anything"
+msgstr "Ask us Anything"
+
+msgid "lower_back"
+msgstr "Lower Back"
+
+msgid "patrollers"
+msgstr "Patrollers"
+
+msgid "call_received"
+msgstr "Call received"
+
+msgid "poland"
+msgstr "Poland"
+
+msgid "Asia/Samarkand"
+msgstr "Asia/Samarkand"
+
+msgid "cook_islands"
+msgstr "Cook Islands"
+
+msgid "America/Toronto"
+msgstr "America/Toronto"
+
+msgid "Africa/Ouagadougou"
+msgstr "Africa/Ouagadougou"
+
+msgid "abilities"
+msgstr "Abilities"
+
+msgid "America/Port_of_Spain"
+msgstr "America/Port_of_Spain"
+
+msgid "America/Whitehorse"
+msgstr "America/Whitehorse"
+
+msgid "taiwan"
+msgstr "Taiwan"
+
+msgid "injuries"
+msgstr "Injuries"
+
+msgid "loading"
+msgstr "LOADING"
+
+msgid "Europe/Simferopol"
+msgstr "Europe/Simferopol"
+
+msgid "andorra"
+msgstr "Andorra"
+
+msgid "groin___pelvis"
+msgstr "Groin / Pelvis"
+
+msgid "location"
+msgstr "Location"
+
+msgid "America/Indiana/Petersburg"
+msgstr "America/Indiana/Petersburg"
+
+msgid "Atlantic/Cape_Verde"
+msgstr "Atlantic/Cape_Verde"
+
+msgid "australia"
+msgstr "Australia"
+
+msgid "Asia/Dushanbe"
+msgstr "Asia/Dushanbe"
+
+msgid "showing"
+msgstr "Showing"
+
+msgid "alcohol_when"
+msgstr "When?"
+
+msgid "fall_on_surface"
+msgstr "Fall on Surface"
+
+msgid "inadvertent_binding_release"
+msgstr "Inadvertent Binding Release"
+
+msgid "kyrgyzstan"
+msgstr "Kyrgyzstan"
+
+msgid "complete_missing_questions"
+msgstr "Complete the missing questions"
+
+msgid "collect"
+msgstr "Collect"
+
+msgid "guinea_bissau"
+msgstr "Guinea-Bissau"
+
+msgid "next_you_will_be_provided_some_text"
+msgstr "Next, you will be provided some \\n text to read, and then in your own words, tell us what you saw. Hit the record button when you're ready. Remember to speak clearly into the phone."
+
+msgid "Europe/Riga"
+msgstr "Europe/Riga"
+
+msgid "your_username_or_password_are_not_correct_please_try_again_or_click_to_retrieve_your_password"
+msgstr "Your username or password are not correct please try again or click to retrieve your password"
+
+msgid "bruising"
+msgstr "Bruising"
+
+msgid "nicaragua"
+msgstr "Nicaragua"
+
+msgid "unrecognised_status_please_try_again"
+msgstr "Unrecognised status, please try again"
+
+msgid "qatar"
+msgstr "Qatar"
+
+msgid "America/St_Thomas"
+msgstr "America/St_Thomas"
+
+msgid "Pacific/Majuro"
+msgstr "Pacific/Majuro"
+
+msgid "Asia/Hong_Kong"
+msgstr "Asia/Hong_Kong"
+
+msgid "phone_number"
+msgstr "Phone Number"
+
+msgid "twisting_fall"
+msgstr "Twisting Fall"
+
+msgid "glasses___lenses_required"
+msgstr "Glasses / Lenses required?"
+
+msgid "synching_data"
+msgstr "SYNCHRONIZING DATA"
+
+msgid "back_left_din_placeholder"
+msgstr "1-20"
+
+msgid "vitals"
+msgstr "Vitals"
+
+msgid "from"
+msgstr "From"
+
+msgid "date_should_be_before_end_date_and_before_today"
+msgstr "Date should be before end date, and before today"
+
+msgid "review_on_google_play"
+msgstr "Review on Google Play"
+
+msgid "spratly_islands"
+msgstr "Spratly Islands"
+
+msgid "western_sahara"
+msgstr "Western Sahara"
+
+msgid "patroller_notes"
+msgstr "Patroller Notes"
+
+msgid "eg_20"
+msgstr "e.g. 20"
+
+msgid "activity_related"
+msgstr "Activity related"
+
+msgid "Pacific/Pitcairn"
+msgstr "Pacific/Pitcairn"
+
+msgid "french_southern_and_antarctic_lands"
+msgstr "French Southern and Antarctic Lands"
+
+msgid "waiting_to_sync"
+msgstr "Data waiting to synch"
+
+msgid "media_cannot_be_decoded_please_try_again"
+msgstr "Media cannot be decoded, please try again"
+
+msgid "front_valley"
+msgstr "Front Valley"
+
+msgid "Europe/Dublin"
+msgstr "Europe/Dublin"
+
+msgid "madagascar"
+msgstr "Madagascar"
+
+msgid "bangladesh"
+msgstr "Bangladesh"
+
+msgid "Europe/Bucharest"
+msgstr "Europe/Bucharest"
+
+msgid "democratic_republic_of_the_congo"
+msgstr "Democratic Republic of the Congo"
+
+msgid "invalid_token_or_token_has_expired"
+msgstr "oAuth access token is not valid, or has expired"
+
+msgid "fast"
+msgstr "Fast"
+
+msgid "America/Indiana/Marengo"
+msgstr "America/Indiana/Marengo"
+
+msgid "America/Winnipeg"
+msgstr "America/Winnipeg"
+
+msgid "not_applicable"
+msgstr "Not Applicable"
+
+msgid "snowblades"
+msgstr "Snowblades"
+
+msgid "vatican_city"
+msgstr "Vatican City"
+
+msgid "photo_date_taken"
+msgstr "Photo Date Taken"
+
+msgid "invalid_token_header_no_credentials_provided."
+msgstr "Invalid token header no credentials provided."
+
+msgid "british_indian_ocean_territory"
+msgstr "British Indian Ocean Territory"
+
+msgid "America/Argentina/Mendoza"
+msgstr "America/Argentina/Mendoza"
+
+msgid "morocco"
+msgstr "Morocco"
+
+msgid "America/North_Dakota/New_Salem"
+msgstr "America/North_Dakota/New_Salem"
+
+msgid "saudi_arabia"
+msgstr "Saudi Arabia"
+
+msgid "guyana"
+msgstr "Guyana"
+
+msgid "tanzania"
+msgstr "Tanzania"
+
+msgid "security"
+msgstr "Security"
+
+msgid "chad"
+msgstr "Chad"
+
+msgid "America/Denver"
+msgstr "America/Denver"
+
+msgid "Indian/Chagos"
+msgstr "Indian/Chagos"
+
+msgid "transport_from_first_aid"
+msgstr "Transport From First Aid"
+
+msgid "home"
+msgstr "Home"
+
+msgid "released_to_ski_school"
+msgstr "Release to Ski School"
+
+msgid "Antarctica/DumontDUrville"
+msgstr "Antarctica/DumontDUrville"
+
+msgid "users"
+msgstr "USERS"
+
+msgid "America/Indiana/Valparaiso"
+msgstr "America/Indiana/Valparaiso"
+
+msgid "ungroomed"
+msgstr "Ungroomed"
+
+msgid "familiar_with_this_run"
+msgstr "Familiar with this run?"
+
+msgid "case_closed"
+msgstr "Case Closed"
+
+msgid "cannot_change_closed_case"
+msgstr "You cannot modify closed cases. "
+
+msgid "ago"
+msgstr "ago"
+
+msgid "date_time"
+msgstr "Date/Time"
+
+msgid "maldives"
+msgstr "Maldives"
+
+msgid "age"
+msgstr "Age"
+
+msgid "open_eyes_to_command"
+msgstr "Open eyes to command"
+
+msgid "Atlantic/Canary"
+msgstr "Atlantic/Canary"
+
+msgid "name_and_address"
+msgstr "Name, and address"
+
+msgid "no_more_licenses"
+msgstr "This resort does not have any more licenses available, please contact us."
+
+msgid "Antarctica/Mawson"
+msgstr "Antarctica/Mawson"
+
+msgid "tokelau"
+msgstr "Tokelau"
+
+msgid "windy"
+msgstr "Windy"
+
+msgid "cascade_wrap"
+msgstr "Cascade Wrap"
+
+msgid "saint_pierre_and_miquelon"
+msgstr "Saint Pierre and Miquelon"
+
+msgid "toboganning"
+msgstr "Toboganning"
+
+msgid "days_in_this_resort"
+msgstr "Days in this resort"
+
+msgid "body_armour_worn"
+msgstr "Body Armour Worn?"
+
+msgid "Africa/Maseru"
+msgstr "Africa/Maseru"
+
+msgid "binding_make"
+msgstr "Binding Make"
+
+msgid "breathing"
+msgstr "Breathing"
+
+msgid "medical_centre"
+msgstr "Medical Centre"
+
+msgid "medic_alert"
+msgstr "Medic Alert"
+
+msgid "external_rental"
+msgstr "External Rental"
+
+msgid "or_register_a_new_account"
+msgstr "OR Register a new account now"
+
+msgid "resort_does_not_exists"
+msgstr "Resort Does Not Exists"
+
+msgid "nausea"
+msgstr "Nausea"
+
+msgid "mauritania"
+msgstr "Mauritania"
+
+msgid "assigned_user_does_not_exist"
+msgstr "Assigned User Does Not Exist"
+
+msgid "gender"
+msgstr "Gender"
+
+msgid "notes"
+msgstr "Notes"
+
+msgid "shock"
+msgstr "Shock"
+
+msgid "tenderness"
+msgstr "Tenderness"
+
+msgid "America/Mexico_City"
+msgstr "America/Mexico_City"
+
+msgid "whiteout"
+msgstr "Whiteout"
+
+msgid "Indian/Mauritius"
+msgstr "Indian/Mauritius"
+
+msgid "right_no"
+msgstr "Right No"
+
+msgid "blades_with_release"
+msgstr "Blades (with release)"
+
+msgid "blades_no_release"
+msgstr "Blades (No release)"
+
+msgid "jump"
+msgstr "Jump"
+
+msgid "witness_name"
+msgstr "Witness Name"
+
+msgid "reunion"
+msgstr "Reunion"
+
+msgid "password_placeholder"
+msgstr "Password"
+
+msgid "invalid_access_token_header_token_string_should_not_contain_spaces."
+msgstr "Invalid access token header token string should not contain spaces."
+
+msgid "Atlantic/Bermuda"
+msgstr "Atlantic/Bermuda"
+
+msgid "America/Araguaina"
+msgstr "America/Araguaina"
+
+msgid "Africa/Freetown"
+msgstr "Africa/Freetown"
+
+msgid "Asia/Baku"
+msgstr "Asia/Baku"
+
+msgid "heatmap"
+msgstr "Heatmap"
+
+msgid "code_crash_pack"
+msgstr "Code/Crash Pack"
+
+msgid "brunei"
+msgstr "Brunei"
+
+msgid "America/Danmarkshavn"
+msgstr "America/Danmarkshavn"
+
+msgid "logout"
+msgstr "Logout"
+
+msgid "millilitres_ml"
+msgstr "Millilitres (ml)"
+
+msgid "europa_island"
+msgstr "Europa Island"
+
+msgid "ukraine"
+msgstr "Ukraine"
+
+msgid "guardian_name"
+msgstr "Guardian Name"
+
+msgid "Asia/Ho_Chi_Minh"
+msgstr "Asia/Ho_Chi_Minh"
+
+msgid "witness_phone"
+msgstr "Witness Phone"
+
+msgid "egypt"
+msgstr "Egypt"
+
+msgid "stateprovince"
+msgstr "State / Province"
+
+msgid "closed_fracture"
+msgstr "Closed Fracture"
+
+msgid "austria"
+msgstr "Austria"
+
+msgid "motor"
+msgstr "Motor"
+
+msgid "resort_id_is_not_provided"
+msgstr "Resort Id Is Not Provided"
+
+msgid "please_enter_your_name_to_continue"
+msgstr "Please enter your name to continue."
+
+msgid "Asia/Oral"
+msgstr "Asia/Oral"
+
+msgid "Asia/Aden"
+msgstr "Asia/Aden"
+
+msgid "state___province"
+msgstr "State / Province"
+
+msgid "injury_locations"
+msgstr "Injury Locations"
+
+msgid "Australia/Lindeman"
+msgstr "Australia/Lindeman"
+
+msgid "next"
+msgstr "Next"
+
+msgid "Pacific/Galapagos"
+msgstr "Pacific/Galapagos"
+
+msgid "toboggan_slope"
+msgstr "Toboggan Slope"
+
+msgid "malawi"
+msgstr "Malawi"
+
+msgid "visibility"
+msgstr "Visibility"
+
+msgid "10_lessons"
+msgstr "10+ Lessons"
+
+msgid "train"
+msgstr "Train"
+
+msgid "pulse__breathing"
+msgstr "Pulse & Breathing"
+
+msgid "Africa/Algiers"
+msgstr "Africa/Algiers"
+
+msgid "Africa/Harare"
+msgstr "Africa/Harare"
+
+msgid "borrowed"
+msgstr "Borrowed"
+
+msgid "America/Costa_Rica"
+msgstr "America/Costa_Rica"
+
+msgid "high"
+msgstr "High"
+
+msgid "Asia/Brunei"
+msgstr "Asia/Brunei"
+
+msgid "America/Tijuana"
+msgstr "America/Tijuana"
+
+msgid "gcs"
+msgstr "GCS"
+
+msgid "Pacific/Tahiti"
+msgstr "Pacific/Tahiti"
+
+msgid "media_content_not_provided"
+msgstr "Media Content Not Provided"
+
+msgid "America/Pangnirtung"
+msgstr "America/Pangnirtung"
+
+msgid "geudel_airway"
+msgstr "Geudel Airway"
+
+msgid "America/Asuncion"
+msgstr "America/Asuncion"
+
+msgid "wrist"
+msgstr "Wrist"
+
+msgid "resort_expiry_date_past"
+msgstr "The expiry date for this resort has passed, please contact us."
+
+msgid "on_piste"
+msgstr "On Piste"
+
+msgid "dominica"
+msgstr "Dominica"
+
+msgid "eritrea"
+msgstr "Eritrea"
+
+msgid "America/Juneau"
+msgstr "America/Juneau"
+
+msgid "America/Inuvik"
+msgstr "America/Inuvik"
+
+msgid "light"
+msgstr "Light"
+
+msgid "scoop"
+msgstr "Scoop"
+
+msgid "Indian/Comoro"
+msgstr "Indian/Comoro"
+
+msgid "skidoo_no_trailer"
+msgstr "Skidoo (No Trailer)"
+
+msgid "Indian/Mahe"
+msgstr "Indian/Mahe"
+
+msgid "equatorial_guinea"
+msgstr "Equatorial Guinea"
+
+msgid "equipment_details"
+msgstr "Equipment Details"
+
+msgid "not_a_valid_uuid"
+msgstr "Not A Valid Uuid"
+
+msgid "lithuania"
+msgstr "Lithuania"
+
+msgid "America/Antigua"
+msgstr "America/Antigua"
+
+msgid "confirm_logout"
+msgstr "Are you sure you want to log out? All locally held data will be deleted."
+
+msgid "Asia/Ulaanbaatar"
+msgstr "Asia/Ulaanbaatar"
+
+msgid "Indian/Maldives"
+msgstr "Indian/Maldives"
+
+msgid "front"
+msgstr "Front"
+
+msgid "password_intro"
+msgstr "Select a password that is unique to you. This will allow you to login quickly on a shared device, and secure your data on this phone."
+
+msgid "Australia/Adelaide"
+msgstr "Australia/Adelaide"
+
+msgid "liberia"
+msgstr "Liberia"
+
+msgid "edit"
+msgstr "Edit"
+
+msgid "backboard"
+msgstr "Backboard"
+
+msgid "latvia"
+msgstr "Latvia"
+
+msgid "palm_side"
+msgstr "Palm Side"
+
+msgid "beginner"
+msgstr "Beginner"
+
+msgid "date_should_be_after_start_date"
+msgstr "Date should be after start date"
+
+msgid "America/Bahia_Banderas"
+msgstr "America/Bahia_Banderas"
+
+msgid "full_name"
+msgstr "Full Name"
+
+msgid "new_note"
+msgstr "NEW NOTE"
+
+msgid "witness"
+msgstr "Witness"
+
+msgid "America/Boa_Vista"
+msgstr "America/Boa_Vista"
+
+msgid "America/Lima"
+msgstr "America/Lima"
+
+msgid "race_course"
+msgstr "Race course"
+
+msgid "Pacific/Wallis"
+msgstr "Pacific/Wallis"
+
+msgid "medic52_feedback"
+msgstr "Medic52 Feedback"
+
+msgid "witness_statement_recording"
+msgstr "Witness Statement Recording"
+
+msgid "invalid_role_id_provided"
+msgstr "Invalid Role Id Provided"
+
+msgid "croatia"
+msgstr "Croatia"
+
+msgid "adaptive"
+msgstr "Adaptive"
+
+msgid "lift_related"
+msgstr "Lift Related?"
+
+msgid "switzerland"
+msgstr "Switzerland"
+
+msgid "no_user_found"
+msgstr "No user found!"
+
+msgid "lower_leg"
+msgstr "Lower Leg"
+
+msgid "kiribati"
+msgstr "Kiribati"
+
+msgid "Asia/Amman"
+msgstr "Asia/Amman"
+
+msgid "Africa/Windhoek"
+msgstr "Africa/Windhoek"
+
+msgid "retail"
+msgstr "Retail"
+
+msgid "blue_cow"
+msgstr "Blue Cow"
+
+msgid "Pacific/Pohnpei"
+msgstr "Pacific/Pohnpei"
+
+msgid "snowmaking"
+msgstr "Snowmaking"
+
+msgid "Asia/Jakarta"
+msgstr "Asia/Jakarta"
+
+msgid "Europe/Vienna"
+msgstr "Europe/Vienna"
+
+msgid "Asia/Pyongyang"
+msgstr "Asia/Pyongyang"
+
+msgid "owned"
+msgstr "Owned"
+
+msgid "svalbard"
+msgstr "Svalbard"
+
+msgid "congo"
+msgstr "Congo"
+
+msgid "the_email_address_was_invalid_or_not_found"
+msgstr "The email address was invalid, or not found"
+
+msgid "management"
+msgstr "Management"
+
+msgid "unknown"
+msgstr "Unknown"
+
+msgid "bootno"
+msgstr "Boot #"
+
+msgid "new_snow"
+msgstr "New Snow"
+
+msgid "intermediate"
+msgstr "Intermediate"
+
+msgid "ankle"
+msgstr "Ankle"
+
+msgid "private_car"
+msgstr "Private Car"
+
+msgid "collision_with_person"
+msgstr "Collision with person"
+
+msgid "third_party"
+msgstr "Third Party"
+
+msgid "mins ago"
+msgstr "mins ago"
+
+msgid "America/Kentucky/Monticello"
+msgstr "America/Kentucky/Monticello"
+
+msgid "saint_helena"
+msgstr "Saint Helena"
+
+msgid "sweden"
+msgstr "Sweden"
+
+msgid "America/Godthab"
+msgstr "America/Godthab"
+
+msgid "you_dont_have_have_permission_to_add_user"
+msgstr "You Dont Have Have Permission To Add User"
+
+msgid "Africa/Maputo"
+msgstr "Africa/Maputo"
+
+msgid "privacy_statement_given"
+msgstr "Privacy Statement Given"
+
+msgid "northern_island"
+msgstr "Northern Island"
+
+msgid "ski___board_no"
+msgstr "Ski / Board #"
+
+msgid "uganda"
+msgstr "Uganda"
+
+msgid "close"
+msgstr "Close"
+
+msgid "select_timezone"
+msgstr "Select Timezone"
+
+msgid "America/North_Dakota/Center"
+msgstr "America/North_Dakota/Center"
+
+msgid "America/Indiana/Vevay"
+msgstr "America/Indiana/Vevay"
+
+msgid "allergies"
+msgstr "Allergies"
+
+msgid "Asia/Almaty"
+msgstr "Asia/Almaty"
+
+msgid "this_device_is_not_pending_deletion"
+msgstr "This device is not pending deletion."
+
+msgid "accuracy"
+msgstr "Accuracy"
+
+msgid "review_on_app_store"
+msgstr "Review Medic52 on the App Store"
+
+msgid "device"
+msgstr "Device"
+
+msgid "centimetres"
+msgstr "centimetres"
+
+msgid "pain_out_of_10"
+msgstr "Pain out of 10"
+
+msgid "body_part"
+msgstr "Body Part"
+
+msgid "face"
+msgstr "Face"
+
+msgid "location_info"
+msgstr "Location Info"
+
+msgid "Europe/Minsk"
+msgstr "Europe/Minsk"
+
+msgid "blood_pressure"
+msgstr "Blood Pressure"
+
+msgid "refused_care"
+msgstr "Refused Care"
+
+msgid "senegal"
+msgstr "Senegal"
+
+msgid "Africa/Libreville"
+msgstr "Africa/Libreville"
+
+msgid "patroller_signature"
+msgstr "Patroller Signature"
+
+msgid "staff"
+msgstr "Staff"
+
+msgid "Europe/Samara"
+msgstr "Europe/Samara"
+
+msgid "northern_marianas"
+msgstr "Northern Marianas"
+
+msgid "Pacific/Saipan"
+msgstr "Pacific/Saipan"
+
+msgid "Asia/Magadan"
+msgstr "Asia/Magadan"
+
+msgid "Europe/Zaporozhye"
+msgstr "Europe/Zaporozhye"
+
+msgid "my_phone_is"
+msgstr "My phone number is"
+
+msgid "please_enter_your_email_address_to_continue"
+msgstr "Please enter your email address to continue."
+
+msgid "no_treatment"
+msgstr "No Treatment"
+
+msgid "America/Argentina/Buenos_Aires"
+msgstr "America/Argentina/Buenos_Aires"
+
+msgid "cuba"
+msgstr "Cuba"
+
+msgid "area_name"
+msgstr "Area Name"
+
+msgid "years"
+msgstr "Years"
+
+msgid "kazakhstan"
+msgstr "Kazakhstan"
+
+msgid "operating_system"
+msgstr "Operating System"
+
+msgid "America/Regina"
+msgstr "America/Regina"
+
+msgid "denmark"
+msgstr "Denmark"
+
+msgid "incident_type"
+msgstr "Incident Type"
+
+msgid "view"
+msgstr "VIEW"
+
+msgid "America/Merida"
+msgstr "America/Merida"
+
+msgid "albania"
+msgstr "Albania"
+
+msgid "collision_with_skier"
+msgstr "Collision with Skier"
+
+msgid "terrain_park"
+msgstr "Terrain Park"
+
+msgid "Asia/Makassar"
+msgstr "Asia/Makassar"
+
+msgid "kids_ski_school"
+msgstr "Kids Ski School"
+
+msgid "yugoslavia"
+msgstr "Yugoslavia"
+
+msgid "sync_data"
+msgstr "Sync data"
+
+msgid "greece"
+msgstr "Greece"
+
+msgid "email_address"
+msgstr "Email Address"
+
+msgid "Asia/Yekaterinburg"
+msgstr "Asia/Yekaterinburg"
+
+msgid "America/Montevideo"
+msgstr "America/Montevideo"
+
+msgid "epilepsy_convulsion"
+msgstr "Epilepsy/Convulsion"
+
+msgid "America/Moncton"
+msgstr "America/Moncton"
+
+msgid "you_dont_have_permission_to_retrieve_user_device"
+msgstr "You Dont Have Permission To Retrieve User Device"
+
+msgid "state"
+msgstr "State"
+
+msgid "closed"
+msgstr "Closed"
+
+msgid "external_demo"
+msgstr "External Demo"
+
+msgid "email"
+msgstr "Email"
+
+msgid "Europe/Prague"
+msgstr "Europe/Prague"
+
+msgid "ability"
+msgstr "Ability"
+
+msgid "1_5_lessons"
+msgstr "1-5 Lessons"
+
+msgid "armenia"
+msgstr "Armenia"
+
+msgid "penthrane"
+msgstr "Penthrane"
+
+msgid "America/Chihuahua"
+msgstr "America/Chihuahua"
+
+msgid "admin"
+msgstr "Admin"
+
+msgid "antigua_and_barbuda"
+msgstr "Antigua and Barbuda"
+
+msgid "drug"
+msgstr "Drug"
+
+msgid "entonox"
+msgstr "Entonox"
+
+msgid "cm"
+msgstr "cm"
+
+msgid "loading_incidents"
+msgstr "LOADING INCIDENTS"
+
+msgid "tunisia"
+msgstr "Tunisia"
+
+msgid "my_account"
+msgstr "My Account"
+
+msgid "rpm"
+msgstr "RPM"
+
+msgid "invalid_token"
+msgstr "Invalid token"
+
+msgid "gondola"
+msgstr "Gondola"
+
+msgid "Pacific/Niue"
+msgstr "Pacific/Niue"
+
+msgid "date_of_birth"
+msgstr "Date of Birth"
+
+msgid "relevant_signage_comment"
+msgstr "Details"
+
+msgid "ventolin"
+msgstr "Ventolin"
+
+msgid "error_try_print_later"
+msgstr "Unable to print right now, please try again later."
+
+msgid "not_activity_related"
+msgstr "Not activity related"
+
+msgid "referrer_name"
+msgstr "Referrer Name"
+
+msgid "Africa/Lusaka"
+msgstr "Africa/Lusaka"
+
+msgid "years_experience"
+msgstr "Years Experience"
+
+msgid "Pacific/Guadalcanal"
+msgstr "Pacific/Guadalcanal"
+
+msgid "America/Yellowknife"
+msgstr "America/Yellowknife"
+
+msgid "exact_location"
+msgstr "Exact Location"
+
+msgid "signs_hint"
+msgstr "What do you see?"
+
+msgid "spain"
+msgstr "Spain"
+
+msgid "south_africa"
+msgstr "South Africa"
+
+msgid "America/St_Kitts"
+msgstr "America/St_Kitts"
+
+msgid "Pacific/Palau"
+msgstr "Pacific/Palau"
+
+msgid "Asia/Kamchatka"
+msgstr "Asia/Kamchatka"
+
+msgid "Asia/Qatar"
+msgstr "Asia/Qatar"
+
+msgid "capture"
+msgstr "Capture"
+
+msgid "incident_status_not_found"
+msgstr "Incident Status Not Found"
+
+msgid "units"
+msgstr "Units"
+
+msgid "witness_date_of_birth"
+msgstr "Witness Date of Birth"
+
+msgid "collision_riding_tbar_button_lift"
+msgstr "Collision riding T-Bar/Button lift"
+
+msgid "America/Paramaribo"
+msgstr "America/Paramaribo"
+
+msgid "list_incidents"
+msgstr "List Incidents"
+
+msgid "reporting"
+msgstr "Reporting"
+
+msgid "gcs_motor_5"
+msgstr "Localizes painful stimuli"
+
+msgid "gcs_motor_4"
+msgstr "Flexion / Withdrawal to painful stimuli"
+
+msgid "gcs_motor_6"
+msgstr "Obeys command"
+
+msgid "gcs_motor_1"
+msgstr "Makes no movements"
+
+msgid "gcs_motor_3"
+msgstr "Abnormal flexion to painful stimuli"
+
+msgid "gcs_motor_2"
+msgstr "Extension to painful stimuli (decerebrate response)"
+
+msgid "indonesia"
+msgstr "Indonesia"
+
+msgid "netherlands_antilles"
+msgstr "Netherlands Antilles"
+
+msgid "Asia/Muscat"
+msgstr "Asia/Muscat"
+
+msgid "user_inactive_or_deleted"
+msgstr "User is inactive, or has been deleted. "
+
+msgid "Pacific/Wake"
+msgstr "Pacific/Wake"
+
+msgid "dose"
+msgstr "Dose"
+
+msgid "Asia/Colombo"
+msgstr "Asia/Colombo"
+
+msgid "staff_types"
+msgstr "Staff Types"
+
+msgid "America/Argentina/Salta"
+msgstr "America/Argentina/Salta"
+
+msgid "back_right_din"
+msgstr "Back Right DIN"
+
+msgid "micronesia"
+msgstr "Micronesia"
+
+msgid "add"
+msgstr "ADD"
+
+msgid "heavy_snow"
+msgstr "Heavy Snow"
+
+msgid "aruba"
+msgstr "Aruba"
+
+msgid "wet"
+msgstr "Wet"
+
+msgid "drugs_when"
+msgstr "When?"
+
+msgid "media_reference_is_required"
+msgstr "Media Reference Is Required"
+
+msgid "Asia/Kathmandu"
+msgstr "Asia/Kathmandu"
+
+msgid "Asia/Pontianak"
+msgstr "Asia/Pontianak"
+
+msgid "the_json_provided_for_the_key_is_not_valid"
+msgstr "The JSON provided for the key is not valid"
+
+msgid "zimbabwe"
+msgstr "Zimbabwe"
+
+msgid "select_country"
+msgstr "Select Country"
+
+msgid "belgium"
+msgstr "Belgium"
+
+msgid "falkland_islands_islas_malvinas"
+msgstr "Falkland Islands (Islas Malvinas)"
+
+msgid "America/Curacao"
+msgstr "America/Curacao"
+
+msgid "Indian/Kerguelen"
+msgstr "Indian/Kerguelen"
+
+msgid "soft"
+msgstr "Soft"
+
+msgid "sprain"
+msgstr "Sprain"
+
+msgid "device_id_is_not_provided"
+msgstr "Device Id Is Not Provided"
+
+msgid "overcast"
+msgstr "Overcast"
+
+msgid "heard_island_and_mcdonald_islands"
+msgstr "Heard Island and McDonald Islands"
+
+msgid "mozambique"
+msgstr "Mozambique"
+
+msgid "Pacific/Port_Moresby"
+msgstr "Pacific/Port_Moresby"
+
+msgid "transport"
+msgstr "Transport"
+
+msgid "first_name"
+msgstr "First Name"
+
+msgid "competitor"
+msgstr "Competitor"
+
+msgid "turkmenistan"
+msgstr "Turkmenistan"
+
+msgid "Europe/Luxembourg"
+msgstr "Europe/Luxembourg"
+
+msgid "man_made"
+msgstr "Man Made"
+
+msgid "first_responder"
+msgstr "First Responder"
+
+msgid "confirm_close_case_text"
+msgstr "You cannot re-open a case, please check you have completed all the details. "
+
+msgid "invalid_mime_type_provided"
+msgstr "Invalid Mime Type Provided"
+
+msgid "Europe/Belgrade"
+msgstr "Europe/Belgrade"
+
+msgid "Asia/Choibalsan"
+msgstr "Asia/Choibalsan"
+
+msgid "pressure"
+msgstr "Pressure"
+
+msgid "America/Los_Angeles"
+msgstr "America/Los_Angeles"
+
+msgid "Asia/Kabul"
+msgstr "Asia/Kabul"
+
+msgid "Indian/Antananarivo"
+msgstr "Indian/Antananarivo"
+
+msgid "about"
+msgstr "About Medic52"
+
+msgid "Atlantic/Reykjavik"
+msgstr "Atlantic/Reykjavik"
+
+msgid "Asia/Nicosia"
+msgstr "Asia/Nicosia"
+
+msgid "courtesy_transport"
+msgstr "Courtesy Transport"
+
+msgid "Pacific/Easter"
+msgstr "Pacific/Easter"
+
+msgid "injury_types"
+msgstr "Injury Types"
+
+msgid "weather"
+msgstr "Weather"
+
+msgid "Atlantic/South_Georgia"
+msgstr "Atlantic/South_Georgia"
+
+msgid "female"
+msgstr "Female"
+
+msgid "registration"
+msgstr "Registration"
+
+msgid "America/Campo_Grande"
+msgstr "America/Campo_Grande"
+
+msgid "mimetype_is_required"
+msgstr "Mimetype Is Required"
+
+msgid "the_email_address_is_already_in_use"
+msgstr "The email address is already in use"
+
+msgid "America/Porto_Velho"
+msgstr "America/Porto_Velho"
+
+msgid "groomed"
+msgstr "Groomed"
+
+msgid "slovakia"
+msgstr "Slovakia"
+
+msgid "groomer"
+msgstr "Groomer"
+
+msgid "yrs"
+msgstr "yrs"
+
+msgid "has_insurance"
+msgstr "Has Insurance?"
+
+msgid "maintenance"
+msgstr "Maintenance"
+
+msgid "no_incident_found"
+msgstr "No Incident Found"
+
+msgid "alcohol_what"
+msgstr "What?"
+
+msgid "bus"
+msgstr "Bus"
+
+msgid "volume"
+msgstr "Volume"
+
+msgid "wallis_and_futuna"
+msgstr "Wallis and Futuna"
+
+msgid "skin_colour"
+msgstr "Skin Colour"
+
+msgid "Pacific/Johnston"
+msgstr "Pacific/Johnston"
+
+msgid "off_snow"
+msgstr "Off Snow"
+
+msgid "password_again"
+msgstr "Again"
+
+msgid "signed"
+msgstr "Signed"
+
+msgid "collision_w__man_made_object"
+msgstr "Collision w/ Man Made Object"
+
+msgid "prevent_sleep"
+msgstr "Prevent sleep"
+
+msgid "ashmore_and_cartier_island"
+msgstr "Ashmore and Cartier Island"
+
+msgid "file_not_found"
+msgstr "File Not Found"
+
+msgid "America/Glace_Bay"
+msgstr "America/Glace_Bay"
+
+msgid "America/Hermosillo"
+msgstr "America/Hermosillo"
+
+msgid "paraguay"
+msgstr "Paraguay"
+
+msgid "no_access_token_provided"
+msgstr "No access token provided"
+
+msgid "America/Resolute"
+msgstr "America/Resolute"
+
+msgid "algeria"
+msgstr "Algeria"
+
+msgid "America/Montserrat"
+msgstr "America/Montserrat"
+
+msgid "America/La_Paz"
+msgstr "America/La_Paz"
+
+msgid "other"
+msgstr "Other"
+
+msgid "Africa/Kigali"
+msgstr "Africa/Kigali"
+
+msgid "one_to_four_weeks"
+msgstr "1-4 Weeks"
+
+msgid "injury_location"
+msgstr "Injury Location"
+
+msgid "Africa/Lagos"
+msgstr "Africa/Lagos"
+
+msgid "Europe/Sofia"
+msgstr "Europe/Sofia"
+
+msgid "America/Guayaquil"
+msgstr "America/Guayaquil"
+
+msgid "lift"
+msgstr "Lift"
+
+msgid "i_want_to_try_link"
+msgstr "I want to try Medic52 for FREE,\\n or I do not have a resort key yet"
