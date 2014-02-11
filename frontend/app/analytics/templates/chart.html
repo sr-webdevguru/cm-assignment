@@ -1,0 +1,225 @@
+<div class="container-fluid cont-w-sidenav" ng-class="{side__active: true}">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <h2>Build a chart</h2>
+        </div>
+
+        <form name="reportform">
+
+            <div class="row">
+                <div class="col-md-1 col-xs-2">
+                    <label>Type:</label>
+                </div>
+                <div class="col-md-4 col-xs-10">
+
+                    <input type="radio" ng-model="chart_type" value="timeline" name="chart_type"><label
+                        style="padding:0 10px;"><p style="text-align: center"><img src="/images/line.png"><br/>Timeline
+                </p></label>
+                    <input type="radio" ng-model="chart_type" value="bar" name="chart_type"><label
+                        style="padding:0 10px;"><p style="text-align: center"><img src="/images/bar.png"><br/>Bar Chart
+                </p></label>
+                    <input type="radio" ng-model="chart_type" value="pie" name="chart_type"><label
+                        style="padding:0 10px;"><p style="text-align: center"><img src="/images/pie.png"><br/>Pie Chart
+                </p></label>
+                </div>
+
+                <div class="col-md-2 col-xs-12">
+                    <label>Scale:</label>
+                    <select class="form-control" ng-model="scale"
+                            ng-options="option.value for option in scales"></select>
+                </div>
+
+            </div>
+
+            <div class="row" ng-repeat="filter in model" style="margin-top: 10px">
+                <div class="col-md-1 col-xs-2">
+                    <label ng-show="$first">Date Range:</label>
+                    <label ng-hide="(chart_type=='pie' || $first)"><input type="checkbox" ng-model="filter.compare"
+                                                                          name="compare"> Compare
+                    </label>
+                </div>
+                <div class="col-md-6 col-xs-10">
+                    <div class="row" ng-show="filter.compare && (chart_type!='pie' || $first)">
+                        <div class="col-xs-6" style="max-height: 68px;">
+                            <div class="right-inner-addon">
+                                <label>From:</label>
+                                <input type="text" class="form-control" placeholder="From"
+                                       ng-model="filter.date.datefrom"
+                                       bs-datepicker
+                                       data-autoclose="true"
+                                       data-max-date="[[filter.date.dateto]]" data-date-format="[[date_format]]"
+                                       data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                                       maxlength="10"
+                                       data-placement="bottom-left"
+                                        >
+                                <i class="fa fa-calendar"
+                                   style="float: right; position: relative;  top: -35px;  right: 0px;"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-6" style="max-height: 68px;">
+                            <div class="right-inner-addon" ng-show="$first">
+                                <label>To:</label>
+                                <input type="text" class="form-control" placeholder="[[ 'to' | translate]]"
+                                       ng-model="filter.date.dateto"
+                                       bs-datepicker
+                                       data-min-date="[[filter.date.datefrom]]" data-date-format="[[date_format]]"
+                                       data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                                       data-autoclose="true" data-placement="bottom-right"
+                                       maxlength="10">
+                                <i class="fa fa-calendar"
+                                   style="float: right; position: relative;  top: -35px;  right: 0px;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="filter.compare && (chart_type!='pie' || $first)">
+                        <table class="col-xs-12"
+                               style="border-collapse: inherit; background-color: transparent; border-spacing: 10px 10px;">
+                            <tr style="margin-bottom:8px" ng-repeat="data_filter in filter.data">
+                                <td style="width:20%">
+                                    <div class="form-group" style="margin-bottom:0px;margin-left: -10px">
+                                        <select class="form-control" name="" ng-hide="$first && chart_type!='pie'"
+                                                ng-options="property as property.title for property in schema.properties track by property.fullkey"
+                                                ng-model="filter.data[$index].field"/>
+                                        <select class="form-control" name="" ng-show="$first && chart_type!='pie'"
+                                                ng-options="property as property.title for property in schema.properties_alter track by property.fullkey"
+                                                ng-model="filter.data[$index].field"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%" ng-if="chart_type!='pie'">
+                                    <div class="form-group" style="margin-bottom:0px;">
+                                        <select ng-if="filter.data[$index].field.formtype=='select'"
+                                                ng-hide="filter.data[$index].field.key == 'total_incident' || chart_type=='pie'"
+                                                class="form-control"
+                                                placeholder="[[ data_filter.placeholder ]]"
+                                                ng-options="property.value as property.name for property in filter.data[$index].field.titleMap"
+                                                ng-model="filter.data[$index].value"/>
+                                    </div>
+                                </td>
+
+                                <!--Child Field Selection For Timelime and Bar Chart-->
+                                <td style="width:20%" ng-if="filter.data[$index].value && filter.data[$index].field.childField && chart_type!='pie'">
+                                    <div class="form-group" style="margin-bottom:0px;">
+                                        <select ng-if="filter.data[$index].value && filter.data[$index].field.childField"
+                                                ng-hide="filter.data[$index].field.key == 'total_incident' || chart_type=='pie'"
+                                                class="form-control"
+                                                ng-options="property as property.title for property in filter.data[$index].field.childField[filter.data[$index].value].select track by property.fullkey"
+                                                ng-init="filter.data[$index].childField.field = filter.data[$index].field.childField[filter.data[$index].value].select[0]"
+                                                ng-model="filter.data[$index].childField.field"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%" ng-if="filter.data[$index].value && filter.data[$index].field.childField && chart_type!='pie'">
+                                    <div class="form-group" style="margin-bottom:0px;">
+                                        <select ng-if="filter.data[$index].value && filter.data[$index].field.childField"
+                                                ng-hide="filter.data[$index].field.key == 'total_incident' || chart_type=='pie'"
+                                                class="form-control"
+                                                ng-options="property.value as property.name for property in filter.data[$index].field.childField[filter.data[$index].value].titleMap"
+                                                ng-init="filter.data[$index].childField.value = 'all'"
+                                                ng-model="filter.data[$index].childField.value"/>
+                                    </div>
+                                </td>
+                                <!--Child Field Selection For Timelime and Bar Chart End-->
+
+                                <!--Child Field Selection For Pie Chart-->
+                                <td style="width:20%" ng-if="chart_type=='pie' && filter.data[$index].field.childField">
+                                    <div class="form-group" style="margin-bottom:0px;">
+                                        <select class="form-control"
+                                                ng-options="property.value as property.name for property in filter.data[$index].field.titleMap"
+                                                ng-model="filter.data[$index].value"/>
+                                    </div>
+                                </td>
+                                <!--Child Field Selection For Pie Chart End-->
+
+                                <td style="width:10%">
+                                    <a class="button" ng-click="addField(filter.data)"
+                                       ng-hide="!$last || filter.data[$index].field.key == 'total_incident' || chart_type=='pie'"><i
+                                            class="fa fa-plus-circle fa-2x"></i></a>
+                                    <a class="button" ng-click="removeField(filter.data, $index)"
+                                       ng-hide="$first && filter.data.length<=1"><i
+                                            class="fa fa-minus-circle fa-2x"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--<div class="row">-->
+            <!--<div class="col-xs-6">-->
+                <!--<pre>[[model | json]]</pre>-->
+            <!--</div>-->
+            <!--<div class="col-xs-6">-->
+                <!--<pre>[[finalmodel | json]]</pre>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary pull-right" ng-click="onSubmit(reportform)">[[ 'search' | translate]]
+                </button>
+                <button class="btn btn-primary pull-right" ng-click="onReset()" style="margin-right:10px">[[ 'reset' |
+                                                                                                          translate]]
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12" style="margin:10px 0px">
+                <span class="pull-left"
+                      ng-hide="true">There are [[list.totalItems]] incidents matching your search.</span>
+                <a href="" class="pull-right" ng-click="onDownload(reportform)"><i class="fa fa-file-excel-o"></i> [[
+                                                                                                                   'download'
+                                                                                                                   |
+                                                                                                                   translate]]</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div google-chart chart="chart" style="[[css]]"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <td ng-repeat="column in columns track by $index">[[column]]</td>
+                    </tr>
+                    </thead>
+                    <tr ng-repeat="row in rows track by $index">
+                        <td ng-repeat="col in row track by $index">
+                            [[ col ]]
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-9"></div>
+            <div class="col-xs-2">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Enter chart name" ng-model="report.label">
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <a href="" class="btn btn-primary pull-right" ng-click="createReport()" ng-disabled="report.label==''">[['save_chart' |
+                                                                                        translate]]</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-9"></div>
+            <div class="col-xs-2">
+                <div class="form-group">
+                    <input type="checkbox" ng-model="report.global" ng-checked="report.global"> Share with other users?
+                </div>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+
+    </div>
+</div>
