@@ -1,0 +1,36 @@
+<div class="login login__new-password">
+
+    <div class="container">
+        <div class="row clearfix">
+
+            <div class="login-box">
+                <img src="/images/logo_medium.png" class="center-block" alt="logo"/>
+
+                <strong>Please enter a new password</strong>
+                <strong>[[ message ]]</strong>
+
+                <form role="form" name="password_form" ng-submit="submit()">
+                    <div class="form-group">
+                        <input type="password" class="input-transparent" name="password" id="password1"
+                               placeholder=" Enter new password" autofocus="true" ng-model="password1" ng-pattern="/^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/" required>
+                        <span ng-show="password_form.password.$error.pattern">Not a valid Password!</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="input-transparent" id="password2" name="password2" placeholder="Repeat Password" ng-model="password2" required data-password-verify="password1">
+                        <div ng-show="password_form.password2.$error.passwordVerify">
+                            Password and Repeat Password must be same.</div>
+                    </div>
+                    <div class="form-info-row">
+                        <i class="fa fa-info-circle"></i> Minimun 8 characters, must contain one uppercase character and
+                        one number
+                    </div>
+                    <button type="submit" ng-disabled="!password_form.$valid" class="btn">Reset</button>
+                </form>
+
+                <button type="button" class="btn hidden">Go</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
