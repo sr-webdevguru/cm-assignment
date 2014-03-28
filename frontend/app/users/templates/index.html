@@ -1,0 +1,109 @@
+<div class="container-fluid page-heading">
+    <h4>Users</h4>
+</div>
+<div class="container-fluid" ng-class="{side__active: true}" ng-init="list.get()">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <h2>[[ 'users' | translate]]</h2>
+
+            <div class="main-title--options">
+                <div class="right-inner-addon inner-addon__large">
+                    <input type="text" class="form-control" placeholder="[['search_users'|translate ]]"
+                           ng-model="search"
+                           >
+                    <i class="fa fa-search"></i>
+                </div>
+
+                <button class="btn btn-primary pull-right" ng-click="add()">[[ 'add_user' | translate]]</button>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row table-container">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th ng-click="list.sort_by('user__name');">[['name'|translate]] <span
+                                ng-show="list.predicate=='user__name'"><i class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th ng-click="list.sort_by('user__email');">[['email'|translate]] <span ng-show="list.predicate=='user__email'"><i
+                                class="fa fa-caret-down"
+                                ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th ng-click="list.sort_by('role');">[['role'|translate]] <span ng-show="list.predicate=='role'"><i
+                                class="fa fa-caret-down"
+                                ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th ng-click="list.sort_by('user_status');">[['status'|translate]] <span ng-show="list.predicate=='user_status'"><i
+                                class="fa fa-caret-down"
+                                ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th class="thnohover">[['actions'|translate]]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-show="list.loading">
+                        <td colspan="5">
+                            [[ 'loading' | translate]]
+                        </td>
+                    </tr>
+                    <tr ng-repeat="data in list.users">
+                        <td class="user-name">[[data.name]]</td>
+                        <td>[[data.email]]</td>
+                        <td class="user-role">[[data.role_id | keysOnly]]</td>
+                        <td>[[data.user_status.key]]</td>
+                        <td>
+                            <a ui-sref="user_edit({ userId: data.user_id })"><i class="fa fa-pencil-square-o"></i>
+                                [[ 'edit' | translate]]</a>
+                        </td>
+                    </tr>
+                    <tr ng-show="list.filteredItems == 0 && list.loading == false">
+                        <td colspan="5">
+                            [[ 'no_user_found' | translate]]
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row table-footer">
+                <div class="table-options">
+                    <div class="table-options--page">
+                        <span>[[ 'page' | translate]]</span>
+                        <select class="form-control select__small" name="" id="" ng-model="list.currentPage">
+                            <option ng-repeat="n in [] | range:list.totalPages">[[n]]</option>
+                        </select>
+                        <span>[[ 'of' | translate]] 1 [[ 'page' | translate]]</span>
+                        <small> ([[list.totalItems]] [[ 'total_items' | translate]])</small>
+                    </div>
+                    <div class="table-options--itemspp">
+                        <span>[[ 'showing' | translate]]</span>
+                        <select class="form-control select__small" name="" ng-model="list.itemsPerPage">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>[[ 'items_per_page' | translate]]</span>
+                    </div>
+                </div>
+                <div
+                        pagination=""
+                        ng-model="list.currentPage"
+                        total-items="list.totalItems"
+                        items-per-page="list.itemsPerPage"
+                        boundary-links="false"
+                        on-select-page="list.setPage(page)"
+                        previous-text="&laquo;"
+                        next-text="&raquo;"
+                        class="pagination-small">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
