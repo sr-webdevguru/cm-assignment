@@ -1,0 +1,130 @@
+.dashboard{
+	@extend .cont-w-sidenav;
+	&.form-horizontal .main-title{
+		.right-inner-addon{
+			text-align: right;
+		}
+	}
+	.dashboard--incidents{
+		@include make-xs-column(12);
+		height: 300px;
+//		background: darken(white,3%);
+		margin-bottom: $grid-gutter-width/2;
+	}
+	.dashboard--activity{
+		@include make-xs-column(12);
+		height: 300px;
+//		background: darken(white,6%);
+		margin-bottom: $grid-gutter-width/2;
+	}
+	.dashboard--patrollers{
+		@include make-xs-column(12);
+		height: 300px;
+//		background: darken(white,9%);
+		margin-bottom: $grid-gutter-width/2;
+	}
+	.dashboard--types{
+		@include make-xs-column(12);
+		height: 300px;
+//		background: darken(white,12%);
+		margin-bottom: $grid-gutter-width/2;
+	}
+	.dashboard--referred{
+		@include make-xs-column(12);
+		height: 300px;
+//		background: darken(white,15%);
+		margin-bottom: $grid-gutter-width/2;
+	}
+	.dashboard--age{
+		@include make-xs-column(12);
+		height: 300px;
+//		background: darken(white,18%);
+		margin-bottom: $grid-gutter-width/2;
+	}
+	.dashboard--drugs{
+		@include make-xs-column(12);
+		height: 300px;
+//		background: darken(white,21%);
+		margin-bottom: $grid-gutter-width/2;
+	}
+	.dashboard--content{
+		padding: 0 $grid-gutter-width;
+		h3{
+			text-transform: none;
+			font-size: 18px;
+			font-family: $font-helvetica-lt;
+		}
+	}
+	.dashboard--title{
+		margin-bottom: 0;
+	}
+	div[google-chart]{
+		@extend .row;
+		overflow: visible;
+	}
+}
+
+@media only screen and (min-width: $screen-xs){
+
+}
+@media only screen and (min-width: $screen-sm){
+	.dashboard{
+		.main-title{
+			margin-top: 0;
+			margin-bottom: -$grid-gutter-width;
+			z-index: $zindex-dropdown;
+		}
+		.dashboard--incidents{
+			@include make-xs-column(12);
+		}
+		.dashboard--activity{
+			@include make-xs-column(6);
+		}
+		.dashboard--patrollers{
+			@include make-xs-column(6);
+		}
+		.dashboard--types{
+			@include make-xs-column(6);
+		}
+		.dashboard--referred{
+			@include make-xs-column(6);
+		}
+		.dashboard--age{
+			@include make-xs-column(6);
+		}
+		.dashboard--drugs{
+			@include make-xs-column(6);
+		}
+	}
+}
+@media only screen and (min-width: $screen-md){
+	.dashboard{
+		.dashboard--incidents{
+			@include make-xs-column(12);
+		}
+		.dashboard--activity{
+			@include make-xs-column(4);
+		}
+		.dashboard--patrollers{
+			@include make-xs-column(4);
+		}
+		.dashboard--types{
+			@include make-xs-column(4);
+		}
+		.dashboard--referred{
+			@include make-xs-column(4);
+		}
+		.dashboard--age{
+			@include make-xs-column(4);
+		}
+		.dashboard--drugs{
+			@include make-xs-column(4);
+		}
+	}
+}
+@media only screen and (min-width: $screen-lg){
+	.dashboard{
+
+
+	}
+}
