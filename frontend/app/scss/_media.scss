@@ -1,0 +1,25 @@
+
+
+// Break point 1
+@import "media/_bp0";
+
+// Break point 2
+@media only screen and (min-width: $screen-sm) {
+	@import "media/_bp1";
+}
+// Break point 3
+@media only screen and (min-width: $screen-md) {
+	@import "media/bp2";
+}
+// Break point 4
+@media only screen and (min-width: $screen-lg) {
+	@import "media/bp3";
+}
+
+// Break point x2 --> Retina Display
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+	@import "media/2x";}
+
