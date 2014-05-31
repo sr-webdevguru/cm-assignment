@@ -1,0 +1,194 @@
+<div class="navbar navbar-default navbar-static-top navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-main" aria-expanded="false">
+                <span><img src="/images/menu-icon.png" alt="menu"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-brand">
+                <img src="/images/logo_small.png" alt="logo">
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+
+                <li ng-hide="currentUser.role === 'Patroller'" ui-sref-active="active"><a ui-sref="map"><i
+                        class="fa fa-2x"></i>[['map'|translate]]</a>
+                </li>
+
+                <li ui-sref-active="active"><a ui-sref="incidents"><i class="fa fa-2x"></i>[['incidents'|translate]]</a>
+                </li>
+
+                <li class="dropdown" ui-sref-active="active"
+                    ng-hide="currentUser.role === 'Patroller' || currentUser.user_connected.key=='solo' ">
+                    <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false"><i class="fa fa-2x"></i>[['Reports' | translate]] <span
+                            class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="row" style="width: 500px;">
+                                <div class="col-xs-12 col-md-4">
+                                    <strong>Standard Reports</strong>
+                                    <ul class="list-unstyled">
+                                        <li ng-hide="currentUser.role === 'Patroller'" ui-sref-active="active"><a
+                                                ui-sref="dashboard"><i
+                                                class="fa fa-2x"></i>[['dashboard'|translate]]</a>
+                                        </li>
+                                        <li><a ui-sref="heatmap">[['heatmap'|translate]]</a></li>
+                                        <li><a ui-sref="case-status">[['case_status'|translate]]</a></li>
+                                        <li ng-hide="currentUser.role === 'Patroller'" ui-sref-active="active"><a
+                                                ui-sref="patrollers_report"><i
+                                                class="fa fa-2x"></i>[['patrollers_report'|translate]]</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <strong>Your Reports</strong>
+                                    <ul class="list-unstyled">
+                                        <li ng-repeat="report in reports"><a
+                                                ui-sref="report_edit({reportId: report.report_id})">[[report.label]]</a>
+                                        </li>
+                                        <li><a ui-sref="reporting">[['create_report'|translate]]</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-xs-12 col-md-4">
+                                    <strong>Your Charts</strong>
+                                    <ul class="list-unstyled">
+                                        <li ng-repeat="chart in charts"><a
+                                                ui-sref="chart_edit({reportId: chart.report_id})">[[chart.label]]</a>
+                                        </li>
+                                        <li><a
+                                                ui-sref="charts">[['create_chart'|translate]]</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li ng-show="currentUser.isManager" ui-sref-active="active"><a ui-sref="users"><i class="fa fa-2x"></i>[['Users'|translate]]</a>
+                </li>
+
+                <li class="dropdown" ui-sref-active="active"
+                    ng-show="currentUser.user_controlled_substances||currentUser.user_asset_management">
+                    <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false"><i class="fa fa-2x"></i>[['Assets' | translate]] <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li ng-show="currentUser.user_controlled_substances" ui-sref-active="active">
+                            <a ui-sref="stock_report"><i class="fa fa-2x"></i>[['Controlled Substances'|translate]]</a>
+                        </li>
+                        <li ng-show="currentUser.user_controlled_substances" ui-sref-active="active">
+                            <a ui-sref="controlled_substances"><i class="fa fa-2x"></i>[['List Controlled Substances'|translate]]</a>
+                        </li>
+                        <li ng-show="currentUser.user_asset_management" ui-sref-active="active">
+                            <a ui-sref="areas"><i class="fa fa-2x"></i>[['List Areas'|translate]]</a>
+                        </li>
+                        <li ng-show="currentUser.user_asset_management" ui-sref-active="active">
+                            <a ui-sref="locations"><i class="fa fa-2x"></i>[['List Locations'|translate]]</a>
+                        </li>
+                        <li ng-show="currentUser.user_asset_management" ui-sref-active="active">
+                            <a ui-sref="assets"><i class="fa fa-2x"></i>[['List Assets'|translate]]</a>
+                        </li>
+                        <li ng-show="currentUser.user_asset_management" ui-sref-active="active">
+                            <a ng-click="goTo('due_today')"><i class="fa fa-2x"></i>[['Due Today'|translate]]</a>
+                        </li>
+                        <!--<li ng-show="currentUser.user_controlled_substances" ui-sref-active="active"><a ui-sref="audit_log"><i-->
+                        <!--class="fa fa-2x"></i>[['Audit Log'|translate]]</a>-->
+                        <!--</li>-->
+                    </ul>
+                </li>
+                <li>
+                    <a ng-click="goTo('home')" >
+                        <i class="fa fa-2x"></i>
+                        [['Try V2' | translate]]
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="intercom-icon"><i
+                        class="fa-circle fa-2x glyphicon glyphicon-question-sign"></i></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false"><i class="fa-circle fa-2x glyphicon glyphicon-cog"></i><span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a ui-sref="user_edit({ userId: currentUser.user_id })">[['my_account'|translate]]</a></li>-->
+                        <li><a ui-sref="user_edit({ userId: currentUser.user_id })">[['Settings for '|translate]]
+                                                                                    [[currentUser.name]]</a></li>
+                        <li ng-show="currentUser.role === 'Manager' && currentUser.user_connected.key=='network'"><a
+                                ui-sref="resort_settings({ resortId: currentUser.resorts[0].resort_id })">[['Settings
+                                                                                                          for
+                                                                                                          '|translate]]
+                                                                                                          [[currentUser.resorts[0].resort_name]]</a>
+                        </li>
+                        <li><a ng-click="logout()">[['logout'|translate]]</a></li>
+                    </ul>
+                </li>
+                <li class="hidden-xs">
+                    <div class="navbar-brand">
+                        <img src="/images/logo_small.png" alt="logo">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="sidenav sidenav__right"
+     ng-init="$parent.siderbtn = false"
+     ng-class="{sidenav__active: $parent.siderbtn == true}">
+
+    <div class="sidenav--close" ng-click="$parent.siderbtn = !$parent.siderbtn">
+        <img src="/images/close-cross.png" alt="close"/>
+    </div>
+    <div class="sidenav--header">
+        <img ng-src="[[resort_logo]]" alt="[[currentUser.resorts[0].resort_name]]" style="width: 100%"
+             ng-show="currentUser.resorts[0].resort_logo"/>
+
+        <div class="sidenav--header--user">
+            <span ng-show="currentUser"><i class="fa fa-user"></i>[['logged_in'|translate]]</span>
+            <strong>[[currentUser.name]]</strong>
+            <small>[[ currentUser.role ]]</small>
+        </div>
+    </div>
+
+    <ul>
+        <li class="sidenav--title">[[ 'language' | translate]]</li>
+        <li>
+            <ul class="list-inline">
+                <li><a ng-click="changeLanguage('en')"><img src="/images/en.png" alt="en"/></a></li>
+                <li><a ng-click="changeLanguage('fr')"><img src="/images/fr.png" alt="fr"/></a></li>
+                <li><a ng-click="changeLanguage('it')"><img src="/images/it.png" alt="it"/></a></li>
+                <li><a ng-click="changeLanguage('zh')"><img src="/images/zh.png" alt="zh"/></a></li>
+            </ul>
+        </li>
+        <li class="sidenav--title">[['menu'|translate]]</li>
+        <li ng-hide="currentUser.role === 'Patroller'"><a ui-sref="map">[['dispatch'|translate]]</a></li>
+        <li ng-hide="currentUser.role === 'Patroller'"><a ui-sref="dashboard">[['dashboard'|translate]]</a></li>
+        <li><a ui-sref="incidents">[['list_incidents'|translate]]</a></li>
+        <li ng-hide="currentUser.role === 'Patroller'"><a ui-sref="heatmap">[['heatmap'|translate]]</a></li>
+        <li ng-hide="currentUser.role === 'Patroller' || currentUser.user_connected.key=='solo' "><a
+                ui-sref="reporting">[['reporting'|translate]]</a></li>
+        <li ng-hide="currentUser.role === 'Patroller' || currentUser.user_connected.key=='solo' "><a ui-sref="charts">[['charts'|translate]]</a>
+        </li>
+        <li class="sidenav--title">[['admin'|translate]]</li>
+        <li ng-show="currentUser.isManager"><a ui-sref="users">[['list_users'|translate]]</a></li>
+        <li><a ui-sref="user_edit({ userId: currentUser.user_id })">[['my_account'|translate]]</a></li>
+        <li><a ng-click="logout()">[['logout'|translate]]</a></li>
+        <div class="sidenav--footer">
+            [['powered_by_medic52'|translate]] <img src="/images/logo_w_tiny.png" alt=""/>
+        </div>
+    </ul>
+</div>
