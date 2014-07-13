@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label class="control-label" ng-show="form.title && form.notitle !== true">{{ form.title }}</label>
+    <div
+        repeater="form"
+        ng-show="form.key"
+        ng-model="$$value$$">
+    </div>
+</div>
