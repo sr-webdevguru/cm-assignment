@@ -1,0 +1,173 @@
+<div class="container-fluid page-heading">
+    <h4>[[ 'Reports' | translate]]</h4>
+</div>
+<div class="container-fluid cont-w-sidenav" ng-class="{side__active: true}">
+    <div class="row-fluid" id="section-to-print">
+
+        <div class="main-title">
+            <h2>Patroller Report</h2>
+        </div>
+
+        <form name="reportform" class="form-horizontal">
+            <div class="row" style="margin-top: 10px">
+                <div class="col-md-1 col-xs-2">
+                    <label class="control-label">Date Range:</label>
+                </div>
+                <div class="col-md-8 col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-4 form-group">
+                            <div class="col-sm-10">
+                                <select class="form-control" name="date_range_select" id="date_range_select"
+                                        ng-model="properties.date_range.select.model_value"
+                                        ng-change="properties.date_range.select.onChange(properties.date_range.select.model_value)"
+                                        ng-options="option.text for option in properties.date_range.select.options track by option.id">
+                                </select>
+                            </div>
+                            <div class="col-sm-2 control-label no-print">
+                              OR
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label class="col-sm-2 control-label">From:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="[[ 'from' | translate]]"
+                                       ng-model="properties.date_range.from" bs-datepicker
+                                       data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                                       data-autoclose="true" data-placement="bottom-right"
+                                       data-max-date="[[properties.date_range.to]]"
+                                       ng-change="properties.date_range.pickers.onChange('frontHandled')"
+                                       maxlength="10">
+                                <i class="fa fa-calendar" style="float: right; position: relative;  top: -25px;  right: 10px;"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label class="col-sm-2 control-label">To:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="[[ 'to' | translate]]"
+                                       ng-model="properties.date_range.to" bs-datepicker
+                                       data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                                       data-autoclose="true" data-placement="bottom-right"
+                                       data-min-date="[[properties.date_range.from]]"
+                                       ng-change="properties.date_range.pickers.onChange('frontHandled')"
+                                        maxlength="10">
+                                <i class="fa fa-calendar"
+                                   style="float: right; position: relative;  top: -25px;  right: 10px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="row no-print">
+            <div class="col-xs-12">
+                <button class="btn btn-primary pull-right" ng-click="list.print()">[[ 'print' | translate]]
+                </button>
+                <button class="btn btn-primary pull-right" ng-click="list.download()" style="margin-right:10px">[[ 'download' | translate]]
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-12" style="padding-top: 20px; padding-bottom: 20px">
+            <div class="row table-container">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center" ng-click="list.sortBy('name')">
+                            [['patroller'|translate]]
+                            <span ng-show="list.predicate=='name'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                        <th style="text-align: center" ng-click="list.sortBy('primary')">
+                            [['primary'|translate]]
+                            <span ng-show="list.predicate=='primary'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                        <th style="text-align: center" ng-click="list.sortBy('secondary')">
+                            [['secondary'|translate]]
+                            <span ng-show="list.predicate=='secondary'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                        <th style="text-align: center" ng-click="list.sortBy('assist')">
+                            [['assist'|translate]]
+                            <span ng-show="list.predicate=='assist'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                        <th style="text-align: center" ng-click="list.sortBy('total')">
+                            [['total'|translate]]
+                            <span ng-show="list.predicate=='total'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-show="list.loading">
+                            <td>
+                                [[ 'loading' | translate]]
+                            </td>
+                        </tr>
+                        <tr ng-repeat="data in list.items">
+                            <td style="text-align: left">[[data.name]]</td>
+                            <td style="text-align: right">[[data.primary]]</td>
+                            <td style="text-align: right">[[data.secondary]]</td>
+                            <td style="text-align: right">[[data.assist]]</td>
+                            <td style="text-align: right">[[data.total]]</td>
+                        </tr>
+                        <tr ng-show="list.filteredItems == 0 && list.loading == false">
+                            <td colspan="5">
+                                [[ 'no_patrollers_found' | translate]]
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row table-footer">
+                <div class="table-options">
+                    <div class="table-options--page">
+                        <span>[[ 'page' | translate]]</span>
+                        <select class="form-control select__small" name="" id="" ng-model="list.currentPage">
+                            <option ng-repeat="n in [] | range:list.totalPages">[[n]]</option>
+                        </select>
+                        <span>[[ 'of' | translate]] 1 [[ 'page' | translate]]</span>
+                        <small> ([[list.totalItems]] [[ 'total_items' | translate]])</small>
+                    </div>
+                    <div class="table-options--itemspp">
+                        <span>[[ 'showing' | translate]]</span>
+                        <select class="form-control select__small" name="" ng-model="list.itemsPerPage">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>[[ 'items_per_page' | translate]]</span>
+                    </div>
+                </div>
+                <div pagination="" ng-model="list.currentPage" total-items="list.totalItems"
+                    items-per-page="list.itemsPerPage" boundary-links="false"
+                    on-select-page="list.setPage(page)" previous-text="&laquo;"
+                    next-text="&raquo;" class="pagination-small">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row no-print">
+            <div class="col-xs-12">
+                <button class="btn btn-primary pull-right" ng-click="list.print()">[[ 'print' | translate]]
+                </button>
+                <button class="btn btn-primary pull-right" ng-click="list.download()" style="margin-right:10px">[[ 'download' | translate]]
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
