@@ -1,0 +1,46 @@
+<div class="container-fluid page-heading">
+    <h4>[[ 'controlled_substances' | translate]]</h4>
+</div>
+<div class="container-fluid user-edit" ng-class="{side__active: true}">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <h2>[[ 'add_controlled_substance' | translate]]</h2>
+
+            <div class="main-title--options">
+                <div class="pull-right">
+                    <a class="link-btn" ui-sref="controlled_substances">[[ 'controlled_substances' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="controlled_substance_add">[[ 'add_controlled_substance' | translate]]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-edit--details">
+
+            <form name="form" class="form-horizontal" role="form" ng-submit="add()">
+                <div class="form-group">
+                    <label for="controlled_substance_name" class="col-sm-3 control-label">[[ 'name' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="controlled_substance_name" id="controlled_substance_name" placeholder=""
+                               ng-model="controlled_substance_name" required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="units" class="col-sm-3 control-label">[[ 'units' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="units" id="units" placeholder=""
+                               ng-model="units" required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary pull-right">[['save'|translate]]</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
