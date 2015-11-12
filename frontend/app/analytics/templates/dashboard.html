@@ -1,0 +1,87 @@
+<div class="container-fluid dashboard" ng-class="{side__active: true}" ng-init="init()">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <div class="main-title--options">
+                <div class="right-inner-addon">
+                    <input type="text" class="form-control" placeholder="[[ 'to' | translate]]" ng-model="list.dateTo" bs-datepicker
+                           ng-change="init()"
+                           data-min-date="[[list.dateFrom]]" data-date-format="[[date_format]]"
+                           data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                           data-autoclose="true" data-placement="bottom-right"
+                           maxlength="10">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <div class="right-inner-addon">
+                    <input type="text" class="form-control" placeholder="[[ 'from' | translate]]" ng-model="list.dateFrom" bs-datepicker
+                           ng-change="init()"
+                           data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                           data-autoclose="true" data-placement="bottom-right"
+                           data-max-date="[[list.dateTo]]" data-date-format="[[date_format]]"
+                            maxlength="10">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 dashboard--content">
+            <div class="dashboard--incidents">
+                <h3>[['incidents'|translate]]</h3>
+
+                <div google-chart chart="by_incidents" style="[[css]]"></div>
+            </div>
+
+            <div class="dashboard--activity">
+                <h3>[['activity'|translate]]</h3>
+
+                <div google-chart chart="by_activities" style="[[css]]"></div>
+            </div>
+
+            <div class="dashboard--patrollers" style="overflow-y: auto">
+                <h3>[['patrollers'|translate]]</h3>
+
+                <div>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>[[ 'patroller' | translate]]</th>
+                            <th>[[ 'primary' | translate]]</th>
+                            <th>[[ 'secondary' | translate]]</th>
+                            <th>[[ 'assist' | translate]]</th>
+                        </tr>
+                        <tr ng-repeat="patroller in patrollers">
+                            <td>[[patroller.name]]</td>
+                            <td>[[patroller.primary]]</td>
+                            <td>[[patroller.secondary]]</td>
+                            <td>[[patroller.assist]]</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="dashboard--types">
+                <h3>[['injury_types'|translate]]</h3>
+
+                <div google-chart chart="by_injury_types" style="[[css]]"></div>
+            </div>
+
+            <div class="dashboard--referred">
+                <h3>[['referred_to'|translate]]</h3>
+
+                <div google-chart chart="by_referred" style="[[css]]"></div>
+            </div>
+
+            <div class="dashboard--age">
+                <h3>[['age'|translate]]</h3>
+
+                <div google-chart chart="by_age" style="[[css]]"></div>
+            </div>
+
+            <div class="dashboard--drugs">
+                <h3>[['alcohol_or_drugs'|translate]]</h3>
+
+                <div google-chart chart="by_drugs" style="[[css]]"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
