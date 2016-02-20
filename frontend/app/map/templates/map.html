@@ -1,0 +1,135 @@
+<div class="container-fluid map-container" ng-class="{side__active: true}" ng-init="init()">
+
+    <div  id="map" style="height: 100%; width: 100%;"></div>
+    <span class="fa-stack fa-1x add-incident-icon" ng-click="list.add()">
+    		<i class="fa fa-circle fa-stack-2x"></i>
+    		<i class="fa fa-plus fa-stack-1x"></i>
+    </span>
+    
+
+    <div class="main-title" ng-hide="true">
+        <div class="main-title--options">
+            <div class="right-inner-addon">
+                <input type="text" class="form-control" placeholder="[[ 'to' | translate]]" ng-model="list.dateTo" bs-datepicker
+                       ng-change="init()"
+                       data-min-date="[[list.dateFrom]]" data-date-format="yyyy-MM-dd"
+                       data-autoclose="true"
+                       data-placement="bottom-right"
+                       maxlength="10">
+                <i class="fa fa-calendar"></i>
+            </div>
+            <div class="right-inner-addon">
+                <input type="text" class="form-control" placeholder="[[ 'from' | translate]]" ng-model="list.dateFrom" bs-datepicker
+                       data-autoclose="true" ng-change="init()"
+                       data-placement="bottom-right"
+                       data-max-date="[[list.dateTo]]" data-date-format="yyyy-MM-dd"
+                       maxlength="10">
+                <i class="fa fa-calendar"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="map-popup" ng-show="info.isOpen">
+        <div class="map-popup--header">
+            <a class="btn" href="/#/incidents/[[info.current.incident_id]]/edit" ng-show="info.current.incident_id" target="new">[[ 'view' | translate]]</a>
+            <h3>
+                <span>[[ 'time_started' | translate]]: [[ info.current.local_dt_created ]]</span>
+                <span>[[ 'incident_id' | translate]]: [[ info.current.incident_pk]]</span>
+                <span ng-hide="userRole=='Patroller' || userConnected=='solo' || assignees==null">[[ 'assigned_to' | translate]]: <select class="form-control" name="assigned_to" id="assigned_to"
+                                                              ng-model="assigned_to"
+                                                              ng-change="updateAssignee()"
+                                                              ng-options="choice.key as choice.name for choice in assignees | orderBy:'name'">
+                                                              </select></span>
+            </h3>
+        </div>
+        <div class="map-popup--content">
+            <table style="border-collapse: inherit; background-color: transparent; border-spacing: 5px 5px 5px 0px; width:100%">
+                <tr style="margin-bottom:8px" ng-repeat="filter in model.filters">
+                    <th style="width:40%">
+                        <div class="form-group" style="margin-bottom:0px;">
+                            [[model.filters[$index].field.title]]
+                        </div>
+                    </th>
+                    <td style="width:60%">
+                        <div class="form-group" style="margin-bottom:5px;">
+                            <input ng-if="model.filters[$index].field.formtype=='text' || model.filters[$index].field.formtype=='number' ||
+                            model.filters[$index].field.formtype=='date_picker' || model.filters[$index].field.formtype=='date_time_picker'"
+                                   class="form-control" type="[[ filter.formtype ]]" placeholder="[[ filter.placeholder ]]" ng-model="model.filters[$index].value"
+                                   sf-form="form_items">
+                            <select ng-if="model.filters[$index].field.formtype=='select'" class="form-control" placeholder="[[ filter.placeholder ]]"
+                                    ng-options="property.value as property.name for property in model.filters[$index].field.titleMap"
+                                    ng-model="model.filters[$index].value"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="margin-bottom:8px">
+                    <th style="width:40%">
+                        <div class="form-group" style="margin-bottom:0px;">
+                            [[ 'status' | translate]]
+                        </div>
+                    </th>
+                    <td style="width:60%">
+                        <div class="form-group" style="margin-bottom:5px;">
+                            <select class="form-control" name="incident_status" id="incident_status"
+                            ng-model="incident_status" ng-change="updateStatus()"
+                            ng-options="choice.incident_status_id as choice.key for choice in status_list"></select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+
+
+                <!--<li><strong>[[ 'name' | translate]]:</strong><span>[[info.current.patient| transformPatient | toTitlecase]]</span></li>-->
+                <!--<li><strong>[[ 'phone' | translate]]:</strong><span>[[info.current.patient.phone]]</span></li>-->
+                <!--<li><strong>[[ 'injury' | translate]]:</strong><span>[[info.current.injury| transformInjury | toTitlecase]]</span></li>-->
+                <!--<li><strong>[[ 'treatment' | translate]]:</strong><span>[[info.current.treatment|transformTreatment|toTitlecase]]</span></li>-->
+
+        </div>
+        <div class="map-popup--form">
+            <input class="form-control note-input" type="text" placeholder="New Note" required ng-model="info.note"/>
+
+            <div class="btn pull-right" ng-click="addNote()">[[ 'add' | translate]] <i class="fa fa-plus"></i></div>
+        </div>
+        <div class="map-popup--table">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>[[ 'note' | translate]]</th>
+                    <th>[[ 'time' | translate]]</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="note in info.current.notes">
+                    <td>[[ note.field_52ca448dg94ja3 ]]</td>
+                    <td>[[ note.field_52ca448dg94ja4 ]]</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="map-notifications"
+         ng-init="mapNotToggle = true"
+         ng-class="{'map-notifications__active': mapNotToggle == true}">
+
+        <div class="map-notifications--title">
+            <img src="/images/map-incidents-icon.png" alt=""/>
+            [[ 'incidents' | translate]]
+            <i class="fa fa-angle-double-up"
+               ng-click="mapNotToggle = !mapNotToggle"></i>
+        </div>
+        <ul>
+            <li ng-repeat="incident in incidents"
+                ng-click="highlight(incident)"
+                ng-style="{'background-color': '#'+incident.incident_status[0].color}"
+                ng-class="{'incident-selected':incident.selected}"
+                ng-bind="incident.header">
+
+            </li>
+        </ul>
+    </div>
+
+
+</div>
