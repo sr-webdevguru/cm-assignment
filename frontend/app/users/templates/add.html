@@ -1,0 +1,53 @@
+<div class="container-fluid page-heading">
+    <h4>Users</h4>
+</div>
+<div class="container-fluid user-edit" ng-class="{side__active: true}" >
+    <div class="row-fluid">
+        <div class="main-title">
+            <h2>[[ 'add_user' | translate]]</h2>
+        </div>
+        <div class="user-edit--details">
+
+            <form name="form" class="form-horizontal" role="form" ng-submit="addUser()">
+                <h3>[[ 'user_details' | translate]]</h3>
+
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">[[ 'name' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="" ng-model="name" ng-required="true">
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : form.email.$invalid && form.email.$dirty }">
+                    <label for="email" class="col-sm-3 control-label">[[ 'email' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="" ng-model="email" ng-required="true"  backend-error>
+                        <span ng-show="form.email.$error.backend && form.email.$dirty" class="help-block">[[errors.email | translate]]</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="col-sm-3 control-label">[[ 'phone' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="" ng-model="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="role" class="col-sm-3 control-label">[[ 'role' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="role" id="role" ng-model="role" ng-options="choice.key as choice.name for choice in roles" ng-required="true"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary pull-right">[['save'|translate]]</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
