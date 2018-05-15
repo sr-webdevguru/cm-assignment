@@ -1,0 +1,189 @@
+.user-role {
+  text-transform: capitalize;
+}
+
+.user-edit{
+	@extend .cont-w-sidenav;
+	.user-edit--details{
+		@include make-xs-column(12);
+		margin-top: 10px;
+	}
+	.user-edit--actions{
+		@include make-xs-column(12);
+		margin-top: 10px;
+	}
+	button,.btn{
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+.user-actions{
+	padding: 0;
+	padding-bottom: $grid-gutter-width/2;
+	border-radius: $border-radius-large;
+	background: #ebebeb;
+	@include clearfix();
+
+	h3{
+		margin-top: 0;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.user-actions--buttons{
+		@include clearfix();
+		padding: $grid-gutter-width/2;
+		button{
+			margin-bottom: 11px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	.user-actions--devices{
+		@include clearfix();
+		padding: $grid-gutter-width/2;
+
+		.user-actions--devices--item{
+			@include clearfix();
+			padding: $grid-gutter-width/2;
+			background: white;
+			display: block;
+			width: 100%;
+			.device-info{
+				width: 100%;
+				display: block;
+				.device-name{
+					margin-bottom: $grid-gutter-width/3;
+				}
+			}
+			.device-action{
+				width: 100%;
+				display: block;
+				vertical-align: middle;
+				margin-top: $grid-gutter-width/2;
+			}
+		}
+		button{
+			margin:0;
+		}
+	}
+}
+
+.ngTopPanel{
+  background-color: #3c3a3b;
+  color: white;
+  text-transform: uppercase;
+  border-bottom: 1px solid #7d7c7c;
+}
+
+@media only screen and (min-width: $screen-xs){
+
+	.user-actions{
+		padding: $grid-gutter-width/2;
+	}
+}
+@media only screen and (min-width: $screen-sm){
+
+	.user-actions{
+		padding: $grid-gutter-width/2;
+		h3{
+		}
+		.user-actions--buttons{
+
+			button{
+
+				&:last-child{
+
+				}
+			}
+		}
+		.user-actions--devices{
+
+			.user-actions--devices--item{
+				@include clearfix();
+				padding: $grid-gutter-width/2;
+				background: white;
+				display: table;
+				width: 100%;
+				.device-info{
+					width: 60%;
+					display: table-cell;
+					.device-name{
+						margin-bottom: $grid-gutter-width/3;
+					}
+				}
+				.device-action{
+					width: 40%;
+					display: table-cell;
+					vertical-align: middle;
+					margin-top:0;
+				}
+			}
+			button{
+
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $screen-md){
+
+	.user-edit{
+		.user-edit--details{
+			@include make-xs-column(6);
+			.control-label{
+
+			}
+		}
+		.user-edit--actions{
+			@include make-xs-column(6);
+		}
+	}
+
+	.user-actions{
+		padding-bottom: $grid-gutter-width/2;
+		h3{
+		}
+		.user-actions--buttons{
+
+			button{
+
+				&:last-child{
+
+				}
+			}
+		}
+		.user-actions--devices{
+
+			.user-actions--devices--item{
+				.device-info{
+
+					.device-name{
+
+					}
+				}
+				.device-action{
+				}
+			}
+			button{
+
+			}
+		}
+	}
+}
+@media only screen and (min-width: $screen-lg){
+	.user-edit{
+		.user-edit--details{
+			@include make-xs-column(6);
+			.control-label{
+
+			}
+		}
+		.user-edit--actions{
+			@include make-xs-column(5);
+			float: right;
+		}
+	}
+}
