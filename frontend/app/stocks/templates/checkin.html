@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <h3 class="modal-title">[[ 'check_in' | translate]]</h3>
+</div>
+<div class="modal-body">
+
+
+    <form>
+        <div class="row">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">[[data.added_by_user.name]]: </label>
+
+                <div class="col-sm-9">
+                    [[data.volume]] [[data.controlled_substance.units]]
+                    [[data.controlled_substance.controlled_substance_name]]
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+            <div class="form-group">
+                <label for="location_id" class="col-sm-3 control-label">[[ 'location' | translate]]</label>
+
+                <div class="col-sm-9">
+                    <select class="form-control" name="location_id" id="location_id" ng-model="location_id"
+                            ng-options="choice.location_id as choice.location_name for choice in locations"
+                            required="true"></select>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row" style="margin-top:10px;">-->
+            <!--<div class="form-group">-->
+                <!--<label for="disposal" class="col-sm-3 control-label"></label>-->
+
+                <!--<div class="col-sm-9">-->
+                    <!--<input type="checkbox" name="disposal" id="disposal" ng-model="disposal"-->
+                            <!--required="true"> <label>[['disposal_expired_item' | translate]]</label>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </form>
+</div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok(location_id)">Submit</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>
