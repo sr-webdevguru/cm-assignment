@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="StarterApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/project/lib/angular-material/angular-material.min.css"/>
+    <title>Upload New Language File</title>
+</head>
+<body layout="column" ng-controller="AppCtrl">
+    {% csrf_token %}
+    <md-toolbar class="md-warn" layout="row" layout-align="center center">
+        <h1>Medic52</h1>
+    </md-toolbar>
+
+    <div style="margin: 6% 20% 0 20%; background-color: white  ">
+        <md-whiteframe class="md-whiteframe-z2" layout="column" layout-align="center center">
+
+            <md-toolbar class="md-warn md-default-theme">
+                <div class="md-toolbar-tools">
+                    <h2 class="md-flex">Upload Language File</h2>
+                </div>
+            </md-toolbar>
+
+            <md-content layout-padding layout="column">
+                <md-button class="md-raised md-primary" ngf-select ngf-change="upload($files)" accept=".csv">Upload</md-button>
+                <div layout="row" layout-sm="column" layout-align="space-around">
+                    <md-progress-circular md-mode="indeterminate" ng-if="uploadStatus"></md-progress-circular>
+                </div>
+            </md-content>
+        </md-whiteframe>
+    </div>
+<script type="application/javascript" src="/static/project/lib/angular/angular.min.js"></script>
+<script type="application/javascript" src="/static/project/lib/angular-animate/angular-animate.min.js"></script>
+<script type="application/javascript" src="/static/project/lib/angular-aria/angular-aria.min.js"></script>
+<script type="application/javascript" src="/static/project/lib/angular-material/angular-material.min.js"></script>
+<script type="application/javascript" src="/static/project/lib/ng-file-upload/ng-file-upload-shim.min.js"></script>
+<script type="application/javascript" src="/static/project/lib/ng-file-upload/ng-file-upload.min.js"></script>
+<script type="application/javascript" src="/static/project/js/language-file.js"></script>
+</body>
+</html>
