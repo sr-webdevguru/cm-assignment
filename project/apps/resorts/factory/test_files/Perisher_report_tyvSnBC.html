@@ -1,0 +1,540 @@
+{% load tz %}
+{% load i18n %}
+{% load parse_date %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0079)https://dgjl4kjgjzs4p.cloudfront.net/wp-content/uploads/2014/05/Perisher10.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta name="pdfkit-page-size" content="A4"/>
+        <meta name="pdfkit-orientation" content="Landscape"/>
+    
+        <title>Perisher Incident Report Form</title>
+        <style type="text/css">
+            body {
+                font: normal 14px Arial;
+            }
+
+            .form-title {
+                margin-bottom: 5px;
+            }
+
+            img {
+                border: 0;
+            }
+
+            table {
+                width: 100%;
+                border: 1px solid #000;
+                border-collapse: collapse;
+            }
+
+            table td {
+                border: 1px solid #000;
+                border-width: 1px 0 0 1px;
+                vertical-align: top;
+                padding: 4px;
+                word-wrap: break-word;
+                word-break: break-all;
+            }
+
+            table tr:first-child > td {
+                border-top: 0;
+            }
+
+            table td:first-child {
+                border-left: 0;
+            }
+
+            table + table {
+                border-top: 0;
+            }
+
+            table table {
+                border: 0;
+            }
+
+            table td img {
+                max-width: 100%;
+            }
+
+            table td.signature {
+                vertical-align: middle;
+            }
+
+            table td.signature img {
+                max-width: 150px;
+                vertical-align: middle;
+            }
+
+            .no-pads {
+                padding: 0;
+            }
+
+            .center {
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+<form name="Perisher" action="">    
+    <h3 class="form-title">PERISHER SKI PATROL INCIDENT REPORT</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Privacy Statement:</strong> {% trans DashboardItems.field_52ca426c0a178.Questions.field_5334b101c8779.selected.value %}</td>
+                <td><strong>LOG No:</strong> {{incident_info.incident_pk}}</td>
+                <td><strong>Date:</strong> {{ incident_info.dt_created | parse_date:timez | date:"SHORT_DATE_FORMAT"}}</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><strong>Exact Location:</strong> Latitude: {{DashboardItems.field_52ca41c50a16f.Questions.field_52ca456962ba8.selected.lat }}, Longitude: {{DashboardItems.field_52ca41c50a16f.Questions.field_52ca456962ba8.selected.long }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Customer Type:</strong> {{DashboardItems.field_52ca41790a16c.Questions.field_52ca3d31ac436.selected.value }}</td>
+                <td><strong>Pass:</strong> {% trans DashboardItems.field_52ca41790a16c.Questions.field_5386e4e216667.selected.value %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4"><strong>Name:</strong> {{DashboardItems.user_info.Questions.name.selected}}</td>
+            </tr>
+
+            <tr>
+                <td style="width: 25%;"><strong>DOB:</strong> {{DashboardItems.user_info.Questions.dob.selected}}</td>
+                <td style="width: 25%;">Sex: {{DashboardItems.user_info.Questions.sex.selected.value}}</td>
+                <td style="width: 25%;">Height: {{DashboardItems.field_52ca41790a16c.Questions.field_52dd8bee9b004.selected}} cm</td>
+                <td style="width: 25%;">Weight: {{DashboardItems.field_52ca41790a16c.Questions.field_52dd8c049b005.selected}} kg</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><strong>Address:</strong> {{DashboardItems.user_info.Questions.address.selected}} {{DashboardItems.user_info.Questions.suburb.selected}} {{DashboardItems.user_info.Questions.state.selected}}</td>
+                <td>P/C {{DashboardItems.user_info.Questions.postcode.selected}} {{DashboardItems.user_info.Questions.country.selected.value}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="6">Phone: {{DashboardItems.user_info.Questions.phone.selected}}</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Aware of ARC? {% trans DashboardItems.field_52ca426c0a178.Questions.field_53c386190a2dd.selected.value %}</td>
+                <td colspan="2">Wrist guards worn? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca429c62b98.selected.value %} {% for val in  DashboardItems.field_52ca41790a16c.Questions.field_52d483dceb786.selected %}{% trans val %}, {% endfor %}</td>
+                <td colspan="2">Helmet worn? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca430462b9a.selected.value %} {{DashboardItems.field_52ca41790a16c.Questions.field_52dd8a57e95a7.selected}}</td>
+            </tr>
+
+            <tr>
+                <td colspan="3">Corrective lenses needed? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca43f362ba0.selected.value %}</td>
+                <td colspan="3">If yes were they worn? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca43c462b9f.selected.value %}</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Medications taken? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca405959d2c.selected.value %}</td>
+                <td colspan="2">What? {{DashboardItems.field_52ca41790a16c.Questions.field_52ca407959d2d.selected}}</td>
+                <td colspan="2">When? {{DashboardItems.field_52ca41790a16c.Questions.field_52ca407a59d2e.selected}} hours ago</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Alcohol consumed? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca3fcc59d29.selected.value %}</td>
+                <td colspan="2">What? {{DashboardItems.field_52ca41790a16c.Questions.field_52ca404059d2b.selected}}</td>
+                <td colspan="2">When? {{DashboardItems.field_52ca41790a16c.Questions.field_52ca3fe959d2a.selected}} hours ago</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Drug consumed? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca437b62b9c.selected.value %}</td>
+                <td colspan="2">What? {{DashboardItems.field_52ca41790a16c.Questions.field_52ca438e62b9d.selected}}</td>
+                <td colspan="2">When? {{DashboardItems.field_52ca41790a16c.Questions.field_52ca438f62b9e.selected}} hours ago</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Incident Type:</strong> {% for val in  DashboardItems.field_52ca419f0a16e.Questions.field_52ca447762ba2.selected %}{% trans val %}, {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Activity:</strong> {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca3dc8ac437.selected.value %}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Location:</strong> {% trans DashboardItems.field_52ca41c50a16f.Questions.field_52ca453862ba6.selected.value %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4"><strong>Name of instructor:</strong> {{DashboardItems.field_52ca41790a16c.Questions.field_52ca44c862ba4.selected}}</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Number of times rode lift/run today? {{DashboardItems.field_52ca41790a16c.Questions.field_52d4888a5b643.selected}} hours</td>
+                <td colspan="2">Previously? {{DashboardItems.field_52ca41790a16c.Questions.field_52d488b6573b0.selected}} days</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Ability? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca3dfcac438.selected.value %}</td>
+                <td colspan="2">Trail Rating? {% trans DashboardItems.field_52ca41c50a16f.Questions.field_52ca451a62ba5.selected.value %}</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Snow conditions at scene? {% for val in DashboardItems.field_52ca42550a175.Questions.field_52ca45d6cc0fb.selected %}{% trans val %}, {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Weather? {% for val in DashboardItems.field_52ca42550a175.Questions.field_5386e82f7e637.selected %}{% trans val %}, {% endfor %}</td>
+                <td colspan="2">Visibility? {% trans DashboardItems.field_52ca42550a175.Questions.field_52ca45fbcc0fc.selected.value %}</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Equipment? {% trans DashboardItems.field_52ca41790a16c.Questions.field_52ca3e17ac439.selected.value %}</td>
+                <td colspan="2">From? {{DashboardItems.field_52ca41790a16c.Questions.field_52ca42f362b99.selected}}</td>
+            </tr>
+
+            <tr>
+                <td>L Toe: {{DashboardItems.field_52ca41790a16c.Questions.field_52ca3ef759d23.selected}}</td>
+                <td>L Heel: {{DashboardItems.field_52ca41790a16c.Questions.field_52ca3f8e59d28.selected}}</td>
+                <td>R Toe: {{DashboardItems.field_52ca41790a16c.Questions.field_52ca3f8d59d27.selected}}</td>
+                <td>R Heel: {{DashboardItems.field_52ca41790a16c.Questions.field_52ca3f8c59d26.selected}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>Injured Persons Statement</strong>
+                    <div>{{DashboardItems.field_52ca419f0a16e.Questions.field_52d47eer6dbe2.selected}}</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <!-- sample signatures -->
+            <tr>
+                <td class="signature">I declare report true and correct, SIGN: <img src="{{DashboardItems.field_52ca426c0a178.Questions.field_52d47d6aedbdc.selected | convert_image}}" alt="xyz" /></td>
+            </tr>
+
+            <tr>
+                <td class="signature">If minor, Parent/Guardian signature? {% trans DashboardItems.field_52ca426c0a178.Questions.field_52d47d7fedbdd.selected.value %} {{DashboardItems.field_52ca426c0a178.Questions.field_52d47da6edbde.selected}}</td>
+            </tr>
+
+            <tr>
+                <td class="signature">I understand that I have been offered specific first aid treatment and/or offered transport to PVMC for further treatment and I REFUSE THIS OFFER. {% trans DashboardItems.field_52ca42230a171.Questions.field_539158b37517e.selected.value %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Level of Consciousness (GCS)</strong></td>
+            </tr>
+
+            <tr>
+                <!-- Need to add class "no-pads" on columns that has sub table -->
+                <td class="no-pads">
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Time</strong></td>
+                        <td><strong>Eyes</strong></td>
+                        <td><strong>Motor</strong></td>
+                        <td><strong>Verbal</strong></td>
+                        <td><strong>Total</strong></td>
+                      </tr>
+                      {% for val in  DashboardItems.field_52d4767cde30d.selected|dictsort:"date_added" %}
+                      <tr>
+                        <td>{{ val.date_added | parse_date:timez | date:"H:i" }}</td>
+                        <td>{{ val.gcs_eye }}</td>
+                        <td>{{ val.gcs_motor }}</td>
+                        <td>{{ val.gcs_verbal }}</td>
+                        <td>{{ val.pain_score| add:val.gcs_eye | add:val.gcs_verbal }}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Observations</strong></td>
+            </tr>
+
+            <tr>
+                <!-- Need to add class "no-pads" on columns that has sub table -->
+                <td class="no-pads">
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Time</strong></td>
+                        <td><strong>Pulse</strong></td>
+                        <td><strong>Breathing</strong></td>
+                        <td><strong>sp02</strong></td>
+                        <td><strong>Blood Pressure</strong></td>
+                        <td><strong>Pain Score</strong></td>
+                        <td><strong>SkinColour</strong></td>
+                      </tr>
+                      {% for val in  DashboardItems.field_52d4767cde30d.selected|dictsort:"date_added" %}
+                      <tr>
+                        <td>{{ val.date_added | parse_date:timez | date:"H:i" }}</td>
+                        <td>{{ val.heart_rate }}</td>
+                        <td>{{ val.respiration_rate }}</td>
+                        <td>{{ val.sp02 }}</td>
+                        <td>{{ val.blood_pressure }}</td>
+                        <td>{{ val.pain_score }}</td>
+                        <td>{{ val.skin_colour }}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Injury</strong></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Location</strong></td>
+                        <td><strong>Body Part</strong></td>
+                        <td><strong>Injury Type</strong></td>
+                        <td><strong>Pre-existing?</strong></td>
+                      </tr>
+                      {% for val in  DashboardItems.field_52d4798f6d229.Questions.field_52d4798f6d227.selected %}
+                      <tr>
+                        <td>{%  trans val.injury_location.value %}</td>
+                        <td>{%  trans val.body_part.value %}</td>
+                        <td>{%  trans val.injury_type.value %}</td>
+                        <td>{%  trans val.preexisting_injury.value %}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>Treatment:</strong> {% for val in DashboardItems.field_52ca42230a171.Questions.field_52ca445d62ba1.selected %}{% trans val %}, {% endfor %}
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Drugs Administered</strong></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Time</strong></td>
+                        <td><strong>Drug</strong></td>
+                        <td><strong>Dose</strong></td>
+                        <td><strong>Volume</strong></td>
+                      </tr>
+                      {% for val in  DashboardItems.field_52ca42230a171.Questions.field_52d4800164f2e.selected|dictsort:"drug_time_administered" %}
+                      <tr>
+                        <td>{{ val.drug_time_administered | parse_date:timez | date:"H:i" }}</td>
+                        <td>{% trans val.drug_administered.value %}</td>
+                        <td>{{ val.dose_administered }}</td>
+                        <td>{% trans val.drug_volume_administered.value %}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Patient Status Starts -->
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Patient Status:</strong> {% trans DashboardItems.field_52ca42770a179.Questions.field_52d48077a16be.selected.value %}, {{DashboardItems.field_52ca42770a179.Questions.field_52d48117a16bf.selected}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Patient Status Ends -->
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Transport:</strong> {% for val in DashboardItems.field_52ca425e0a176.Questions.field_52ca4c34ef1a1.selected %}{% trans val %}, {% endfor %}</td>
+            </tr>"
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Witness</strong></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Name</strong></td>
+                        <td><strong>Phone</strong></td>
+                        <td><strong>Relationship</strong></td>
+                        <td><strong>Date of Birth</strong></td>
+                        <td><strong>From</strong></td>
+                        <td><strong>Listen</strong></td>
+                        <td><strong>Time</strong></td>
+                      </tr>
+                      {% for val in  DashboardItems.field_52d47b5fdda86.selected %}
+                      <tr>
+                        <td>{{ val.witness_name }}</td>
+                        <td>{{ val.witness_phone }}</td>
+                        <td>{{ val.witness_relationship }}</td>
+                        <td>{{ val.witness_date_of_birth }}</td>
+                        <td>{% trans val.witness_type.value %}</td>
+                        <td><a href="{{ val.witness_statement_recording | redirect_url }}">Listen</a></td>
+                        <td>{{ val.time_of_witness_statement | parse_date:timez | date:"d/m/Y H:i" }}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Attending Patrollers</strong></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Patroller</strong></td>
+                        <td><strong>Incident Role</strong></td>
+                      </tr>
+                      {% for val in  DashboardItems.field_52d47aac9bd13.selected %}
+                      <tr>
+                        <td>{{ val.patroller.value }}</td>
+                        <td>{% trans val.incident_role.value %}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Photos</strong></td>
+            </tr>
+            <tr>
+                <td class="no-pads">
+                    <table style="width:100%">
+                      {% for val in  DashboardItems.field_52d47a654d1aa.selected %}
+                      <td>
+                        <tr>
+                            <img src="{{val.photo | convert_image}}" alt="" />
+                        </tr>
+                        <tr>
+                            {{val.photo_date_taken | parse_date:timez | date:"d/m/Y H:i"}}
+                         </tr>
+                      </td>
+
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Notes</strong></td>
+            </tr>
+
+            <tr>
+                <td class="no-pads">
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Date</strong></td>
+                        <td><strong>By</strong></td>
+                        <td><strong>Note</strong></td>
+                      </tr>
+                      {% for val in  DashboardItems.notes.selected|dictsort:"field_52ca448dg94ja4" %}
+                      <tr>
+                        <td>{{ val.field_52ca448dg94ja4 | parse_date:timez | date:"d/m/Y H:i"}}</td>
+                        <td>{{ val.field_52ca448dg94ja5.value }}</td>
+                        <td>{{ val.field_52ca448dg94ja3 }}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>Status</strong></td>
+            </tr>
+
+            <tr>
+                <td class="no-pads">
+                    <table style="width:100%">
+                      <tr>
+                        <td><strong>Date</strong></td>
+                        <td><strong>By</strong></td>
+                        <td><strong>Status</strong></td>
+                      </tr>
+                      {% for val in  status_history %}
+                      <tr>
+                        <td>{{ val.status_date | parse_date:timez | date:"d/m/Y H:i"}}</td>
+                        <td>{{ val.user.name }}</td>
+                        <td>{% trans val.status.key %}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</body></html>
