@@ -1,0 +1,14 @@
+<div class="form-group" ng-class="{'has-error': hasError()}">
+    <div
+        file="form"
+        ng-show="form.key"
+        schema-validate="form"
+        ng-model="$$value$$">
+    </div>
+    <div style="color: #A94442" ng-if="hasError()">
+        <div ng-if="ngModel.$error.fileSize">{{form.errorFileSize}}</div>
+        <div ng-if="ngModel.$error.fileType">{{form.errorFileType}}</div>
+        <div ng-if="ngModel.$error.uploadError">Upload error</div>
+        <div ng-if="ngModel.$error.uploadCanceled">Upload canceled</div>
+    </div>
+</div>
