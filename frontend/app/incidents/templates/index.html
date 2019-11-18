@@ -1,0 +1,135 @@
+<div class="container-fluid cont-w-sidenav" ng-class="{side__active: true}" ng-init="list.get()">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <h2>[[ 'list_of_incidents' | translate]]</h2>
+
+            <div class="main-title--options">
+            	
+                <span class="fa-stack fa-1x add-incident-icon" ng-click="list.add()">
+                        <i class="fa fa-circle fa-stack-2x" ></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                </span>
+
+                <div class="right-inner-addon">
+                    <input type="text" class="form-control" placeholder="[[ 'to' | translate]]"
+                           ng-model="list.range.dateTo" bs-datepicker
+                           data-min-date="[[list.range.dateFrom]]" data-date-format="[[date_format]]"
+                           data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right"
+                           data-autoclose="true" data-placement="bottom-right"
+                           maxlength="10">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <div class="right-inner-addon">
+                    <input type="text" class="form-control" placeholder="[[ 'from' | translate]]"
+                           ng-model="list.range.dateFrom" bs-datepicker
+                           data-autoclose="true"
+                           data-max-date="[[list.range.dateTo]]" data-date-format="[[date_format]]"
+                           data-icon-left="fa fa-chevron-left" data-icon-right="fa fa-chevron-right" maxlength="10"
+                           data-placement="bottom-right">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <div class="right-inner-addon inner-addon__large">
+                    <input type="text" class="form-control" placeholder="[[ 'search_casualty_name' | translate]]"
+                           ng-model="search.casualty"
+                           ng-change="list.filter()">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row table-container">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th ng-click="list.sort_by('dt_created');">[[ 'date_time' | translate]] <span
+                                ng-show="list.predicate=='dt_created'"><i
+                                class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th ng-click="list.sort_by('incident_pk');">[[ 'incident_id' | translate]] <span
+                                ng-show="list.predicate=='incident_pk'"><i
+                                class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th>[[ 'casualty_name' | translate]]</th>
+                        <th>[[ 'injury' | translate]]</th>
+                        <th>[[ 'activity' | translate]]</th>
+                        <th ng-click="list.sort_by('assigned_to');">[[ 'assigned_to' | translate]] <span
+                                ng-show="list.predicate=='assigned_to'"><i
+                                class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th ng-click="list.sort_by('incident_status');">[[ 'status' | translate]] <span
+                                ng-show="list.predicate=='incident_status'"><i
+                                class="fa fa-caret-down" ng-show="list.reverse"></i><i
+                                class="fa fa-caret-up" ng-hide="list.reverse"></i></span></th>
+                        <th>[[ 'actions' | translate]]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-show="list.loading">
+                        <td colspan="7">
+                            [[ 'loading' | translate]]
+                        </td>
+                    </tr>
+                    <tr ng-repeat="data in list.incidents">
+                        <td>[[data.dt_created]]</td>
+                        <td>#[[data.incident_pk]]</td>
+                        <td class="titlecase">[[data.patient.name]]</td>
+                        <td>[[data.injury| transformInjury | toTitlecase]]</td>
+                        <td class="titlecase">[[data.activity]]</td>
+                        <td class="titlecase">[[data.assigned_to.name]]</td>
+                        <td class="titlecase">[[data.incident_status[0].key | translate]]</td>
+                        <td>
+                            <a ui-sref="incident_edit({ incidentId: data.incident_id })"
+                               ng-hide="data.status=='Closed'"><i
+                                    class="fa fa-pencil-square-o"></i> [[ 'edit' | translate]]</a>
+                            <a href="javascript:void(0);" ng-click="list.print(data.incident_id)"><i class="fa fa-print"></i> [[
+                                'print' | translate]]</a>
+                        </td>
+                    </tr>
+
+                    <tr ng-show="list.filteredItems == 0 && list.loading == false">
+                        <td colspan="7">
+                            [[ 'no_incident_found' | translate]]
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row table-footer">
+                <div class="table-options">
+                    <div class="table-options--page">
+                        <span>[[ 'page' | translate]]</span>
+                        <select class="form-control select__small" name="" id="" ng-model="list.currentPage">
+                            <option ng-repeat="n in [] | range:list.totalPages">[[n]]</option>
+                        </select>
+                        <span>[[ 'of' | translate]] 1 [[ 'page' | translate]]</span>
+                        <small> ([[list.totalItems]] [[ 'total_items' | translate]])</small>
+                    </div>
+                    <div class="table-options--itemspp">
+                        <span>[[ 'showing' | translate]]</span>
+                        <select class="form-control select__small" name="" ng-model="list.itemsPerPage">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>[[ 'items_per_page' | translate]]</span>
+                    </div>
+                </div>
+                <div
+                        pagination=""
+                        ng-model="list.currentPage"
+                        total-items="list.totalItems"
+                        items-per-page="list.itemsPerPage"
+                        boundary-links="false"
+                        on-select-page="list.setPage(page)"
+                        previous-text="&laquo;"
+                        next-text="&raquo;"
+                        class="pagination-small">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
