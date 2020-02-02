@@ -1,0 +1,83 @@
+# Latest stable release of django
+Django>=1.8,<1.9
+
+# Django-Rest-Framework for API
+djangorestframework==3.3.3
+
+# for enum fields in models
+django-enumfield==1.3b2
+
+# for JSON field in models
+jsonfield==1.0.3
+
+# django rest swagger for documenting API
+django-rest-swagger==0.2.9
+
+# Django health checking module
+# django-health-check==1.0.2
+# Direct from master branch since it has not been uploaded to pypi yet.
+# -e git+https://github.com/KristianOellegaard/django-health-check.git#egg=django-health-check
+
+django-health-check==1.1.3
+
+psycopg2==2.6.2
+
+# For API Documentation
+mkdocs==0.12.2
+
+# For test data generation during test
+factory_boy==2.5.2
+
+# For encrypted JSON field
+django-encrypted-fields==1.1.2
+
+# For PDF generation
+pdfkit==0.5.0
+
+# For validation
+validators==0.7
+
+# Sentry client
+raven==5.3.1
+
+# For oauth provider
+oauthlib>=0.6.2
+django-braces==1.4.0
+
+# For python2-3 compatibility
+six
+
+# For requests
+urllib3>=1.10.2
+
+# For CORS request
+django-cors-headers==1.1.0
+
+# For securely serving media content
+django-sendfile==0.3.10
+
+# For forced HTTPS across all URL
+django-sslify>=0.2.0
+
+# newrelic module
+newrelic>=2.50.0.39
+
+# python timezone module
+pytz
+
+# Python Imaging Library
+Pillow==2.8.2
+
+# For cron job
+django-cron==0.4.6
+
+# AWS SDK
+boto3==1.4.0
+
+futures >=2.2.0,<4.0.0
+
+# Amazon S3 Storage
+django-storages==1.5.2
+
+# Django Math-filter
+django-mathfilters==0.4.0
