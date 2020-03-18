@@ -1,0 +1,244 @@
+<div class="container-fluid page-heading">
+    <h4>Resort</h4>
+</div>
+<div class="container-fluid user-edit" ng-class="{side__active: true}" ng-init="get()">
+    <div class="row-fluid">
+        <div class="main-title">
+            <h2>[[ 'Settings for ' | translate]] [[currentUser.resorts[0].resort_name]]</h2>
+        </div>
+        <form name="form" class="form-horizontal" role="form" ng-submit="save()">
+            <div class="user-edit--details">
+
+                <h3>[[ 'dispatch' | translate]]</h3>
+
+                <div class="form-group">
+                    <label for="latitude" class="col-sm-3 control-label">[[ 'latitude' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="latitude" id="latitude" placeholder=""
+                               ng-model="settings.map_lat" required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="longitude" class="col-sm-3 control-label">[[ 'longitude' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="longitude" id="longitude" placeholder=""
+                               ng-model="settings.map_lng" required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="frm_initial_map_zoom_level" class="col-sm-3 control-label">[[ 'frm_initial_map_zoom_level' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <number-input ng-model="settings.initial_map_zoom_level"
+                                      id="frm_initial_map_zoom_level"
+                                      max="18"
+                                      min="1"
+                                      step="1"
+                                      hint="Between 1 to 18"
+                                      hideHint="false"
+                                      disableDecimal="true"
+                                      decimalPlaces="0"></number-input>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="map_kml" class="col-sm-3 control-label">[[ 'map_file' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <label class="btn btn-primary" ng-if="!settings.map_kml">
+                            <input
+                                    style="display: none"
+                                    name="map_kml"
+                                    id="map_kml"
+                                    type="file"
+                                    ng-model="settings.map_kml"
+                                    file-monitor
+                                    on-file-change="onFileChange(files)"/>
+                            <span>[[ 'Select' | translate]]</span>
+                        </label><br/>
+
+                        <a target="_blank" href="[['url_how_to_create_map_file'|translate]]">[['msg_how_to_create_map_file'|translate]]</a>
+
+                        <div ng-if="settings.map_kml">
+                            <a style="margin-left: 10px" class="pull-right" href="" ng-click="removeFile('map_kml')">Remove</a>
+                            <a class="download_file pull-right"
+                               target="_blank" download="[[settings.map_kml]]"
+                               ng-class="{disabled: !settings.map_kml}"
+                               ng-click="download(settings.map_kml, 'map.json')"
+                                    >
+                                [['view_file'|translate]]
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <h3>[[ 'case_summary' | translate]]</h3>
+
+
+                <div class="row" ng-repeat="filter in model.filters">
+                    <div class="col-sm-3">
+                        Field [[$index + 1]]
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group" style="margin-bottom:10px;padding-left: 15px">
+                            <select class="form-control" name=""
+                                    ng-options="property as property.title for property in schema.properties"
+                                    ng-model="model.filters[$index].field"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="button" ng-click="addField(model.filters)"
+                           ng-hide="!$last || model.filters.length>=4"><i class="fa fa-plus-circle fa-2x"></i></a>
+                        <a class="button" ng-click="removeField($index)" ng-hide="$first && model.filters.length<=1"><i
+                                class="fa fa-minus-circle fa-2x"></i></a>
+                    </div>
+                </div>
+
+                <!--<pre>[[model|json]]</pre>-->
+
+
+                <h3>[[ 'settings' | translate]]</h3>
+
+                <div class="form-group">
+                    <label for="unit_format" class="col-sm-3 control-label">[[ 'Units' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="unit_format" id="unit_format" ng-model="settings.unit_format"
+                                ng-options="choice.key as choice.name for choice in unit_formats"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="report_form" class="col-sm-3 control-label">[[ 'pdf_template' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <label class="btn btn-primary" ng-if="!settings.report_form">
+                            <input
+                                    style="display: none"
+                                    name="report_form"
+                                    id="report_form"
+                                    type="file"
+                                    ng-model="settings.report_form"
+                                    file-monitor
+                                    on-file-change="onFileChange(files)"/>
+                            <span>[[ 'Select' | translate]]</span>
+                        </label><br/>
+                        <a target="_blank" href="[['url_how_to_create_pdf_template'|translate]]">[['msg_how_to_create_pdf_template'|translate]]</a>
+
+                        <div ng-if="settings.report_form">
+                            <a style="margin-left: 10px" class="pull-right" href=""
+                               ng-click="removeFile('report_form')">Remove</a>
+
+                            <a class="download_file pull-right"
+                               target="_blank" download="[[settings.report_form]]"
+                               ng-class="{disabled: !settings.report_form}"
+                               ng-click="download(settings.report_form, 'report_form.html')"
+                                    >
+                                [['view_file'|translate]]
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="default_unit_paper" class="col-sm-3 control-label">[[ 'page_size' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="default_unit_paper" id="default_unit_paper"
+                                ng-model="settings.default_unit_paper"
+                                ng-options="choice.key as choice.name for choice in paper_sizes"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="timezone" class="col-sm-3 control-label">[[ 'timezones' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="timezone" id="timezone" ng-model="settings.timezone"
+                                ng-options="choice.key as choice.name for choice in timezones"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="datetime_format" class="col-sm-3 control-label">[[ 'date_format' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="datetime_format" id="datetime_format" ng-model="settings.datetime_format"
+                                ng-options="choice.key as choice.name for choice in datetime_formats"></select>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="user-edit--actions">
+
+                <h3>[[ 'licenses' | translate]]</h3>
+
+                <p>[[ 'licenses' | translate]]: [[settings.user_count]] [['used_of'|translate ]] [[settings.licenses ]] [[ 'available' | translate]]</p>
+
+                <p>[[ 'network_key' | translate]]: [[settings.network_key ]]</p>
+
+                <h3>[[ 'logo' | translate]]</h3>
+
+                <div class="form-group">
+                    <label for="resort_logo" class="col-sm-3 control-label">[[ 'resort_logo' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <label class="btn btn-primary" ng-if="!settings.resort_logo">
+                            <input
+                                    style="display: none"
+                                    name="resort_logo"
+                                    id="resort_logo"
+                                    type="file"
+                                    ng-model="settings.resort_logo"
+                                    file-monitor
+                                    on-file-change="onFileChange(files)"/>
+                            <span>[[ 'Select' | translate]]</span>
+                        </label><br/>
+
+                        [['msg_image_upload_info'|translate]]
+
+                        <div ng-if="settings.resort_logo">
+                            <p><a style="margin-left: 10px" class="pull-right" href=""
+                                  ng-click="removeFile('resort_logo')">Remove</a></p>
+                            <img ng-src="[[settings.resort_logo]]" style="max-height:100px;max-width: 400px;">
+                        </div>
+                    </div>
+                </div>
+
+                <h3>[[ 'api' | translate]]</h3>
+
+                <div ng-show="settings.client_id=='' && settings.client_secret==''">
+                    <p>[['txt_resort_no_api_key_yet'|translate]]</p>
+                    <a class="btn btn-primary pull-right" ng-click="generate_oauth_key()">[['btn_generate_oauth_key'|translate]]</a>
+                </div>
+
+                <div ng-hide="settings.client_id=='' && settings.client_secret==''">
+                    <p>[['api_details_overview'|translate]]</p>
+                    <a target="_blank" href="[['url_how_to_use_api'|translate]]" class="pull-right">[['msg_how_to_use_api'|translate]]</a>
+
+                    <p>[[ 'Endpoint' | translate]]: [[settings.domain_id ]]</p>
+
+                    <p>[[ 'client_id' | translate]]: [[settings.client_id ]]</p>
+
+                    <p style="word-wrap: break-word;">[[ 'client_secret' | translate]]: [[settings.client_secret ]]</p>
+                    <a class="btn btn-primary pull-right" ng-click="regenerate_oauth_key()">[['api_regenerate_oauth_key'|translate]]</a>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary pull-right">[['save'|translate]]</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
