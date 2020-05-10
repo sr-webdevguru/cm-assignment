@@ -1,0 +1,43 @@
+.wrapheader{
+	margin-bottom: 60px;
+}
+
+.main-title{
+	@include make-xs-column(12);
+	padding-left:0;
+	margin-bottom: 16px;
+
+	h2{
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	.main-title--options{
+		@include make-xs-column(12);
+		margin-top: $grid-gutter-width/2;
+		padding-right: 0;
+		float:right;
+		text-align: center;
+		direction: rtl;
+		input{
+		}
+
+		.right-inner-addon{
+			width: 100%;
+			max-width: 100px;
+			background:white;
+			margin: $grid-gutter-width/3;
+			display: inline-block;
+			direction: ltr;
+			&.inner-addon__large{
+				max-width: 180px;
+			}
+		}
+		.form-control{
+			@extend .input-sm;
+		}
+	}
+}
+
