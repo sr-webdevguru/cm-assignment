@@ -1,0 +1,232 @@
+<div class="container-fluid page-heading">
+    <h4>[[ 'controlled_substances' | translate]]</h4>
+</div>
+<div class="container-fluid user-edit" ng-class="{side__active: true}">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <h2>[[ current_status_text | translate]]</h2>
+
+            <div class="main-title--options">
+                <div class="pull-right">
+                    <a class="link-btn" ui-sref="stock_report">[[ 'stock_take' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="stock_add">[[ 'add_stock' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="stock_checkout">[[ 'checkout' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="audit_log">[[ 'audit' | translate]]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-4">
+                    <form name="form" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="controlled_substance_id" class="col-sm-3 control-label">[[ 'select' |
+                                                                                                translate]]</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control" name="controlled_substance_id" id="controlled_substance_id"
+                                        ng-model="controlled_substance"
+                                        ng-options="choice as choice.controlled_substance_name for choice in controlled_substances"
+                                        required="true"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location_id" class="col-sm-3 control-label">[[ 'location' | translate]]</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control" name="location_id" id="location_id" ng-model="location_id"
+                                        ng-options="choice.location_id as choice.location_name for choice in locations"
+                                        required="false"></select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-2">
+                    <div google-chart chart="chart" style="[[css]]"></div>
+                </div>
+                <div class="col-xs-2">
+                    <dl>
+                        <dt>[['in_stock' | translate]]</dt>
+                        <dd><a href="" ng-click="current_status='in'">[[list.summary.in || 0]]</a></dd>
+                        <dt>[['allocated' | translate]]</dt>
+                        <dd><a href="" ng-click="current_status='out'">[[list.summary.out || 0]]</a></dd>
+                        <dt>[['used' | translate]]</dt>
+                        <dd><a href="" ng-click="current_status='used'">[[list.summary.used || 0]]</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12" style="margin-bottom: 15px;" ng-show="current_status == 'used'">
+            <div class="row date-filters">
+                <div class="col-xs-2">
+                    <div class="right-inner-addon">
+                        <label>[['from' |translate ]]</label>
+                        <input type="text" class="form-control" placeholder="[[ 'from' | translate]]"
+                               ng-model="list.dateFrom"
+                               bs-datepicker
+                               data-autoclose="true" ng-change="init()"
+                               data-placement="bottom-right"
+                               data-max-date="[[list.dateTo]]" data-date-format="[[date_format]]"
+                               maxlength="10">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="right-inner-addon">
+                        <label>[['to' |translate ]]</label>
+                        <input type="text" class="form-control" placeholder="[[ 'to' | translate]]"
+                               ng-model="list.dateTo"
+                               bs-datepicker
+                               ng-change="init()"
+                               data-min-date="[[list.dateFrom]]" data-date-format="[[date_format]]"
+                               data-autoclose="true"
+                               data-placement="bottom-right"
+                               maxlength="10">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row table-container">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th ng-click="list.sort_by('controlled_substance_stock_pk')">
+                            [['#'|translate]]
+                            <span ng-show="list.predicate=='controlled_substance_stock_pk'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                        <th class="thnohover">
+                            [['item'|translate]]
+                        </th>
+                        <th class="thnohover">[['volume'|translate]]</th>
+                        <th class="thnohover" ng-show="current_status == 'out' || current_status == 'used'">[['who'|translate]]</th>
+                        <th class="thnohover" ng-show="current_status == 'in'">[['expiry_date'|translate]]</th>
+                        <th ng-show="current_status == 'out' || current_status == 'used'"
+                            ng-click="list.sort_by('stockassignment__dt_added')">
+                            [['date_issued'|translate]]
+                            <span ng-show="list.predicate=='stockassignment__dt_added'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                        <th ng-show="current_status == 'used'"
+                            ng-click="list.sort_by('stockassignment__dt_used')">
+                            [['date_used'|translate]]
+                            <span ng-show="list.predicate=='stockassignment__dt_used'">
+                                <i class="fa fa-caret-down" ng-show="list.reverse"></i>
+                                <i class="fa fa-caret-up" ng-hide="list.reverse"></i>
+                            </span>
+                        </th>
+                        <th class="thnohover" ng-show="current_status == 'used'">[['incident'|translate]]</th>
+                        <th class="thnohover" ng-hide="current_status == 'used'">[['actions'|translate]]</th>
+                        <th class="thnohover" ng-show="current_status == 'in'">[['select'|translate]]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-show="list.loading">
+                        <td>
+                            [[ 'loading' | translate]]
+                        </td>
+                    </tr>
+                    <tr ng-repeat="data in list.items">
+                        <td>[[data.controlled_substance_stock_pk]]</td>
+                        <td class="controlled-substance-name">[[data.controlled_substance.controlled_substance_name]]
+                        </td>
+                        <td>[[data.volume]] [[data.controlled_substance.units]]</td>
+                        <td ng-show="current_status == 'out' || current_status == 'used'">[[data.assignment.user.name]]
+                        </td>
+                        <td ng-show="current_status == 'in'">[[data.dt_expiry | toLocalDateTime]]</td>
+                        <td ng-show="current_status == 'out' || current_status == 'used'">[[data.assignment.dt_added | toLocalDateTime]]
+                        </td>
+                        <td ng-show="current_status == 'used'">[[data.assignment.dt_used | toLocalDateTime]]</td>
+                        <td ng-show="current_status == 'used'">
+                            <a ui-sref="incident_edit({ incidentId: data.assignment.incident_id })">[[data.assignment.incident_pk]]</a>
+                        </td>
+                        <td ng-hide="current_status == 'used'">
+                            <a href="" ng-show="current_status == 'in'"
+                               ui-sref="stock_checkout({controlledSubstanceStockId: data.controlled_substance_stock_id, controlledSubstanceId:data.controlled_substance.controlled_substance_id, locationId:data.location.location_id})">
+                                <i class="fa fa-check"></i> [['allocate'|translate]]</a>
+
+                            <a href="" ng-show="current_status == 'out'"
+                               ng-click="list.check_in(data)">
+                                <i class="fa fa-sign-in"></i> [['check_in'|translate]]</a>
+                        </td>
+                        <td ng-show="current_status == 'in'"><input type="checkbox" name="selected" ng-change="selection_update(data.selected)"
+                                                                    ng-model="data.selected"></td>
+                    </tr>
+                    <tr ng-show="list.filteredItems == 0 && list.loading == false">
+                        <td colspan="5">
+                            [[ 'no_stock_found' | translate]]
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row table-footer">
+                <div class="table-options">
+                    <div class="table-options--page">
+                        <span>[[ 'page' | translate]]</span>
+                        <select class="form-control select__small" name="" id="" ng-model="list.currentPage">
+                            <option ng-repeat="n in [] | range:list.totalPages">[[n]]</option>
+                        </select>
+                        <span>[[ 'of' | translate]] 1 [[ 'page' | translate]]</span>
+                        <small> ([[list.totalItems]] [[ 'total_items' | translate]])</small>
+                    </div>
+                    <div class="table-options--itemspp">
+                        <span>[[ 'showing' | translate]]</span>
+                        <select class="form-control select__small" name="" ng-model="list.itemsPerPage">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>[[ 'items_per_page' | translate]]</span>
+                    </div>
+                </div>
+                <div
+                        pagination=""
+                        ng-model="list.currentPage"
+                        total-items="list.totalItems"
+                        items-per-page="list.itemsPerPage"
+                        boundary-links="false"
+                        on-select-page="list.setPage(page)"
+                        previous-text="&laquo;"
+                        next-text="&raquo;"
+                        class="pagination-small">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12" style="margin-top: 15px;margin-bottom: 15px" ng-show="current_status == 'in' && list.selected>0">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary pull-right" ng-click="bulk_selection_update(bulk_action)"
+                            ng-disabled="bulk_action==null||list.selected==0">[['submit'|translate]] </button>
+                    <select class="form-control pull-right" name="bulk_action" id="bulk_action" ng-model="bulk_action"
+                            ng-options="choice.key as choice.value for choice in bulk_actions"
+                            ng-disabled="list.selected==0"
+                            style="max-width: 120px;margin-right: 15px"
+                            required="false"></select>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
