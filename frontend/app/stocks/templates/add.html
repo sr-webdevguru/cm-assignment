@@ -1,0 +1,88 @@
+<div class="container-fluid page-heading">
+    <h4>[[ 'controlled_substances' | translate]]</h4>
+</div>
+<div class="container-fluid user-edit" ng-class="{side__active: true}">
+    <div class="row-fluid">
+
+        <div class="main-title">
+            <h2>[[ 'add_stock' | translate]]</h2>
+
+            <div class="main-title--options">
+                <div class="pull-right">
+                    <a class="link-btn" ui-sref="stock_report">[[ 'stock_take' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="stock_add">[[ 'add_stock' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="stock_checkout">[[ 'checkout' | translate]]</a><span>|</span>
+                    <a class="link-btn" ui-sref="audit_log">[[ 'audit' | translate]]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-edit--details">
+
+            <form name="form" class="form-horizontal" role="form" ng-submit="add()">
+                <div class="form-group">
+                    <label for="quantity" class="col-sm-3 control-label">[[ 'quantity' | translate]]</label>
+
+                    <div class="col-sm-3">
+                        <input type="number" step="1" class="form-control" name="quantity" id="quantity" placeholder=""
+                               ng-model="quantity" required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="controlled_substance_id" class="col-sm-3 control-label">[[ 'item' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="controlled_substance_id" id="controlled_substance_id"
+                                ng-model="controlled_substance"
+                                ng-options="choice as choice.controlled_substance_name for choice in controlled_substances"
+                                required="true"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="volume" class="col-sm-3 control-label">[[ 'volume' | translate]]</label>
+
+                    <div class="col-sm-3">
+                        <input type="number" step=".1" class="form-control" name="volume" id="volume" placeholder=""
+                               ng-model="volume" required="true">
+                    </div>
+                    <div class="col-sm-6">
+                        <span
+                            style="text-transform: capitalize;line-height: 36px;margin-left: -20px;">[[ controlled_substance.units ]]</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="location_id" class="col-sm-3 control-label">[[ 'location' | translate]]</label>
+
+                    <div class="col-sm-9">
+                        <select class="form-control" name="location_id" id="location_id" ng-model="location_id"
+                                ng-options="choice.location_id as choice.location_name for choice in locations"
+                                required="true"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dt_expiry" class="col-sm-3 control-label">[[ 'expiry_date' | translate]]</label>
+
+                    <div class="col-sm-3 right-inner-addon">
+                        <input type="text" class="form-control"
+                               id="dt_expiry"
+                               name="dt_expiry"
+                               placeholder="[[ 'expiry_date' | translate]]"
+                               ng-model="dt_expiry" bs-datepicker
+                               ng-change="dt_expiry_changed()"
+                               data-min-date="[[minDate]]" data-date-format="yyyy-MM-dd"
+                               data-autoclose="true"
+                               data-placement="bottom-right"
+                               maxlength="10">
+                        <i class="fa fa-calendar" style="right: 10px;"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary pull-right">[['save'|translate]]</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
