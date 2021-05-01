@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="/static/mkdocs/img/favicon.ico">
+
+	<title>oAuth2 API - Medic52 API Documentation</title>
+
+        <link href="/static/mkdocs/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="/static/mkdocs/css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="/static/mkdocs/css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/mkdocs/css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="/docs">Medic52 API Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="/docs">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">API Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            <li class="active">
+                                <a href="./">oAuth2 API</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                
+                <li >
+                    <a rel="next" href="/docs">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a rel="prev" >
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                
+            </ul>
+            
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#oauth-api-documentation">oAuth API documentation</a></li>
+        
+            <li><a href="#register-a-new-client">Register a new client</a></li>
+        
+            <li><a href="#get-access-token">Get access token</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="oauth-api-documentation">oAuth API documentation</h1>
+<p>This module details the oAuth2 API used in Medic52.</p>
+<h2 id="register-a-new-client">Register a new client</h2>
+<p>To create new <strong>oAuth2 client application</strong> follow the process below</p>
+<ol>
+<li>Go to the URL <code>http://api.dev.medic52.com/oauth/applications/register/</code></li>
+<li>If not logged in this will prompt you for the login information. Provide admin login information.</li>
+<li>On Register new application provide the following information<ul>
+<li><code>Name</code> (required) - Provide the name for application</li>
+<li><code>Client type</code> (required) - Select <code>confidential</code> as the option from dropdown</li>
+<li><code>Authorization grant type</code> (required) - select <code>Client credentials</code> from dropdown</li>
+<li><code>Redirect uris</code> - Leave it as empty</li>
+<li><code>Client id</code> and <code>Client secret</code> - Note down this value as it will be required for generating access token</li>
+</ul>
+</li>
+</ol>
+<h2 id="get-access-token">Get access token</h2>
+<p>This API can be used to get access token with validity of 30 mins in exchange for the client id and client secret of 
+the application</p>
+<h4 id="api-url">API URL</h4>
+<pre><code>/auth/access_token/
+</code></pre>
+
+<h4 id="api-method">API Method</h4>
+<pre><code>POST
+</code></pre>
+
+<h4 id="api-parameters">API Parameters</h4>
+<ul>
+<li><code>grant_type</code> (<strong>required</strong>)<ul>
+<li>This parameter defines the grant requirement for the application</li>
+<li><strong>Default</strong> - <code>None</code></li>
+<li><strong>Required Value</strong> - <code>client_credentials</code></li>
+</ul>
+</li>
+<li><code>client_id</code> (<strong>required</strong>)<ul>
+<li>This provides client id for the targeted application </li>
+<li><strong>Default</strong> - <code>None</code></li>
+</ul>
+</li>
+<li><code>client_secret</code> (<strong>required</strong>)<ul>
+<li>This provides client secret for the targeted application </li>
+<li><strong>Default</strong> - <code>None</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="response-type">Response Type</h4>
+<ul>
+<li>
+<p><code>200 (OK)</code></p>
+<pre><code>{
+ "access_token": "i7lMTGchdNhHkeznnfjMY3qYgpSelq",
+ "token_type": "Bearer",
+ "expires_in": 1800,
+ "scope": "read write"
+}
+</code></pre>
+</li>
+<li>
+<p><code>400 (BAD REQUEST)</code> : If no valid <code>grant_type</code> is sent</p>
+<pre><code>{
+ "error": "unsupported_grant_type"
+}
+</code></pre>
+</li>
+<li>
+<p><code>401 (UNAUTHORIZED)</code> : If provided <code>client_id</code> (or) <code>client_secret</code> is not valid</p>
+<pre><code>{
+ "error": "invalid_client"
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="example-request">Example Request</h4>
+<pre><code>curl -X POST -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -d 'grant_type=client_credential&amp;client_id=lRvn55x9bsnpL0Al2qHzJ3q8Aay1B5j8qqGWtpvi&amp;client_secret=qppsn8taUnDqwHMPNqBC8hMWSwhVd5S5QIJrp5xaJc2cqGVncD7Y9rRq0Wk0CZr2ckwDXJQLBepP82k08Iq031eNf7e8F6QLiKvLIBlutS5eJw6Muuxn4pcQAy1pImoE' http://api.dev.medic52.com/oauth/token/
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        
+
+        <script src="/static/mkdocs/js/jquery-1.10.2.min.js"></script>
+        <script src="/static/mkdocs/js/bootstrap-3.0.3.min.js"></script>
+        <script src="/static/mkdocs/js/highlight.pack.js"></script>
+        <script src="/static/mkdocs/js/base.js"></script>
+
+        <!--
+        MkDocs version  : 0.12.2
+        Docs Build Date : 2015-05-03 19:38:38.981593
+        -->
+    </body>
+</html>
