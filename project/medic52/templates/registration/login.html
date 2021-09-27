@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
+    <form method="post" id="login-form" action="{% url 'django.contrib.auth.views.login' %}">
+        {% csrf_token %}
+        <div style="margin: 6% 20% 0 20%; background-color: white  ">
+            <md-whiteframe class="md-whiteframe-z2" layout="column" layout-align="center center">
+
+                <md-toolbar class="md-warn md-default-theme">
+                    <div class="md-toolbar-tools">
+                        <h2 class="md-flex">Admin Login</h2>
+                    </div>
+                </md-toolbar>
+
+                <md-content layout-padding layout="column">
+
+                    <md-input-container>
+                        <label>Email</label>
+                        <input id="id_username" maxlength="254" name="username" type="text" autocomplete="off" style="cursor: auto;">
+                    </md-input-container>
+
+                    <md-input-container >
+                        <label>Password</label>
+                        <input id="id_password" name="password" type="password" autocomplete="off" style="cursor: auto;">
+                    </md-input-container>
+
+                    <md-button class="md-raised md-primary" ng-click="login()">Login</md-button>
+
+                </md-content>
+            </md-whiteframe>
+        </div>
+
+        <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+
+{% endblock %}
