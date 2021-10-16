@@ -1,0 +1,5 @@
+site_name: Medic52 API Documentation
+pages:
+- ['index.md', 'Home']
+- ['api-docs/oAuth.md', 'API Guide', 'oAuth2 API']
+- ['api-docs/Authentication.md', 'API Guide', 'Authentication API']
